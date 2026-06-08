@@ -192,7 +192,7 @@ body{font-size:16.5px;line-height:1.74}
 .ph figcaption{font-size:.8rem;color:var(--inks);padding:9px 12px;border-top:1px solid var(--line);line-height:1.4}
 
 /* ---- RESPONSIVE : toutes tailles d'écran ---- */
-html,body{overflow-x:hidden}
+body{overflow-x:clip}
 img{max-width:100%;height:auto;display:block}
 @media(max-width:1300px){:root{--sw:300px}}
 @media(min-width:981px) and (max-width:1200px){
@@ -246,6 +246,35 @@ img{max-width:100%;height:auto;display:block}
   .fig-grid{grid-template-columns:1fr}
   .org-top{min-width:160px;padding:8px 14px}
 }
+
+/* ---- Bouton retour en haut ---- */
+#scrollTopBtn{
+  position:fixed;bottom:28px;right:28px;z-index:200;
+  width:50px;height:50px;border-radius:50%;
+  background:linear-gradient(135deg,var(--red),var(--redd));
+  color:#fff;border:none;cursor:pointer;font-size:1.4rem;
+  box-shadow:0 4px 18px rgba(200,22,29,.55);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transform:translateY(20px);pointer-events:none;
+  transition:opacity .25s,transform .25s;
+}
+#scrollTopBtn.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+#scrollTopBtn:hover{transform:translateY(-4px)!important;
+  box-shadow:0 8px 24px rgba(200,22,29,.7)}
+@media(max-width:480px){#scrollTopBtn{bottom:18px;right:16px;width:44px;height:44px;font-size:1.2rem}}
+
+/* ── Bouton retour en haut ── */
+#goTop{position:fixed;bottom:26px;right:26px;z-index:200;
+  width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--red),var(--redd));color:#fff;
+  font-size:1.4rem;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 18px rgba(200,22,29,.55);
+  opacity:0;transform:translateY(16px);pointer-events:none;
+  transition:opacity .25s,transform .25s;}
+#goTop.show{opacity:1;transform:translateY(0);pointer-events:auto;}
+#goTop:hover{transform:translateY(-4px)!important;
+  box-shadow:0 8px 24px rgba(200,22,29,.7);}
+@media(max-width:480px){#goTop{bottom:16px;right:14px;width:42px;height:42px;font-size:1.2rem;}}
 </style></head><body>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
@@ -2021,14 +2050,22 @@ window.addEventListener('load',function(){ // recalcule après chargement des po
    if(!b.classList.contains('collapsed')){var g=document.getElementById(b.getAttribute('data-g'));g.style.maxHeight=g.scrollHeight+'px';}});});
 // scrollspy : NE déplace QUE le menu interne, jamais la fenêtre
 var byId={};links.forEach(function(l){byId[l.getAttribute('data-target')]=l;});
+function offsetInSidebar(el){
+  var t=0,e=el;
+  while(e&&e!==sidebar){t+=e.offsetTop;e=e.offsetParent;}return t;
+}
 function followInSidebar(a){
- var g=a.parentElement;
- if(g&&g.classList.contains('nav-group')){
-  var btn=nav.querySelector('[data-g="'+g.id+'"]');
-  if(btn&&btn.classList.contains('collapsed')&&btn._open)btn._open();}
- var r=a.getBoundingClientRect(),s=sidebar.getBoundingClientRect();
- if(r.top<s.top+70){sidebar.scrollTop-=(s.top+70-r.top);}
- else if(r.bottom>s.bottom-20){sidebar.scrollTop+=(r.bottom-(s.bottom-20));}
+  var g=a.parentElement;
+  if(g&&g.classList.contains('nav-group')){
+    var btn=nav.querySelector('[data-g="'+g.id+'"]');
+    if(btn&&btn.classList.contains('collapsed')&&btn._open){
+      btn._open();
+      setTimeout(function(){
+        sidebar.scrollTo({top:Math.max(0,offsetInSidebar(a)-80),behavior:'smooth'});
+      },250);return;
+    }
+  }
+  sidebar.scrollTo({top:Math.max(0,offsetInSidebar(a)-80),behavior:'smooth'});
 }
 var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
  links.forEach(function(l){l.classList.remove('active');});
@@ -2047,4 +2084,22 @@ search&&search.addEventListener('input',function(){
  dashboard.style.display=q===''?'':'none';
  noresult.style.display=shown===0?'block':'none';});
 })();
-</script></body></html>
+// Bouton retour en haut
+(function(){
+  var btn=document.getElementById('scrollTopBtn');
+  if(!btn)return;
+  window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>380);},{passive:true});
+  btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+})();
+// Bouton retour en haut
+(function(){
+  var b=document.getElementById('goTop');
+  if(!b)return;
+  window.addEventListener('scroll',function(){
+    b.classList.toggle('show',window.scrollY>380);
+  },{passive:true});
+  b.onclick=function(){window.scrollTo({top:0,behavior:'smooth'});};
+})();
+</script><button id="scrollTopBtn" aria-label="Remonter en haut" title="Remonter en haut">↑</button>
+<button id="goTop" aria-label="Remonter" title="Remonter en haut">↑</button>
+</body></html>
