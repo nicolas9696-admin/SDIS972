@@ -2899,10 +2899,33 @@ function pubInitMap(){
   var el = document.getElementById('pub-map');
   if(!el || typeof L === 'undefined') return;
   el.style.height = '520px';
-  pubMap = L.map('pub-map').setView([14.64, -61.02], 11);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    attribution:'© <a href="https://openstreetmap.org">OpenStreetMap</a>', maxZoom:19
-  }).addTo(pubMap);
+  // Tuiles custom de l'intranet Martinique RP
+  // Fonctionne si connecté à l'intranet dans le même navigateur
+  var tileUrl = 'https://intranet.martinique-roleplay.fr/tiles/{z}/{x}/{y}.png';
+  var tileOSM = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+
+  // Essai tuiles intranet, fallback OSM si erreur
+  var customTiles = L.tileLayer(tileUrl, {
+    attribution:'Martinique Roleplay — Carte RP',
+    maxZoom:6, minZoom:0, tileSize:256,
+    errorTileUrl:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='
+  });
+
+  var osmTiles = L.tileLayer(tileOSM, {
+    attribution:'© OpenStreetMap', maxZoom:19
+  });
+
+  // Détecter si l'intranet est accessible
+  var testImg = new Image();
+  testImg.onload  = function(){ customTiles.addTo(pubMap); console.log('Tuiles RP chargées ✅'); };
+  testImg.onerror = function(){ osmTiles.addTo(pubMap); console.log('Fallback OSM'); };
+  testImg.src = 'https://intranet.martinique-roleplay.fr/tiles/0/2/2.png?t='+Date.now();
+
+  // Centre sur Martinique par défaut (les coordonnées RP peuvent différer)
+  pubMap = L.map('pub-map', {
+    center:[14.64,-61.02], zoom:11,
+    layers:[]
+  });
   // Marqueur CSP
   L.marker([14.5507,-60.9009], {icon: L.divIcon({
     html:'<div style="background:#072A4C;color:#fff;font-size:1.1rem;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:3px solid #F6B24A;box-shadow:0 2px 8px rgba(0,0,0,.4)">🚒</div>',
