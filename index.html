@@ -489,6 +489,81 @@ body.show-docs    .layout{animation:pgIn .28s ease}
 /* goTop buttons */
 #goTop,#scrollTopBtn{bottom:22px;right:22px}
 
+
+/* ══ Générateur de bilan ══ */
+body.show-bilan .bilan-page{display:block}
+.bilan-page{display:none;margin-top:58px;min-height:calc(100vh - 58px);
+  background:#F6F1E7;animation:pgIn .28s ease}
+.bilan-wrap{max-width:1100px;margin:0 auto;padding:36px 7% 80px;
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+@media(max-width:860px){.bilan-wrap{grid-template-columns:1fr;padding:24px 6% 60px}}
+.bilan-form-col,.bilan-preview-col{display:flex;flex-direction:column;gap:0}
+/* Header bilan */
+.bilan-page-head{padding:28px 7% 20px;border-bottom:3px solid #C8161D;
+  background:linear-gradient(135deg,#072A4C,#0A3A66);margin-bottom:0}
+.bilan-page-head h2{font-family:'Oswald',sans-serif;font-size:1.4rem;color:#fff;
+  margin:0 0 4px;letter-spacing:.05em;text-transform:uppercase}
+.bilan-page-head p{font-size:.84rem;color:rgba(255,255,255,.55);margin:0}
+/* Type selector */
+.bilan-type-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.bilan-type-btn{padding:9px 18px;border-radius:9px;border:2px solid #E2D9C6;
+  background:#fff;font-family:'Oswald',sans-serif;font-size:.86rem;letter-spacing:.05em;
+  text-transform:uppercase;cursor:pointer;transition:.18s;color:#666}
+.bilan-type-btn:hover{border-color:#0A3A66;color:#0A3A66}
+.bilan-type-btn.active{border-color:var(--bc,#C8161D);background:var(--bc,#C8161D);color:#fff}
+/* Blocs de champs */
+.bilan-block{background:#fff;border:1px solid #E2D9C6;border-radius:12px;
+  margin-bottom:14px;overflow:hidden}
+.bilan-block-title{padding:10px 16px;font-family:'Oswald',sans-serif;font-size:.82rem;
+  letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid #E2D9C6;
+  display:flex;align-items:center;gap:8px}
+.bilan-block-body{padding:14px 16px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bilan-block-body.cols1{grid-template-columns:1fr}
+.bilan-block-body.cols3{grid-template-columns:1fr 1fr 1fr}
+.bf-group{display:flex;flex-direction:column;gap:4px}
+.bf-group.full{grid-column:1/-1}
+.bf-label{font-size:.72rem;font-family:'Oswald',sans-serif;letter-spacing:.06em;
+  text-transform:uppercase;color:#777}
+.bf-inp,.bf-sel,.bf-ta{width:100%;padding:8px 11px;border:1px solid #E2D9C6;
+  border-radius:8px;font-family:'Mulish',sans-serif;font-size:.86rem;
+  box-sizing:border-box;outline:none;transition:.18s}
+.bf-inp:focus,.bf-sel:focus,.bf-ta:focus{border-color:#0A3A66;box-shadow:0 0 0 3px rgba(10,58,102,.08)}
+.bf-ta{resize:vertical;min-height:62px}
+/* Checkboxes gestes */
+.bf-checks{display:flex;flex-wrap:wrap;gap:8px;grid-column:1/-1}
+.bf-check-item{display:flex;align-items:center;gap:6px;cursor:pointer;
+  background:#F6F1E7;border:1px solid #E2D9C6;border-radius:7px;padding:5px 10px;
+  font-size:.82rem;transition:.15s}
+.bf-check-item:hover{border-color:#0A3A66}
+.bf-check-item input{width:14px;height:14px;cursor:pointer;accent-color:#C8161D}
+.bf-check-item.checked{background:rgba(200,22,29,.08);border-color:#C8161D}
+/* Bouton générer */
+.bilan-gen-btn{width:100%;padding:13px;border:none;border-radius:10px;
+  background:linear-gradient(100deg,#C8161D,#9E1015);color:#fff;
+  font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.05em;
+  text-transform:uppercase;cursor:pointer;transition:.2s;margin-top:4px}
+.bilan-gen-btn:hover{opacity:.9;transform:translateY(-1px)}
+/* Aperçu */
+.bilan-preview-col{position:sticky;top:72px}
+.bilan-preview-box{background:#fff;border:1px solid #E2D9C6;border-radius:12px;overflow:hidden}
+.bilan-preview-head{padding:10px 16px;background:#072A4C;color:#fff;
+  font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:.08em;
+  text-transform:uppercase;display:flex;align-items:center;justify-content:space-between}
+.bilan-preview-text{padding:16px;font-family:'Courier New',monospace;font-size:.82rem;
+  line-height:1.6;color:#333;white-space:pre-wrap;word-break:break-word;
+  min-height:200px;max-height:60vh;overflow-y:auto;background:#fafaf8}
+.bilan-actions{display:flex;gap:10px;padding:12px 16px;border-top:1px solid #E2D9C6;flex-wrap:wrap}
+.bilan-act-btn{flex:1;padding:10px;border:none;border-radius:8px;
+  font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:.05em;
+  text-transform:uppercase;cursor:pointer;transition:.18s;min-width:100px}
+.bilan-copy-btn{background:linear-gradient(100deg,#0A3A66,#072A4C);color:#fff}
+.bilan-copy-btn:hover{opacity:.9}
+.bilan-save-btn{background:#dcfce7;color:#166534;border:1px solid #86efac}
+.bilan-save-btn:hover{background:#bbf7d0}
+.bilan-copied{color:#166534;font-size:.78rem;text-align:center;padding:0 16px 10px;
+  display:none;font-style:italic}
+@media(max-width:580px){.bilan-block-body{grid-template-columns:1fr}.bilan-block-body.cols3{grid-template-columns:1fr 1fr}}
+
 </style></head><body class="show-home">
 <nav id="topnav">
   <button id="tnav-logo" onclick="showPage('home')">
@@ -498,6 +573,7 @@ body.show-docs    .layout{animation:pgIn .28s ease}
   <button class="tnav-btn active" id="tnav-home"    onclick="showPage('home')">🏠 Accueil</button>
   <button class="tnav-btn"        id="tnav-docs"    onclick="showPage('docs')">📚 Documentation</button>
   <button class="tnav-btn"        id="tnav-journal" onclick="showPage('journal')">📋 Journal</button>
+  <button class="tnav-btn" id="tnav-bilan" onclick="showPage('bilan')">📝 Bilan</button>
   <button id="tnav-off" onclick="showOffOvl()">🔐 Officier</button>
   <button id="tnav-ham" onclick="toggleSidebar()" aria-label="Menu">☰</button>
 </nav>
@@ -2493,6 +2569,9 @@ var JOURNAL_DATA = [
 })();
 </script>
 <script>
+
+// Fusionner avec les additions localStorage (bilans sauvegardés)
+function jnlGetAdds(){try{return JSON.parse(localStorage.getItem('sdis_jnl_adds')||'[]');}catch(e){return[];}}
 var jColors={SAP:"#C8161D",INC:"#EE8B1F",SR:"#0A3A66",DIV:"#2E7D46",NAUT:"#0e7ac4",HELI:"#6d28d9"};
 var jIcons={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
 var jLabels={SAP:"Secours à personne",INC:"Incendie",SR:"Secours routier",DIV:"Divers",NAUT:"Nautique",HELI:"Hélitreuillage"};
@@ -2517,7 +2596,9 @@ function jCard(e,del){
 }
 function jStatBar(){
   var del=jnlGetDel();
-  var vis=JOURNAL_DATA.filter(function(e){return del.indexOf(e.id)<0;});
+  var adds=jnlGetAdds();
+  var allData=adds.concat(JOURNAL_DATA);
+  var vis=allData.filter(function(e){return del.indexOf(e.id)<0;});
   var cnt={};vis.forEach(function(e){cnt[e.type]=(cnt[e.type]||0)+1;});
   var h='<span class="jstat"><span class="jstat-dot" style="background:#072A4C"></span>'
     +'<span class="jstat-lbl">Total</span><span class="jstat-num">'+vis.length+'</span></span>';
@@ -2535,7 +2616,7 @@ function jnlRenderAll(){
   var pub=document.getElementById('pub-journal-list');
   if(pub)pub.innerHTML=vis.length?vis.map(function(e){return jCard(e,false);}).join(''):empty;
   var off=document.getElementById('off-journal-list');
-  if(off)off.innerHTML=JOURNAL_DATA.map(function(e){
+  if(off)off.innerHTML=allData.map(function(e){
     var op=del.indexOf(e.id)>=0?' style="opacity:.3;pointer-events:none"':'';
     return '<div id="jw-'+e.id+'"'+op+'>'+jCard(e,true)+'</div>';
   }).join('');
@@ -2559,7 +2640,7 @@ jnlRenderAll();
   function showPage(name){
     document.body.className=document.body.className
       .replace(/\bshow-\w+/g,'').trim()+' show-'+(name||'home');
-    ['home','docs','journal'].forEach(function(p){
+    ['home','docs','journal','bilan'].forEach(function(p){
       var b=document.getElementById('tnav-'+p);
       if(b)b.classList.toggle('active',p===name);
     });
@@ -2614,6 +2695,447 @@ jnlRenderAll();
       e.preventDefault();showPage('journal');
     }
   });
+})();
+</script>
+<div class="bilan-page" id="bilan-page">
+  <div class="bilan-page-head">
+    <h2>📝 Générateur de bilan</h2>
+    <p>Remplissez le formulaire — le texte formaté est généré en temps réel</p>
+  </div>
+
+  <div class="bilan-wrap">
+    <!-- ── Formulaire ── -->
+    <div class="bilan-form-col">
+
+      <!-- Type -->
+      <div class="bilan-type-tabs" id="bilan-type-tabs">
+        <button class="bilan-type-btn active" data-type="SAP" style="--bc:#C8161D" onclick="bilanSetType('SAP',this)">🚑 SAP</button>
+        <button class="bilan-type-btn" data-type="SR"  style="--bc:#0A3A66" onclick="bilanSetType('SR',this)">🛣️ SR</button>
+        <button class="bilan-type-btn" data-type="INC" style="--bc:#EE8B1F" onclick="bilanSetType('INC',this)">🔥 INC</button>
+        <button class="bilan-type-btn" data-type="DIV" style="--bc:#2E7D46" onclick="bilanSetType('DIV',this)">🔧 DIV</button>
+      </div>
+
+      <!-- Champs communs -->
+      <div class="bilan-block">
+        <div class="bilan-block-title" style="background:rgba(7,42,76,.06)">📋 Informations générales</div>
+        <div class="bilan-block-body cols3">
+          <div class="bf-group"><label class="bf-label">N° Inter</label><input id="bf-num" class="bf-inp" placeholder="152" oninput="bilanGen()"></div>
+          <div class="bf-group"><label class="bf-label">Date</label><input id="bf-date" type="date" class="bf-inp" oninput="bilanGen()"></div>
+          <div class="bf-group"><label class="bf-label">Heure</label><input id="bf-heure" type="time" class="bf-inp" oninput="bilanGen()"></div>
+          <div class="bf-group full"><label class="bf-label">Lieu / Adresse</label><input id="bf-lieu" class="bf-inp" placeholder="Autoroute A2, Gros-Morne…" oninput="bilanGen()"></div>
+          <div class="bf-group full"><label class="bf-label">Unités engagées</label><input id="bf-units" class="bf-inp" placeholder="VSAV01, FPTSR01…" oninput="bilanGen()"></div>
+        </div>
+      </div>
+
+      <!-- SAP fields -->
+      <div id="bilan-sap-fields">
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(200,22,29,.06)">👤 Victime</div>
+          <div class="bilan-block-body cols3">
+            <div class="bf-group"><label class="bf-label">Sexe</label>
+              <select id="bf-sexe" class="bf-sel" onchange="bilanGen()">
+                <option value="—">—</option><option>Masculin</option><option>Féminin</option></select></div>
+            <div class="bf-group"><label class="bf-label">Âge approx.</label><input id="bf-age" class="bf-inp" placeholder="35 ans" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">Identité</label><input id="bf-id" class="bf-inp" placeholder="Inconnue" oninput="bilanGen()"></div>
+          </div>
+        </div>
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(200,22,29,.06)">🔴 Bilan primaire</div>
+          <div class="bilan-block-body">
+            <div class="bf-group"><label class="bf-label">Conscience</label>
+              <select id="bf-conscience" class="bf-sel" onchange="bilanGen()">
+                <option>Conscient(e)</option><option>Obnubilé(e)</option>
+                <option>Inconscient(e) — ventile</option><option>Inconscient(e) — ne ventile pas</option></select></div>
+            <div class="bf-group"><label class="bf-label">Voies aériennes</label>
+              <select id="bf-va" class="bf-sel" onchange="bilanGen()">
+                <option>Libres</option><option>Obstruées</option><option>Libérées (manœuvre)</option></select></div>
+            <div class="bf-group"><label class="bf-label">Respiration</label>
+              <select id="bf-resp" class="bf-sel" onchange="bilanGen()">
+                <option>Présente — régulière</option><option>Présente — irrégulière</option>
+                <option>Difficile (dyspnée)</option><option>Absente</option></select></div>
+            <div class="bf-group"><label class="bf-label">Circulation</label>
+              <select id="bf-circ" class="bf-sel" onchange="bilanGen()">
+                <option>Pouls présent</option><option>Pouls faible</option>
+                <option>Pouls absent</option><option>Hémorragie extériorisée</option></select></div>
+            <div class="bf-group"><label class="bf-label">Détresse vitale</label>
+              <select id="bf-detresse" class="bf-sel" onchange="bilanGen()">
+                <option value="Non">Non</option><option value="Oui">Oui</option></select></div>
+            <div class="bf-group"><label class="bf-label">Plainte principale</label>
+              <input id="bf-plainte" class="bf-inp" placeholder="Douleur thoracique, malaise…" oninput="bilanGen()"></div>
+          </div>
+        </div>
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(200,22,29,.06)">🔵 Constantes</div>
+          <div class="bilan-block-body cols3">
+            <div class="bf-group"><label class="bf-label">PA (mmHg)</label><input id="bf-pa" class="bf-inp" placeholder="120/80" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">SpO₂ (%)</label><input id="bf-spo2" class="bf-inp" placeholder="98" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">FC (/min)</label><input id="bf-fc" class="bf-inp" placeholder="72" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">FR (/min)</label><input id="bf-fr" class="bf-inp" placeholder="16" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">T° (°C)</label><input id="bf-temp" class="bf-inp" placeholder="37.2" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">Glycémie (g/L)</label><input id="bf-glyc" class="bf-inp" placeholder="1.0" oninput="bilanGen()"></div>
+          </div>
+        </div>
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(200,22,29,.06)">💊 Antécédents</div>
+          <div class="bilan-block-body cols1">
+            <div class="bf-group"><label class="bf-label">Antécédents médicaux</label><input id="bf-atcd" class="bf-inp" placeholder="HTA, diabète, aucun connu…" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">Allergies</label><input id="bf-allergies" class="bf-inp" placeholder="Aucune connue…" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">Traitements en cours</label><input id="bf-traitement" class="bf-inp" placeholder="Aucun connu…" oninput="bilanGen()"></div>
+          </div>
+        </div>
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(200,22,29,.06)">🩺 Gestes effectués</div>
+          <div class="bilan-block-body">
+            <div class="bf-checks">
+              <label class="bf-check-item"><input type="checkbox" id="g-o2" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">Oxygène</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-pls" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">PLS</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-mce" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">MCE</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-bvm" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">BVM</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-dsa" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">DSA</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-collier" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">Collier cervical</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-immo" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">Immobilisation</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-pans" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">Pansement</label>
+              <label class="bf-check-item"><input type="checkbox" id="g-garrot" onchange="bilanGen();this.closest('.bf-check-item').classList.toggle('checked',this.checked)">Garrot</label>
+            </div>
+            <div class="bf-group full"><label class="bf-label">Autres gestes</label><input id="bf-gestes-autres" class="bf-inp" placeholder="…" oninput="bilanGen()"></div>
+          </div>
+        </div>
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(200,22,29,.06)">🏥 Orientation</div>
+          <div class="bilan-block-body">
+            <div class="bf-group"><label class="bf-label">Décision</label>
+              <select id="bf-orient" class="bf-sel" onchange="bilanGen()">
+                <option>Transport CHU Fort-de-France</option>
+                <option>Transport CH Trinité</option>
+                <option>Hélitreuillage — DRAGON 972</option>
+                <option>Laissée sur place (refus transport)</option>
+                <option>Confiée au SMUR</option>
+                <option>Décès constaté</option></select></div>
+            <div class="bf-group"><label class="bf-label">Bilan médical (SSSM)</label>
+              <select id="bf-sssm" class="bf-sel" onchange="bilanGen()">
+                <option value="Non">Non</option>
+                <option value="Médecin SP">Médecin SP présent</option>
+                <option value="Infirmier SP">Infirmier SP présent</option>
+                <option value="SMUR">SMUR régulé</option></select></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SR fields -->
+      <div id="bilan-sr-fields" style="display:none">
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(10,58,102,.06)">🚗 Véhicules impliqués</div>
+          <div class="bilan-block-body cols3">
+            <div class="bf-group"><label class="bf-label">Nb véhicules</label><input id="sr-nbveh" class="bf-inp" placeholder="2" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">Types</label><input id="sr-typeveh" class="bf-inp" placeholder="VL, Moto…" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">État</label>
+              <select id="sr-etatveh" class="bf-sel" onchange="bilanGen()">
+                <option>Accidenté(s) sur chaussée</option><option>Retourné(s)</option>
+                <option>En feu</option><option>Dans le fossé</option></select></div>
+          </div>
+        </div>
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(10,58,102,.06)">👤 Victimes</div>
+          <div class="bilan-block-body cols3">
+            <div class="bf-group"><label class="bf-label">Nb victimes</label><input id="sr-nbvict" class="bf-inp" placeholder="1" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">Statut</label>
+              <select id="sr-statvict" class="bf-sel" onchange="bilanGen()">
+                <option>Indemne(s)</option><option>Légèrement blessé(es)</option>
+                <option>Blessé(es) grave(s)</option><option>Décédé(es)</option></select></div>
+            <div class="bf-group"><label class="bf-label">Incarcération</label>
+              <select id="sr-incarc" class="bf-sel" onchange="bilanGen()">
+                <option value="Non">Non</option><option value="Oui">Oui — désincarcération effectuée</option></select></div>
+          </div>
+        </div>
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(10,58,102,.06)">🦺 Opérations</div>
+          <div class="bilan-block-body">
+            <div class="bf-group"><label class="bf-label">Balisage</label>
+              <select id="sr-balisage" class="bf-sel" onchange="bilanGen()">
+                <option>Effectué — voie partiellement coupée</option>
+                <option>Effectué — voie totalement coupée</option>
+                <option>DIR pris en charge</option></select></div>
+            <div class="bf-group"><label class="bf-label">Partenaires</label><input id="sr-part" class="bf-inp" placeholder="GN, SMUR, DIR…" oninput="bilanGen()"></div>
+            <div class="bf-group full"><label class="bf-label">Actions réalisées</label>
+              <textarea id="sr-actions" class="bf-ta" placeholder="Sécurisation, balisage, désincarcération…" oninput="bilanGen()"></textarea></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INC fields -->
+      <div id="bilan-inc-fields" style="display:none">
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(238,139,31,.08)">🔥 Feu</div>
+          <div class="bilan-block-body">
+            <div class="bf-group"><label class="bf-label">Type de feu</label>
+              <select id="inc-type" class="bf-sel" onchange="bilanGen()">
+                <option>Habitation</option><option>Véhicule</option>
+                <option>Feux de forêt / végétation</option><option>Entreprise / entrepôt</option>
+                <option>Feux de poubelle</option><option>Autre</option></select></div>
+            <div class="bf-group"><label class="bf-label">Propagation</label>
+              <select id="inc-prop" class="bf-sel" onchange="bilanGen()">
+                <option>Limitée — feu circonscrit</option><option>Importante</option>
+                <option>Maîtrisée à l'arrivée</option><option>En cours de propagation</option></select></div>
+            <div class="bf-group"><label class="bf-label">Victimes</label>
+              <select id="inc-vict" class="bf-sel" onchange="bilanGen()">
+                <option value="Aucune">Aucune</option>
+                <option value="Blessés légers">Blessés légers</option>
+                <option value="Blessés graves">Blessés graves</option>
+                <option value="Décédés">Décédés</option></select></div>
+            <div class="bf-group"><label class="bf-label">Source d'eau</label>
+              <input id="inc-source" class="bf-inp" placeholder="BI rouge n°12, citerne 50m…" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">Lances engagées</label>
+              <input id="inc-lances" class="bf-inp" placeholder="2× LDV 45mm" oninput="bilanGen()"></div>
+            <div class="bf-group"><label class="bf-label">ARI</label>
+              <select id="inc-ari" class="bf-sel" onchange="bilanGen()">
+                <option value="Non utilisés">Non utilisés</option>
+                <option value="Utilisés">Utilisés</option></select></div>
+            <div class="bf-group full"><label class="bf-label">État final</label>
+              <select id="inc-etat" class="bf-sel" onchange="bilanGen()">
+                <option>Feu éteint — levée de garde</option>
+                <option>Feu maîtrisé — surveillance en cours</option>
+                <option>Feu en cours d'extinction</option>
+                <option>Feu non maîtrisé — demande de renforts</option></select></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIV fields -->
+      <div id="bilan-div-fields" style="display:none">
+        <div class="bilan-block">
+          <div class="bilan-block-title" style="background:rgba(46,125,70,.08)">🔧 Intervention diverse</div>
+          <div class="bilan-block-body cols1">
+            <div class="bf-group"><label class="bf-label">Nature</label>
+              <select id="div-nature" class="bf-sel" onchange="bilanGen()">
+                <option>Chute d'arbre sur voie publique</option>
+                <option>Fuite de gaz</option><option>Inondation / dégât des eaux</option>
+                <option>Personne bloquée / coincée</option>
+                <option>Noyade</option><option>Recherche de personne</option>
+                <option>Épanchement de matières dangereuses</option>
+                <option>Manœuvre diverse</option><option>Autre</option></select></div>
+            <div class="bf-group"><label class="bf-label">Description</label>
+              <textarea id="div-desc" class="bf-ta" placeholder="Description de la situation…" oninput="bilanGen()"></textarea></div>
+            <div class="bf-group"><label class="bf-label">Actions effectuées</label>
+              <textarea id="div-actions" class="bf-ta" placeholder="Balisage, mise en sécurité…" oninput="bilanGen()"></textarea></div>
+            <div class="bf-group"><label class="bf-label">Résultat</label>
+              <select id="div-result" class="bf-sel" onchange="bilanGen()">
+                <option>Situation résolue</option><option>En attente d'entreprise spécialisée</option>
+                <option>Remis à un partenaire (GN, Police)</option>
+                <option>Intervention sans suite</option></select></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rédacteur + bouton -->
+      <div class="bilan-block">
+        <div class="bilan-block-title" style="background:rgba(7,42,76,.06)">✍️ Rédacteur</div>
+        <div class="bilan-block-body cols1">
+          <div class="bf-group"><label class="bf-label">Rédigé par</label>
+            <input id="bf-redacteur" class="bf-inp" placeholder="Grade NOM Prénom" oninput="bilanGen()"></div>
+        </div>
+      </div>
+      <button class="bilan-gen-btn" onclick="bilanGen()">⚡ Générer / Rafraîchir le bilan</button>
+    </div>
+
+    <!-- ── Aperçu ── -->
+    <div class="bilan-preview-col">
+      <div class="bilan-preview-box">
+        <div class="bilan-preview-head">
+          <span>📄 Aperçu — Format Discord</span>
+          <span id="bilan-type-label" style="color:#F6B24A;font-size:.76rem">SAP</span>
+        </div>
+        <pre class="bilan-preview-text" id="bilan-preview">Remplissez le formulaire…</pre>
+        <div class="bilan-copied" id="bilan-copied">✅ Copié dans le presse-papiers !</div>
+        <div class="bilan-actions">
+          <button class="bilan-act-btn bilan-copy-btn" onclick="bilanCopy()">📋 Copier</button>
+          <button class="bilan-act-btn bilan-save-btn" onclick="bilanSaveJournal()">💾 Sauvegarder au journal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ══ Générateur de bilan ══ */
+var bilanType='SAP';
+var bilanColors={SAP:'#C8161D',SR:'#0A3A66',INC:'#EE8B1F',DIV:'#2E7D46'};
+var bilanLabels={SAP:'🚑 SECOURS À PERSONNE',SR:'🛣️ SECOURS ROUTIER',INC:'🔥 INCENDIE',DIV:'🔧 DIVERS'};
+
+function bilanSetType(t,btn){
+  bilanType=t;
+  document.querySelectorAll('.bilan-type-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  ['sap','sr','inc','div'].forEach(function(x){
+    var el=document.getElementById('bilan-'+x+'-fields');
+    if(el)el.style.display=x===t.toLowerCase()?'block':'none';
+  });
+  var lbl=document.getElementById('bilan-type-label');
+  if(lbl)lbl.textContent=t;
+  bilanGen();
+}
+
+function gv(id){var el=document.getElementById(id);return el?el.value||'—':'—';}
+function gc(id){var el=document.getElementById(id);return el?el.checked:false;}
+
+function bilanGen(){
+  var num=gv('bf-num'),date=gv('bf-date'),heure=gv('bf-heure');
+  var lieu=gv('bf-lieu'),units=gv('bf-units');
+  // Formater la date
+  var df=date&&date!=='—'?new Date(date).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'}):date;
+  var sep='━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
+  var lines=[];
+  lines.push('**📋 BILAN D\'INTERVENTION — N°'+num+'**');
+  lines.push(sep);
+  lines.push('📅 **Date :** '+df+'   🕐 **Heure :** '+heure);
+  lines.push('📍 **Lieu :** '+lieu);
+  lines.push('🚒 **Unités :** '+units);
+  lines.push(sep);
+
+  if(bilanType==='SAP'){
+    lines.push('**'+bilanLabels.SAP+'**');
+    lines.push('');
+    lines.push('👤 **VICTIME**');
+    lines.push('• Sexe / Âge : '+gv('bf-sexe')+' — '+gv('bf-age'));
+    lines.push('• Identité : '+gv('bf-id'));
+    lines.push('');
+    lines.push('🔴 **BILAN PRIMAIRE**');
+    lines.push('• Conscience : '+gv('bf-conscience'));
+    lines.push('• Voies aériennes : '+gv('bf-va'));
+    lines.push('• Respiration : '+gv('bf-resp'));
+    lines.push('• Circulation : '+gv('bf-circ'));
+    lines.push('• Détresse vitale : **'+gv('bf-detresse')+'**');
+    lines.push('• Plainte : '+gv('bf-plainte'));
+    lines.push('');
+    lines.push('🔵 **CONSTANTES**');
+    lines.push('• PA : '+gv('bf-pa')+' mmHg   SpO₂ : '+gv('bf-spo2')+'%   FC : '+gv('bf-fc')+'/min');
+    lines.push('• FR : '+gv('bf-fr')+'/min   T° : '+gv('bf-temp')+'°C   Glycémie : '+gv('bf-glyc')+' g/L');
+    lines.push('');
+    lines.push('💊 **ANTÉCÉDENTS**');
+    lines.push('• Médicaux : '+gv('bf-atcd'));
+    lines.push('• Allergies : '+gv('bf-allergies'));
+    lines.push('• Traitements : '+gv('bf-traitement'));
+    lines.push('');
+    // Gestes
+    var gestes=[];
+    var gMap={
+      'g-o2':'Oxygénothérapie','g-pls':'Position Latérale de Sécurité',
+      'g-mce':'MCE (Massage Cardiaque)','g-bvm':'Ventilation BVM',
+      'g-dsa':'Défibrillation DSA','g-collier':'Collier cervical',
+      'g-immo':'Immobilisation','g-pans':'Pansement compressif',
+      'g-garrot':'Garrot'
+    };
+    for(var g in gMap){if(gc(g))gestes.push(gMap[g]);}
+    var autresG=gv('bf-gestes-autres');if(autresG!=='—')gestes.push(autresG);
+    lines.push('🩺 **GESTES EFFECTUÉS**');
+    lines.push(gestes.length?gestes.map(function(x){return '• '+x;}).join('\n'):'• Aucun geste effectué');
+    lines.push('');
+    lines.push('🏥 **ORIENTATION**');
+    lines.push('• Décision : '+gv('bf-orient'));
+    lines.push('• Bilan médical : '+gv('bf-sssm'));
+
+  } else if(bilanType==='SR'){
+    lines.push('**'+bilanLabels.SR+'**');
+    lines.push('');
+    lines.push('🚗 **VÉHICULES**');
+    lines.push('• Nombre : '+gv('sr-nbveh')+'   Types : '+gv('sr-typeveh'));
+    lines.push('• État : '+gv('sr-etatveh'));
+    lines.push('');
+    lines.push('👤 **VICTIMES**');
+    lines.push('• Nombre : '+gv('sr-nbvict')+'   Statut : '+gv('sr-statvict'));
+    lines.push('• Incarcération : '+gv('sr-incarc'));
+    lines.push('');
+    lines.push('🦺 **OPÉRATIONS**');
+    lines.push('• Balisage : '+gv('sr-balisage'));
+    lines.push('• Partenaires : '+gv('sr-part'));
+    var acts=gv('sr-actions');
+    if(acts!=='—'){lines.push('• Actions : '+acts);}
+
+  } else if(bilanType==='INC'){
+    lines.push('**'+bilanLabels.INC+'**');
+    lines.push('');
+    lines.push('🔥 **FEU**');
+    lines.push('• Type : '+gv('inc-type'));
+    lines.push('• Propagation : '+gv('inc-prop'));
+    lines.push('• Victimes : '+gv('inc-vict'));
+    lines.push('');
+    lines.push('💧 **MOYENS HYDRAULIQUES**');
+    lines.push('• Source d\'eau : '+gv('inc-source'));
+    lines.push('• Lances engagées : '+gv('inc-lances'));
+    lines.push('• ARI : '+gv('inc-ari'));
+    lines.push('');
+    lines.push('✅ **ÉTAT FINAL**');
+    lines.push('• '+gv('inc-etat'));
+
+  } else {
+    lines.push('**'+bilanLabels.DIV+'**');
+    lines.push('');
+    lines.push('🔧 **NATURE**');
+    lines.push('• '+gv('div-nature'));
+    lines.push('');
+    lines.push('📋 **DESCRIPTION**');
+    lines.push(gv('div-desc'));
+    lines.push('');
+    lines.push('⚙️ **ACTIONS**');
+    lines.push(gv('div-actions'));
+    lines.push('');
+    lines.push('✅ **RÉSULTAT**');
+    lines.push('• '+gv('div-result'));
+  }
+
+  lines.push('');
+  lines.push(sep);
+  lines.push('✍️ **Rédigé par :** '+gv('bf-redacteur'));
+  lines.push('*SDIS 972 — CSP Gros-Morne*');
+
+  var txt=lines.join('\n');
+  var el=document.getElementById('bilan-preview');
+  if(el)el.textContent=txt;
+}
+
+function bilanCopy(){
+  var txt=document.getElementById('bilan-preview').textContent;
+  navigator.clipboard.writeText(txt).then(function(){
+    var el=document.getElementById('bilan-copied');
+    if(el){el.style.display='block';setTimeout(function(){el.style.display='none';},2500);}
+  }).catch(function(){
+    // fallback
+    var ta=document.createElement('textarea');
+    ta.value=txt;document.body.appendChild(ta);ta.select();
+    document.execCommand('copy');document.body.removeChild(ta);
+    var el=document.getElementById('bilan-copied');
+    if(el){el.style.display='block';setTimeout(function(){el.style.display='none';},2500);}
+  });
+}
+
+function bilanSaveJournal(){
+  var num=document.getElementById('bf-num').value||'?';
+  var lieu=document.getElementById('bf-lieu').value||'Lieu non précisé';
+  var date=document.getElementById('bf-date').value;
+  var heure=document.getElementById('bf-heure').value||'--:--';
+  var df=date?new Date(date).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'}):new Date().toLocaleDateString('fr-FR');
+  var entry={
+    id:Date.now(),num:num,type:bilanType,
+    statut:'Terminé',date:df,heure:heure,lieu:lieu,
+    desc:bilanType==='SAP'?(document.getElementById('bf-plainte').value||''):
+         bilanType==='INC'?(document.getElementById('inc-type').value||''):
+         bilanType==='DIV'?(document.getElementById('div-nature').value||''):
+         (document.getElementById('sr-statvict')?document.getElementById('sr-statvict').value:'')
+  };
+  // Sauvegarder dans localStorage (additions au journal)
+  var adds=[];
+  try{adds=JSON.parse(localStorage.getItem('sdis_jnl_adds')||'[]');}catch(e){}
+  adds.unshift(entry);
+  try{localStorage.setItem('sdis_jnl_adds',JSON.stringify(adds));}catch(e){}
+  // Raffraîchir le journal si visible
+  if(typeof jnlRenderAll==='function')jnlRenderAll();
+  alert('✅ Intervention N°'+num+' sauvegardée au journal !');
+}
+
+// Init : pré-remplir date/heure
+(function(){
+  var d=document.getElementById('bf-date'),hh=document.getElementById('bf-heure');
+  if(d&&hh){var n=new Date();d.value=n.toISOString().split('T')[0];hh.value=n.toTimeString().slice(0,5);}
+  bilanGen();
 })();
 </script>
 </body></html>
