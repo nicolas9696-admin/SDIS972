@@ -612,10 +612,10 @@ body.show-exercices .ex-page{display:block}
 .ex-head{background:linear-gradient(135deg,#072A4C,#0A3A66);padding:24px 7% 20px;border-bottom:3px solid #C8161D}
 .ex-head h2{font-family:'Oswald',sans-serif;font-size:1.35rem;color:#fff;margin:0 0 4px;letter-spacing:.05em;text-transform:uppercase}
 .ex-head p{font-size:.83rem;color:rgba(255,255,255,.5);margin:0}
-.ex-mode-tabs{display:flex;gap:10px;padding:16px 7% 0;background:#fff;border-bottom:2px solid #E2D9C6;overflow-x:auto}
+.ex-mode-tabs{display:flex;gap:10px;padding:12px 7% 0;background:#fff;border-bottom:2px solid #E2D9C6;overflow-x:auto;position:sticky;top:58px;z-index:52;box-shadow:0 2px 6px rgba(0,0,0,.05)}
 .ex-mode-btn{padding:10px 20px;border:none;background:none;cursor:pointer;font-family:'Oswald',sans-serif;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;color:#888;border-bottom:3px solid transparent;margin-bottom:-2px;transition:.15s;white-space:nowrap}
 .ex-mode-btn.active{color:#072A4C;border-bottom-color:#C8161D}
-.ex-filters{background:#fff;padding:14px 7%;border-bottom:1px solid #E2D9C6;display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:58px;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.ex-filters{background:#fff;padding:10px 7%;border-bottom:1px solid #E2D9C6;display:flex;flex-wrap:wrap;gap:10px;align-items:center;position:sticky;top:104px;z-index:51;box-shadow:0 2px 8px rgba(0,0,0,.06)}
 .ex-flt{display:flex;flex-direction:column;gap:3px}
 .ex-flt label{font-size:.68rem;font-family:'Oswald',sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#888}
 .ex-flt select,.ex-flt input{padding:6px 10px;border:1px solid #E2D9C6;border-radius:7px;font-family:'Mulish',sans-serif;font-size:.84rem;background:#fff;outline:none;min-width:100px}
@@ -676,7 +676,7 @@ body.show-exercices .ex-page{display:block}
 .ex-phase-min{font-size:.68rem;background:#F6F1E7;border:1px solid #E2D9C6;padding:1px 7px;border-radius:20px;color:#888}
 .ex-phase-body{font-size:.82rem;color:#444;line-height:1.5}
 .ex-radio-msg{background:#0A3A66;color:#fff;border-radius:9px;padding:12px 14px;font-family:'Courier New',monospace;font-size:.82rem;line-height:1.5;margin-bottom:10px;white-space:pre-wrap}
-@media(max-width:640px){.ex-filters{padding:10px 5%;top:52px}.ex-content{padding:14px 5% 50px}.ex-mode-tabs{padding:12px 5% 0}.ex-head{padding:18px 5% 14px}.ex-plan-grid{grid-template-columns:1fr}.ex-detail-panel{width:100vw}.ex-detail-body{padding:14px}}
+@media(max-width:640px){.ex-filters{padding:10px 5%;top:96px}.ex-mode-tabs{padding:10px 5% 0;top:52px}.ex-content{padding:14px 5% 50px}.ex-mode-tabs{padding:12px 5% 0}.ex-head{padding:18px 5% 14px}.ex-plan-grid{grid-template-columns:1fr}.ex-detail-panel{width:100vw}.ex-detail-body{padding:14px}}
 
 </style></head><body class="show-home">
 <nav id="topnav">
@@ -2834,7 +2834,7 @@ jnlRenderAll();
 </div>
 <div class="ex-content" id="ex-mode-tirage">
   <button class="ex-tirage-btn" onclick="exTirer()">Tirer un scenario aleatoire</button>
-  <div class="ex-tirage-result" id="ex-tirage-result">
+  <div class="ex-tirage-result" id="ex-tirage-result" style="display:none">
     <div class="ex-elig" id="ex-elig-txt"></div>
     <div id="ex-tirage-card"></div>
   </div>
@@ -2867,11 +2867,12 @@ function nC(n){var m={'Faible':'faible','Moyen':'moyen','Critique':'critique'};r
 var exFilt=EX_DATA.slice(),exMode2='tirage',exCur=null;
 function exMode(m){
   exMode2=m;
-  ['tirage','catalogue'].forEach(function(x){
-    var b=document.getElementById('exm-'+x),c=document.getElementById('ex-mode-'+x);
-    if(b)b.classList.toggle('active',x===m);
-    if(c)c.style.display=x===m?'block':'none';
-  });
+  document.getElementById('exm-tirage').className='ex-mode-btn'+(m==='tirage'?' active':'');
+  document.getElementById('exm-catalogue').className='ex-mode-btn'+(m==='catalogue'?' active':'');
+  var t=document.getElementById('ex-mode-tirage');
+  var c=document.getElementById('ex-mode-catalogue');
+  if(t)t.style.display=m==='tirage'?'block':'none';
+  if(c)c.style.display=m==='catalogue'?'block':'none';
   if(m==='catalogue')exRenderCatalogue();
 }
 function exApply(){
@@ -2912,10 +2913,10 @@ function exCard(s){
     +'</div></div>';
 }
 function exTirer(){
-  if(!exFilt.length){alert('Aucun sc\u00e9nario.');return;}
+  if(!exFilt.length){alert('Aucun sc\u00e9nario disponible avec ces filtres.');return;}
   var s=exFilt[Math.floor(Math.random()*exFilt.length)];
   var r=document.getElementById('ex-tirage-result');
-  if(r)r.classList.add('show');
+  if(r){r.style.display='block';}
   var e=document.getElementById('ex-elig-txt');
   if(e)e.textContent=exFilt.length+' sc\u00e9nario(s) \u00e9ligible(s)';
   var c=document.getElementById('ex-tirage-card');
