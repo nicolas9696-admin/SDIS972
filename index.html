@@ -360,6 +360,73 @@ img{max-width:100%;height:auto;display:block}
 .jl-hidden{display:none}
 @media(max-width:600px){.jl-icon{width:36px;height:36px;font-size:1rem;flex:0 0 36px}}
 
+
+/* ══ Page d'accueil ══ */
+.home-hero{background:linear-gradient(145deg,#072A4C 0%,#0A3A66 55%,#0d4a80 100%);
+  padding:60px 8% 70px;position:relative;overflow:hidden;border-bottom:5px solid #C8161D}
+.home-hero::before{content:"";position:absolute;inset:0;opacity:.04;
+  background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);
+  background-size:20px 20px;pointer-events:none}
+.home-greeting{font-family:'Oswald',sans-serif;font-size:.92rem;color:#F6B24A;
+  letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+.home-msg{font-family:'Georgia',serif;font-size:2.1rem;color:#fff;font-weight:700;
+  line-height:1.25;margin:0 0 8px;max-width:600px}
+.home-sub{font-size:.86rem;color:rgba(255,255,255,.45);margin-bottom:36px}
+.home-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hcta{display:flex;align-items:center;gap:13px;padding:16px 26px;border-radius:13px;
+  text-decoration:none;font-family:'Oswald',sans-serif;font-size:.98rem;letter-spacing:.04em;
+  text-transform:uppercase;transition:.2s;cursor:pointer;border:none;font-weight:500}
+.hcta-red{background:#C8161D;color:#fff;box-shadow:0 6px 20px rgba(200,22,29,.4)}
+.hcta-red:hover{background:#9E1015;transform:translateY(-2px)}
+.hcta-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.hcta-ghost:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+.hcta-ico{font-size:1.5rem}
+.hcta-sub{font-size:.7rem;opacity:.7;display:block;font-family:'Mulish',sans-serif;
+  text-transform:none;letter-spacing:0;margin-top:1px;font-weight:400}
+.home-row{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
+.home-stat strong{display:block;font-family:'Oswald',sans-serif;font-size:1.4rem;
+  color:#fff;line-height:1}
+.home-stat span{font-size:.78rem;color:rgba(255,255,255,.55)}
+.home-last{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);
+  border-radius:10px;padding:11px 15px;margin-top:24px;max-width:500px;
+  display:none;align-items:center;gap:12px}
+.home-last.show{display:flex}
+.home-last-ico{font-size:1.35rem}
+.home-last-type{font-family:'Oswald',sans-serif;font-size:.7rem;letter-spacing:.1em;
+  text-transform:uppercase;color:#F6B24A;margin-bottom:1px}
+.home-last-lieu{font-size:.88rem;color:#fff;font-weight:600;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:320px}
+.home-last-meta{font-size:.73rem;color:rgba(255,255,255,.45)}
+@media(max-width:600px){.home-hero{padding:36px 6% 46px}.home-msg{font-size:1.55rem}
+  .home-ctas{flex-direction:column}.hcta{padding:14px 20px}}
+/* ══ Journal pro ══ */
+.journal-stats-bar{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.jstat{background:#fff;border:1px solid #E2D9C6;border-radius:8px;
+  padding:5px 12px;font-size:.79rem;display:flex;align-items:center;gap:6px}
+.jstat-dot{width:9px;height:9px;border-radius:50%;flex:0 0 9px}
+.jstat-lbl{color:#777}.jstat-num{font-weight:700;color:#072A4C}
+.jl-card{background:#fff;border:1px solid #E2D9C6;border-radius:12px;
+  margin-bottom:10px;overflow:hidden;transition:.15s;display:flex}
+.jl-card:hover{box-shadow:0 6px 18px rgba(7,42,76,.1)}
+.jl-card-left{width:5px;flex:0 0 5px}
+.jl-card-body{padding:13px 17px;flex:1;min-width:0}
+.jl-card-top{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.jl-num{font-family:'Oswald',sans-serif;font-size:.7rem;background:#F6F1E7;
+  border:1px solid #E2D9C6;color:#999;padding:2px 7px;border-radius:5px;white-space:nowrap}
+.jl-btype{font-family:'Oswald',sans-serif;font-size:.77rem;letter-spacing:.05em;
+  text-transform:uppercase;color:#fff;padding:3px 11px;border-radius:20px;white-space:nowrap}
+.jl-bstatut{font-size:.7rem;padding:3px 8px;border-radius:20px;font-weight:600;
+  white-space:nowrap;margin-left:auto;background:#dcfce7;color:#166534}
+.jl-card-lieu{font-size:.98rem;font-weight:700;color:#072A4C;margin-bottom:4px;line-height:1.3}
+.jl-card-desc{font-size:.83rem;color:#555;line-height:1.5;margin-bottom:6px}
+.jl-card-foot{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.jl-card-meta{font-size:.75rem;color:#aaa;display:flex;align-items:center;gap:3px}
+.jl-card-del{background:none;border:none;cursor:pointer;color:#ddd;font-size:.8rem;
+  padding:2px 6px;border-radius:4px;transition:.15s;margin-left:auto}
+.jl-card-del:hover{color:#C8161D;background:#fff0f0}
+/* Sidebar journal */
+.nav-jlink{color:var(--red)!important;font-weight:700!important}
+
 </style></head><body>
 <div class="layout">
 <aside class="sidebar" id="sidebar">
@@ -493,12 +560,35 @@ img{max-width:100%;height:auto;display:block}
 <div class="dsub"><span class="dsub-c">1</span><span class="dsub-t">💣 Déminage</span><div class="dsub-l"><a href="#nds-demineur">💣 Gestion Démineur</a></div></div>
 </div></div></div>
   </section>
-  <section class="journal-section" id="journal-activite">
+  <div class="home-hero" id="home-page">
+  <div class="home-greeting" id="hgreeting">Bonjour — SDIS 972</div>
+  <h1 class="home-msg" id="hmsg">Bienvenue au SDIS 972 !</h1>
+  <div class="home-sub">CSP Gros-Morne — Martinique</div>
+  <div class="home-ctas">
+    <a href="#cat-A" class="hcta hcta-red">
+      <span class="hcta-ico">📚</span>
+      <span>Documentation<span class="hcta-sub">30 documents officiels</span></span>
+    </a>
+    <a href="#journal-activite" class="hcta hcta-ghost">
+      <span class="hcta-ico">📋</span>
+      <span>Journal d'activité<span class="hcta-sub">Dernières interventions</span></span>
+    </a>
+  </div>
+  <div class="home-last" id="hlast"></div>
+  <div class="home-row">
+    <div class="home-stat"><strong>30</strong><span>Documents</span></div>
+    <div class="home-stat"><strong>3</strong><span>Domaines</span></div>
+    <div class="home-stat"><strong>CSP</strong><span>Gros-Morne</span></div>
+  </div>
+</div>
+
+<section class="journal-section" id="journal-activite">
   <div class="journal-head">
     <span style="font-size:1.5rem">📋</span>
     <h2>Journal d'activité</h2>
     <span style="font-size:.82rem;color:#888;margin-left:8px">Dernières interventions — CSP Gros-Morne</span>
   </div>
+  <div id="journal-stats" class="journal-stats-bar"></div>
   <div id="pub-journal-list"><div class="journal-empty">Chargement…</div></div>
 </section>
 
@@ -2286,51 +2376,102 @@ var JOURNAL_DATA = [
   {id:141,num:"141",type:"SR", date:"07/06/2026",heure:"23:11",lieu:"Nationale 5, Fort-de-France",desc:"Accident de circulation VL seule"},
   {id:140,num:"140",type:"DIV",date:"07/06/2026",heure:"23:00",lieu:"La Trinit\u00e9 — Concess Peugeot",desc:"Menace ou chute d\u2019arbre sur voie publique"},
 ];
+</script>
+<script>
+(function(){
+  var M={
+    0:{m:"Bonne garde de weekend !",a:"Bon dimanche en service !",s:"Bonne soirée de garde !",n:"Bonne nuit de garde !"},
+    1:{m:"Bonne semaine à tous !",a:"Bon lundi après-midi !",s:"Bonne prise de service du soir !",n:"Bonne garde de nuit !"},
+    2:{m:"Bon mardi matin !",a:"Bon mardi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
+    3:{m:"Bon mercredi à l'équipe !",a:"Bon mercredi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
+    4:{m:"Bon jeudi matin !",a:"Bon jeudi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
+    5:{m:"Bon vendredi — dernier effort !",a:"Bon vendredi après-midi !",s:"Bon weekend à ceux qui rentrent !",n:"Bonne nuit — bienvenue au weekend !"},
+    6:{m:"Bon samedi en service !",a:"Bon samedi après-midi !",s:"Bonne soirée de garde !",n:"Bonne nuit de garde !"}
+  };
+  var days=["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
+  var months=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  var G={m:"Bonjour",a:"Bon après-midi",s:"Bonsoir",n:"Bonne nuit"};
+  var now=new Date(), hh=now.getHours();
+  var p=hh>=6&&hh<12?"m":hh>=12&&hh<18?"a":hh>=18&&hh<22?"s":"n";
+  var d=now.getDay();
+  var msg=(M[d]&&M[d][p])||"Bienvenue au SDIS 972 !";
+  var dateStr=days[d]+" "+now.getDate()+" "+months[now.getMonth()]+" "+now.getFullYear();
+  var el=document.getElementById("hmsg");
+  var el2=document.getElementById("hgreeting");
+  if(el)el.textContent=msg;
+  if(el2)el2.textContent=G[p]+" — "+dateStr;
+  if(typeof JOURNAL_DATA!=="undefined"&&JOURNAL_DATA.length){
+    var last=JOURNAL_DATA[0];
+    var jI={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
+    var jL={SAP:"Secours à personne",INC:"Incendie",SR:"Secours routier",DIV:"Divers",NAUT:"Nautique",HELI:"Hélitreuillage"};
+    var li=document.getElementById("hlast");
+    if(li){
+      li.innerHTML='<span class="home-last-ico">'+jI[last.type]+'</span>'
+        +'<div style="min-width:0"><div class="home-last-type">Dernière inter · N°'+last.num+'</div>'
+        +'<div class="home-last-lieu">'+last.lieu+'</div>'
+        +'<div class="home-last-meta">'+last.date+' · '+last.heure+' · '+jL[last.type]+'</div></div>';
+      li.classList.add("show");
+    }
+  }
+})();
+</script>
+<script>
 var jColors={SAP:"#C8161D",INC:"#EE8B1F",SR:"#0A3A66",DIV:"#2E7D46",NAUT:"#0e7ac4",HELI:"#6d28d9"};
-var jIcons ={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
+var jIcons={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
 var jLabels={SAP:"Secours à personne",INC:"Incendie",SR:"Secours routier",DIV:"Divers",NAUT:"Nautique",HELI:"Hélitreuillage"};
-
 function jnlGetDel(){try{return JSON.parse(localStorage.getItem('sdis_jnl_del')||'[]');}catch(e){return[];}}
-function jnlEntry(e,del){
-  var c=jColors[e.type]||'#555', ic=jIcons[e.type]||'📍', lbl=jLabels[e.type]||e.type;
-  var dels=del?'<button class="jl-del" onclick="jnlDel('+e.id+')" title="Masquer">✕</button>':'';
-  return '<div class="jl-entry" id="je-'+e.id+'">'
-    +'<div class="jl-icon" style="background:'+c+'">'+ic+'</div>'
-    +'<div class="jl-body">'
-    +'<div class="jl-top">'
-    +'<span class="jl-type" style="background:'+c+'">'+lbl+'</span>'
+function jCard(e,del){
+  var c=jColors[e.type]||'#555',ic=jIcons[e.type]||'📍',lb=jLabels[e.type]||e.type;
+  return '<div class="jl-card" id="je-'+e.id+'">'
+    +'<div class="jl-card-left" style="background:'+c+'"></div>'
+    +'<div class="jl-card-body">'
+    +'<div class="jl-card-top">'
     +'<span class="jl-num">N°'+e.num+'</span>'
-    +'<span class="jl-lieu">'+e.lieu+'</span>'
-    +'<span class="jl-statut">✅ Terminé</span>'
-    +dels+'</div>'
-    +'<div class="jl-meta"><span>📅 '+e.date+'</span><span>🕐 '+e.heure+'</span></div>'
-    +(e.desc?'<div class="jl-desc">'+e.desc+'</div>':'')
-    +'</div></div>';
+    +'<span class="jl-btype" style="background:'+c+'">'+ic+' '+lb+'</span>'
+    +'<span class="jl-bstatut">✅ Terminé</span>'
+    +(del?'<button class="jl-card-del" onclick="jnlDel('+e.id+')" title="Masquer">✕</button>':'')
+    +'</div>'
+    +'<div class="jl-card-lieu">'+e.lieu+'</div>'
+    +(e.desc?'<div class="jl-card-desc">'+e.desc+'</div>':'')
+    +'<div class="jl-card-foot">'
+    +'<span class="jl-card-meta">📅 '+e.date+'</span>'
+    +'<span class="jl-card-meta">🕐 '+e.heure+'</span>'
+    +'</div></div></div>';
+}
+function jStatBar(){
+  var del=jnlGetDel();
+  var vis=JOURNAL_DATA.filter(function(e){return del.indexOf(e.id)<0;});
+  var cnt={};vis.forEach(function(e){cnt[e.type]=(cnt[e.type]||0)+1;});
+  var h='<span class="jstat"><span class="jstat-dot" style="background:#072A4C"></span>'
+    +'<span class="jstat-lbl">Total</span><span class="jstat-num">'+vis.length+'</span></span>';
+  ['SAP','SR','INC','DIV','NAUT','HELI'].forEach(function(t){
+    if(cnt[t])h+='<span class="jstat"><span class="jstat-dot" style="background:'+jColors[t]+'"></span>'
+      +'<span class="jstat-lbl">'+t+'</span><span class="jstat-num">'+cnt[t]+'</span></span>';
+  });
+  return h;
 }
 function jnlRenderAll(){
   var del=jnlGetDel();
-  var visible=JOURNAL_DATA.filter(function(e){return del.indexOf(e.id)<0;});
+  var vis=JOURNAL_DATA.filter(function(e){return del.indexOf(e.id)<0;});
+  var empty='<div class="journal-empty">Aucune intervention enregistrée.</div>';
+  var sb=document.getElementById('journal-stats');if(sb)sb.innerHTML=jStatBar();
   var pub=document.getElementById('pub-journal-list');
-  if(pub) pub.innerHTML=visible.length?visible.map(function(e){return jnlEntry(e,false);}).join(''):'<div class="journal-empty">Aucune intervention enregistr\u00e9e.</div>';
+  if(pub)pub.innerHTML=vis.length?vis.map(function(e){return jCard(e,false);}).join(''):empty;
   var off=document.getElementById('off-journal-list');
-  var cnt=document.getElementById('jnl-count');
-  if(off) off.innerHTML=JOURNAL_DATA.map(function(e){
-    var hidden=del.indexOf(e.id)>=0?' jl-hidden':'';
-    return '<div class="jl-hidden-wrap'+hidden+'" id="jw-'+e.id+'">'+jnlEntry(e,true)+'</div>';
+  if(off)off.innerHTML=JOURNAL_DATA.map(function(e){
+    var op=del.indexOf(e.id)>=0?' style="opacity:.3;pointer-events:none"':'';
+    return '<div id="jw-'+e.id+'"'+op+'>'+jCard(e,true)+'</div>';
   }).join('');
-  if(cnt) cnt.textContent=visible.length+' / '+JOURNAL_DATA.length;
+  var cnt=document.getElementById('jnl-count');
+  if(cnt)cnt.textContent=vis.length+' / '+JOURNAL_DATA.length;
 }
 function jnlDel(id){
   var d=jnlGetDel();if(d.indexOf(id)<0)d.push(id);
   try{localStorage.setItem('sdis_jnl_del',JSON.stringify(d));}catch(e){}
-  var w=document.getElementById('jw-'+id);if(w)w.classList.add('jl-hidden');
-  var pub=document.getElementById('pub-journal-list');
-  if(pub){var el=document.getElementById('je-'+id);if(el)el.remove();}
-  var cnt=document.getElementById('jnl-count');
-  if(cnt){var vis=JOURNAL_DATA.length-d.length;cnt.textContent=vis+' / '+JOURNAL_DATA.length;}
+  jnlRenderAll();
 }
 function jnlReset(){
-  if(!confirm('R\u00e9afficher toutes les entr\u00e9es masqu\u00e9es ?'))return;
+  if(!confirm('Réafficher toutes les entrées masquées ?'))return;
   try{localStorage.removeItem('sdis_jnl_del');}catch(e){}
   jnlRenderAll();
 }
