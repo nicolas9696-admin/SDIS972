@@ -678,6 +678,59 @@ body.show-docs    .layout{animation:pgIn .28s ease}
 .ex-radio-msg{background:#0A3A66;color:#fff;border-radius:9px;padding:12px 14px;font-family:'Courier New',monospace;font-size:.82rem;line-height:1.5;margin-bottom:10px;white-space:pre-wrap}
 @media(max-width:640px){.ex-filters{padding:10px 5%;top:96px}.ex-mode-tabs{padding:10px 5% 0;top:52px}.ex-content{padding:14px 5% 50px}.ex-mode-tabs{padding:12px 5% 0}.ex-head{padding:18px 5% 14px}.ex-plan-grid{grid-template-columns:1fr}.ex-detail-panel{width:100vw}.ex-detail-body{padding:14px}}
 
+
+/* ══ Page Fiches ══ */
+body.show-fiches .fiches-page{display:block}
+.fiches-page{display:none;margin-top:58px;min-height:calc(100vh - 58px);background:#F6F1E7;animation:pgIn .28s ease}
+.fiches-head{background:linear-gradient(135deg,#072A4C,#0A3A66);padding:22px 7% 18px;border-bottom:3px solid #C8161D}
+.fiches-head h2{font-family:'Oswald',sans-serif;font-size:1.3rem;color:#fff;margin:0 0 3px;letter-spacing:.05em;text-transform:uppercase}
+.fiches-head p{font-size:.82rem;color:rgba(255,255,255,.5);margin:0}
+/* Tabs section */
+.fiches-tabs{display:flex;background:#fff;border-bottom:2px solid #E2D9C6;overflow-x:auto;position:sticky;top:58px;z-index:52;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.fiches-tab{padding:11px 20px;border:none;background:none;cursor:pointer;font-family:'Oswald',sans-serif;font-size:.84rem;letter-spacing:.06em;text-transform:uppercase;color:#888;border-bottom:3px solid transparent;margin-bottom:-2px;transition:.15s;white-space:nowrap}
+.fiches-tab:hover{color:#072A4C}
+.fiches-tab.active{color:#072A4C;border-bottom-color:#C8161D}
+.fiches-content{padding:24px 7% 60px;max-width:1300px}
+/* Grille fiches */
+.fiches-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+/* Fiche card */
+.fiche-card{background:#fff;border:1px solid #E2D9C6;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.07)}
+.fiche-header{padding:16px 20px 12px;display:flex;align-items:center;gap:12px}
+.fiche-ico{font-size:2rem;width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:0 0 52px}
+.fiche-title{font-family:'Oswald',sans-serif;font-size:1.15rem;letter-spacing:.05em;text-transform:uppercase;color:#fff;font-weight:700}
+.fiche-sub{font-size:.74rem;color:rgba(255,255,255,.7);margin-top:2px}
+.fiche-body{padding:0 0 16px}
+/* Étapes */
+.fiche-step{display:flex;align-items:flex-start;gap:12px;padding:10px 20px;border-top:1px solid #F6F1E7;transition:.12s}
+.fiche-step:hover{background:#fafaf8}
+.fiche-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:700;color:#fff;flex:0 0 28px;margin-top:1px}
+.fiche-step-txt{flex:1}
+.fiche-step-label{font-weight:700;color:#072A4C;font-size:.95rem;margin-bottom:2px}
+.fiche-step-detail{font-size:.8rem;color:#666;line-height:1.45}
+.fiche-step-detail em{color:#C8161D;font-style:normal;font-weight:600}
+/* Alerte urgence */
+.fiche-alert{margin:10px 20px;padding:8px 12px;border-radius:8px;font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:8px}
+/* ═══ Codes radio ═══ */
+.radio-section{margin-bottom:28px}
+.radio-section h3{font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.07em;text-transform:uppercase;color:#072A4C;margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.radio-section h3::after{content:"";flex:1;height:2px;background:#E2D9C6}
+.statuts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.statut-card{background:#fff;border:1px solid #E2D9C6;border-radius:10px;overflow:hidden;display:flex;align-items:stretch}
+.statut-num{width:52px;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;flex:0 0 52px}
+.statut-info{padding:10px 12px;flex:1}
+.statut-name{font-weight:700;color:#072A4C;font-size:.9rem}
+.statut-desc{font-size:.78rem;color:#666;margin-top:2px}
+.code10-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #E2D9C6}
+.code10-table th{background:#072A4C;color:#fff;padding:9px 14px;font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:.06em;text-align:left}
+.code10-table td{padding:8px 14px;border-top:1px solid #E2D9C6;font-size:.86rem}
+.code10-table tr:hover td{background:#fafaf8}
+.code10-table td:first-child{font-family:'Oswald',sans-serif;font-weight:700;color:#C8161D;white-space:nowrap}
+.phraseo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.phraseo-card{background:#fff;border:1px solid #E2D9C6;border-radius:10px;padding:12px 15px}
+.phraseo-ctx{font-size:.72rem;font-family:'Oswald',sans-serif;letter-spacing:.07em;text-transform:uppercase;color:#888;margin-bottom:6px}
+.phraseo-msg{font-family:'Courier New',monospace;font-size:.82rem;background:#F6F1E7;border-radius:6px;padding:8px 10px;line-height:1.5;color:#1B1B1B}
+@media(max-width:640px){.fiches-grid{grid-template-columns:1fr}.fiches-content{padding:16px 5% 50px}.fiches-tabs{top:52px}.phraseo-grid{grid-template-columns:1fr}.statuts-grid{grid-template-columns:1fr 1fr}}
+
 </style></head><body class="show-home">
 <nav id="topnav">
   <button id="tnav-logo" onclick="showPage('home')">
@@ -687,6 +740,7 @@ body.show-docs    .layout{animation:pgIn .28s ease}
   <button class="tnav-btn active" id="tnav-home"    onclick="showPage('home')">🏠<span class="tnav-label"> Accueil</span></button>
   <button class="tnav-btn"        id="tnav-docs"    onclick="showPage('docs')">📚<span class="tnav-label"> Docs</span></button>
   <button class="tnav-btn"        id="tnav-journal" onclick="showPage('journal')">📋<span class="tnav-label"> Journal</span></button>
+  <button class="tnav-btn" id="tnav-fiches" onclick="showPage('fiches')">⚡<span class="tnav-label"> Fiches</span></button>
   <button id="tnav-off" onclick="showOffOvl()">🔐<span class="tnav-off-text"> Officier</span></button>
   <button id="tnav-ham" onclick="toggleSidebar()" aria-label="Menu">☰</button>
 </nav>
@@ -694,6 +748,7 @@ body.show-docs    .layout{animation:pgIn .28s ease}
   <button class="tnav-menu-btn active" id="tmenu-home"    onclick="showPage('home');closeMenu()">🏠 Accueil</button>
   <button class="tnav-menu-btn"        id="tmenu-docs"    onclick="showPage('docs');closeMenu()">📚 Documentation</button>
   <button class="tnav-menu-btn"        id="tmenu-journal" onclick="showPage('journal');closeMenu()">📋 Journal d'activité</button>
+  <button class="tnav-menu-btn" id="tmenu-fiches" onclick="showPage('fiches');closeMenu()">⚡ Fiches rapides &amp; Codes radio</button>
   <div class="tnav-menu-divider"></div>
   <button class="tnav-menu-btn"        onclick="showOffOvl();closeMenu()">🔐 Espace Officier</button>
 </div>
@@ -2767,7 +2822,7 @@ jnlRenderAll();
   function showPage(name){
     document.body.className=document.body.className
       .replace(/\bshow-\w+/g,'').trim()+' show-'+(name||'home');
-    ['home','docs','journal'].forEach(function(p){
+    ['home','docs','journal','fiches'].forEach(function(p){
       var b=document.getElementById('tnav-'+p);
       if(b)b.classList.toggle('active',p===name);
     });
@@ -2824,3 +2879,389 @@ jnlRenderAll();
   });
 })();
 </script>
+<div class="fiches-page" id="fiches-page">
+<div class="fiches-head"><h2>Fiches &amp; Codes radio</h2><p>Consultation rapide pendant une intervention</p></div>
+<div class="fiches-tabs">
+  <button class="fiches-tab active" id="ft-fiches"  onclick="fichesTab('fiches',this)">⚡ Fiches rapides</button>
+  <button class="fiches-tab"        id="ft-radio"   onclick="fichesTab('radio',this)">📻 Codes radio</button>
+  <button class="fiches-tab"        id="ft-phraseo" onclick="fichesTab('phraseo',this)">🎙️ Phraséologie</button>
+</div>
+
+<!-- FICHES RAPIDES -->
+<div class="fiches-content" id="fc-fiches">
+<div class="fiches-grid">
+
+<!-- SAP -->
+<div class="fiche-card">
+  <div class="fiche-header" style="background:linear-gradient(135deg,#C8161D,#9E1015)">
+    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🚑</div>
+    <div><div class="fiche-title">SAP</div><div class="fiche-sub">Secours à personne</div></div>
+  </div>
+  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
+    ⚠️ Gants médicaux AVANT tout contact victime
+  </div>
+  <div class="fiche-body">
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#C8161D">1</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Zone sécurisée</div>
+        <div class="fiche-step-detail">Chef d'agrès confirme la sécurité — gants obligatoires</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#C8161D">2</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Bilan PQRST</div>
+        <div class="fiche-step-detail"><em>Chef :</em> Pourquoi / Sévérité / Temps — <em>Équipier :</em> Quoi / Région (examen)</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#C8161D">3</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Bilan circulatoire</div>
+        <div class="fiche-step-detail">Tensiomètre (PA) + LifePak (pouls) — plusieurs mesures</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#C8161D">4</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Constantes Guardian</div>
+        <div class="fiche-step-detail"><em>Noter :</em> BPM · mmHg · SpO₂ · RESP — normales : FC 60-100, SpO₂ 94-100%, FR 12-20</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#C8161D">5</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Traitement blessures</div>
+        <div class="fiche-step-detail">Gauze → coupure/éraflure · CHU → hémorragie · Chito → projectile · BrulStop → brûlure</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#C8161D">6</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">MHTA (transport)</div>
+        <div class="fiche-step-detail">Maladie · Hospitalisation récente · Traitements · Allergies</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#C8161D">7</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Conditionnement &amp; transport</div>
+        <div class="fiche-step-detail"><em>MID</em> si traumatisme · <em>Plan dur</em> si suspicion fracture · transfert normal sinon</div>
+      </div>
+    </div>
+  </div>
+  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
+    🚨 Inconscient sans ventilation → RCP 30 compressions + 2 insufflations (22s / 120bpm)
+  </div>
+  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
+    ⚡ Fibrillation → LifePak : 170J → 180J → 190J → 200J
+  </div>
+</div>
+
+<!-- INC -->
+<div class="fiche-card">
+  <div class="fiche-header" style="background:linear-gradient(135deg,#EE8B1F,#c97010)">
+    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🔥</div>
+    <div><div class="fiche-title">INC</div><div class="fiche-sub">Incendie</div></div>
+  </div>
+  <div class="fiche-alert" style="background:#fff7ed;color:#92400e;border:1px solid #fcd34d">
+    ⚠️ ARI obligatoire dès que vous attaquez les flammes
+  </div>
+  <div class="fiche-body">
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#EE8B1F">1</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Protection individuelle</div>
+        <div class="fiche-step-detail">Tenue INC + ARI (18 min, sortir à <em>25 bar</em>) + BSD activé</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#EE8B1F">2</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Reconnaissance</div>
+        <div class="fiche-step-detail">Type de feu · propagation · victimes · risques particuliers</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#EE8B1F">3</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Alimentation en eau</div>
+        <div class="fiche-step-detail"><em>BI rouge</em> = réseau ville · <em>jaune</em> = haute pression · <em>bleue</em> = aspiration<br>FPTSR 3000L (12 min/LDV) · CCF 6000L (24 min/LDV)</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#EE8B1F">4</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Déploiement lances</div>
+        <div class="fiche-step-detail"><em>LDV 500</em> : 250 L/min sur tuyau 45mm · <em>LTD</em> : 150 L/min (dévidoir)<br>Pression pompe : 3 bar (+1 bar/action, max 9 bar)</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#EE8B1F">5</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Attaque du feu</div>
+        <div class="fiche-step-detail">ARI enclenché · BSD actif · surveiller pression ARI toutes les 5 min</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#EE8B1F">6</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Recharge ARI &amp; CR</div>
+        <div class="fiche-step-detail">Recharger ARI sur FPTSR/CCF après inter · CR CODIS : résultat + levée de garde</div>
+      </div>
+    </div>
+  </div>
+  <div class="fiche-alert" style="background:#fff7ed;color:#92400e;border:1px solid #fcd34d">
+    🔴 BSD : alarme si immobile 25s — bouger pour l'arrêter. 3ème alarme = désactiver manuellement
+  </div>
+</div>
+
+<!-- SR -->
+<div class="fiche-card">
+  <div class="fiche-header" style="background:linear-gradient(135deg,#0A3A66,#072A4C)">
+    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🛣️</div>
+    <div><div class="fiche-title">SR</div><div class="fiche-sub">Secours routier</div></div>
+  </div>
+  <div class="fiche-alert" style="background:#f0f7ff;color:#1e3a5f;border:1px solid #93c5fd">
+    ⚠️ GHV obligatoire avant de quitter le véhicule
+  </div>
+  <div class="fiche-body">
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#0A3A66">1</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Placement véhicule</div>
+        <div class="fiche-step-detail">FPTSR/VIDP en <em>amont</em> de l'accident (tampon) — VSAV en aval</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#0A3A66">2</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Balisage — ACTION PRIORITAIRE</div>
+        <div class="fiche-step-detail">Panneau accident 50-100m en amont · cônes Lübeck de l'amont vers l'aval · aviser DIR si autoroute</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#0A3A66">3</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Reconnaissance</div>
+        <div class="fiche-step-detail">Nb véhicules · nb victimes · incarcération · risque incendie</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#0A3A66">4</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Protection incendie</div>
+        <div class="fiche-step-detail">Couper contact · batterie · frein à main · extincteur/lance prêt</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#0A3A66">5</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Abordage &amp; désincarcération</div>
+        <div class="fiche-step-detail">Stabiliser le véhicule · Halligan tool pour ouvrir portes · soutien VSAV si présent</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#0A3A66">6</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Conditionnement &amp; départ</div>
+        <div class="fiche-step-detail">Accompagner extraction avec le VSAV · nettoyage chaussée · lever balisage · <em>dernier à partir</em></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIV -->
+<div class="fiche-card">
+  <div class="fiche-header" style="background:linear-gradient(135deg,#2E7D46,#1d5c32)">
+    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🔧</div>
+    <div><div class="fiche-title">DIV</div><div class="fiche-sub">Intervention diverse</div></div>
+  </div>
+  <div class="fiche-body">
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#2E7D46">1</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Reconnaissance</div>
+        <div class="fiche-step-detail">Nature exacte · victimes potentielles · risques liés (gaz, chute, eau…)</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#2E7D46">2</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Sécurisation zone</div>
+        <div class="fiche-step-detail">Périmètre de sécurité · aviser partenaires (GN, DIR, gaz…)</div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#2E7D46">3</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">Action adaptée</div>
+        <div class="fiche-step-detail">
+          <em>Arbre :</em> tronçonneuse + balisage VP<br>
+          <em>Fuite gaz :</em> évacuation + couper arrivée<br>
+          <em>Inondation :</em> pompe + mise en sécurité<br>
+          <em>Noyade :</em> sauvetage nautique si dispo
+        </div>
+      </div>
+    </div>
+    <div class="fiche-step">
+      <div class="fiche-num" style="background:#2E7D46">4</div>
+      <div class="fiche-step-txt">
+        <div class="fiche-step-label">CR CODIS &amp; fin d'inter</div>
+        <div class="fiche-step-detail">Résultat · partenaires engagés · statut 1 dès retour caserne</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /fiches-grid -->
+</div><!-- /fc-fiches -->
+
+<!-- CODES RADIO -->
+<div class="fiches-content" id="fc-radio" style="display:none">
+
+<div class="radio-section">
+  <h3>📶 Statuts véhicule (1 → 7)</h3>
+  <div class="statuts-grid">
+    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">1</div><div class="statut-info"><div class="statut-name">Disponible en caserne</div><div class="statut-desc">Engin prêt à partir</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">2</div><div class="statut-info"><div class="statut-name">Disponible hors caserne</div><div class="statut-desc">Sur le terrain, sans mission</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#EE8B1F">3</div><div class="statut-info"><div class="statut-name">En route</div><div class="statut-desc">En déplacement vers l'inter</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#C8161D">4</div><div class="statut-info"><div class="statut-name">Sur les lieux</div><div class="statut-desc">Arrivé sur intervention</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#0A3A66">5</div><div class="statut-info"><div class="statut-name">Transport CH</div><div class="statut-desc">En route vers l'hôpital (VSAV)</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#0A3A66">6</div><div class="statut-info"><div class="statut-name">Arrivée CH</div><div class="statut-desc">Au centre hospitalier</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#555">7</div><div class="statut-info"><div class="statut-name">Indisponible</div><div class="statut-desc">En panne / hors service</div></div></div>
+  </div>
+</div>
+
+<div class="radio-section">
+  <h3>📡 Codes 10</h3>
+  <table class="code10-table">
+    <thead><tr><th>Code</th><th>Signification</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>10-1</td><td>Réception mauvaise</td><td>Signal radio faible</td></tr>
+      <tr><td>10-2</td><td>Réception bonne</td><td>Confirmation signal OK</td></tr>
+      <tr><td>10-3</td><td>Arrêt de transmission</td><td>Fin de communication</td></tr>
+      <tr><td>10-4</td><td>Message bien reçu</td><td>Accusé de réception standard</td></tr>
+      <tr><td>10-7</td><td>Accident de personne</td><td>SAP en cours</td></tr>
+      <tr><td>10-9</td><td>Accident de circulation</td><td>Intervention SR</td></tr>
+      <tr><td>10-10</td><td>Mission terminée</td><td>Fin d'intervention</td></tr>
+      <tr><td>10-12</td><td>Visiteur / observateur</td><td>Présence d'un supérieur</td></tr>
+      <tr><td>10-16</td><td>Demande de renfort</td><td>Ressources insuffisantes</td></tr>
+      <tr><td>10-22</td><td>Danger / urgence</td><td>Situation critique</td></tr>
+      <tr><td>10-26</td><td>Détenu / suspect</td><td>Info GN / Police</td></tr>
+      <tr><td>10-99</td><td>Urgence absolue</td><td>Vie en danger immédiat</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="radio-section">
+  <h3>🏥 Abréviations CODIS</h3>
+  <table class="code10-table">
+    <thead><tr><th>Abréviation</th><th>Signification</th></tr></thead>
+    <tbody>
+      <tr><td>VSAV</td><td>Véhicule de Secours et d'Assistance aux Victimes</td></tr>
+      <tr><td>FPTSR</td><td>Fourgon Pompe Tonne Secours Routier</td></tr>
+      <tr><td>VIDP</td><td>Véhicule d'Intervention Diverse Polyvalent</td></tr>
+      <tr><td>CCF</td><td>Camion-Citerne Feux de forêt</td></tr>
+      <tr><td>VLM</td><td>Véhicule Léger Médicalisé (SSSM)</td></tr>
+      <tr><td>AR</td><td>Ambulance de Réanimation</td></tr>
+      <tr><td>CH / CHU</td><td>Centre Hospitalier (Universitaire)</td></tr>
+      <tr><td>UA</td><td>Urgence Absolue — pronostic vital engagé</td></tr>
+      <tr><td>UR</td><td>Urgence Relative — état stable</td></tr>
+      <tr><td>EU</td><td>État d'Urgence — décédé</td></tr>
+      <tr><td>3SM / SSSM</td><td>Service de Santé et de Secours Médical</td></tr>
+      <tr><td>MGO</td><td>Marche Générale des Opérations</td></tr>
+      <tr><td>COS</td><td>Commandant des Opérations de Secours</td></tr>
+      <tr><td>DIR</td><td>Direction Interdépartementale des Routes</td></tr>
+      <tr><td>ARI</td><td>Appareil Respiratoire Isolant</td></tr>
+      <tr><td>BSD</td><td>Détecteur d'immobilisation (Badass Sensor Device)</td></tr>
+      <tr><td>BI</td><td>Bouche / Borne d'Incendie</td></tr>
+      <tr><td>LDV</td><td>Lance Débit Variable (250 L/min)</td></tr>
+      <tr><td>RCP</td><td>Réanimation Cardio-Pulmonaire</td></tr>
+      <tr><td>PA</td><td>Pression Artérielle</td></tr>
+      <tr><td>SpO₂</td><td>Saturation en oxygène (94-100% normal)</td></tr>
+    </tbody>
+  </table>
+</div>
+</div><!-- /fc-radio -->
+
+<!-- PHRASÉOLOGIE -->
+<div class="fiches-content" id="fc-phraseo" style="display:none">
+<div class="radio-section">
+  <h3>🎙️ Messages types CODIS</h3>
+  <div class="phraseo-grid">
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Départ vers intervention</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], statut 3 pour [NATURE] à [LIEU].</div>
+    </div>
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Arrivée sur intervention</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], statut 4. [DESCRIPTION RAPIDE].</div>
+    </div>
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Demande de renfort</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], 10-16. Demande [MOYEN] pour [NATURE] à [LIEU].</div>
+    </div>
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Transport CH (VSAV)</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], statut 5, transport [UA/UR] vers [CH]. Heure de départ : [HH:MM].</div>
+    </div>
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Arrivée CH</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], statut 6 au [CH]. Victime prise en charge.</div>
+    </div>
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Fin d'intervention</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], 10-10. [RÉSULTAT]. Retour caserne, statut 1 à [HH:MM].</div>
+    </div>
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Urgence absolue</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], 10-99 ! [NATURE]. Besoin immédiat de [MOYEN/SSSM].</div>
+    </div>
+
+    <div class="phraseo-card">
+      <div class="phraseo-ctx">Compte-rendu de situation</div>
+      <div class="phraseo-msg">CODIS de [INDICATIF], CR de situation : [NATURE], [NB] victime(s) [UA/UR], situation [MAÎTRISÉE/EN COURS].</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="radio-section">
+  <h3>📋 Indicatifs radio SP 972</h3>
+  <table class="code10-table">
+    <thead><tr><th>Indicatif</th><th>Véhicule</th></tr></thead>
+    <tbody>
+      <tr><td>VSAV 01</td><td>VSAV principal CSP Gros-Morne</td></tr>
+      <tr><td>FPTSR 01</td><td>Fourgon Pompe Tonne SR — CSP Gros-Morne</td></tr>
+      <tr><td>VIDP 01</td><td>Véhicule Intervention Diverse Polyvalent</td></tr>
+      <tr><td>CCF 6000</td><td>Camion-Citerne Feux de Forêt</td></tr>
+      <tr><td>VLM</td><td>Véhicule Léger SSSM</td></tr>
+      <tr><td>DRAGON 972</td><td>Hélicoptère EC145 SDIS 972</td></tr>
+    </tbody>
+  </table>
+</div>
+</div><!-- /fc-phraseo -->
+
+</div><!-- /fiches-page -->
+
+<script>
+function fichesTab(tab,btn){
+  ['fiches','radio','phraseo'].forEach(function(t){
+    var b=document.getElementById('ft-'+t);
+    var c=document.getElementById('fc-'+t);
+    if(b)b.classList.toggle('active',t===tab);
+    if(c)c.style.display=(t===tab)?'block':'none';
+  });
+}
+</script>
+</body>
+</html>
