@@ -2714,6 +2714,7 @@ search&&search.addEventListener('input',function(){
     <button class="off-tab active" onclick="switchTab('db',this)">🏠 Tableau de bord</button>
     <button class="off-tab" onclick="switchTab('pers',this)">👥 Personnel</button>
     <button class="off-tab" onclick="switchTab('arc',this)">📁 Archives</button>
+    <button class="off-tab" onclick="switchTab('token',this)">🔑 Token</button>
     <button class="off-tab" onclick="switchTab('ann',this)">📢 Annonces</button>
     <button class="off-tab" onclick="switchTab('agenda',this)">📅 Agenda</button>
     <button class="off-tab" onclick="switchTab('promos',this)">🏆 Promotions</button>
@@ -2729,11 +2730,34 @@ search&&search.addEventListener('input',function(){
   <div class="db-card" style="border-top:4px solid #C8161D"><div class="db-num">25</div><div class="db-lbl">Anciens effectifs</div><div style="font-size:.76rem;color:#888;margin-top:4px">🚪 18 · 🚫 7</div></div>
 </div>
 <h3 class="ogrp-title" style="margin-top:24px">📋 Personnel actif</h3>
-<div class="table-wrap"><table class="arc-table"><thead><tr><th>Nom</th><th>Grade</th><th>Statut</th><th>Entrée</th><th>Rôle CTA/CODIS</th></tr></thead><tbody><tr><td><strong style="color:#0A3A66">Julien DELAVEGAS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Lieutenant</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">07/06/2025</td><td style="font-size:.78rem">Responsable CTA/CODIS</td></tr><tr><td><strong style="color:#b9711a">Sami BERTIN</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Lieutenant</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">23/05/2025</td><td style="font-size:.78rem">Opérateur CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Pierre BROUSSARD</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Adjudant</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">18/07/2025</td><td style="font-size:.78rem">Régulateur SAMU</td></tr><tr><td><strong style="color:#0A3A66">Mickael DOS SANTOS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Sergent-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">19/10/2025</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Robert NEVILLE</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">15/02/2026</td><td style="font-size:.78rem">Opérateur CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Nicolas BERING</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">22/02/2026</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Raphael CARPENTIER</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">26/12/2025</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#0A3A66">Clément DESAULNIERS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">15/03/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#0A3A66">Dustin VAKARIAN</strong><span class="ob oc-form" style="font-size:.7rem;margin-left:6px">⏳ Formation</span></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Sapeur 1C</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">17/05/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#b9711a">Antoni WOJDA</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">27/01/2026</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#b9711a">David LOPEZ</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">08/01/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#b9711a">Franck RAMOS</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">22/02/2026</td><td style="font-size:.78rem">—</td></tr></tbody></table></div></div>
+<div class="table-wrap"><table class="arc-table"><thead><tr><th>Nom</th><th>Grade</th><th>Statut</th><th>Entrée</th><th>Rôle CTA/CODIS</th></tr></thead><tbody><tr><td><strong style="color:#0A3A66">Julien DELAVEGAS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Lieutenant</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">07/06/2025</td><td style="font-size:.78rem">Responsable CTA/CODIS</td></tr><tr><td><strong style="color:#b9711a">Sami BERTIN</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Lieutenant</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">23/05/2025</td><td style="font-size:.78rem">Opérateur CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Pierre BROUSSARD</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Adjudant</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">18/07/2025</td><td style="font-size:.78rem">Régulateur SAMU</td></tr><tr><td><strong style="color:#0A3A66">Mickael DOS SANTOS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Sergent-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">19/10/2025</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Robert NEVILLE</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">15/02/2026</td><td style="font-size:.78rem">Opérateur CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Nicolas BERING</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">22/02/2026</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Raphael CARPENTIER</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">26/12/2025</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#0A3A66">Clément DESAULNIERS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">15/03/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#0A3A66">Dustin VAKARIAN</strong><span class="ob oc-form" style="font-size:.7rem;margin-left:6px">⏳ Formation</span></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Sapeur 1C</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">17/05/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#b9711a">Antoni WOJDA</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">27/01/2026</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#b9711a">David LOPEZ</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">08/01/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#b9711a">Franck RAMOS</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">22/02/2026</td><td style="font-size:.78rem">—</td></tr></tbody></table></div>
   <div id="ot-pers" class="off-tab-content"><h3 class="ogrp-title">🎖️ Commandement <span class="ogrp-count">2</span></h3><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Julien DELAVEGAS</div><div class="ocard-grade">Lieutenant · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>07/06/2025</strong></div><div>📈 Évol. : <strong>02/02/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">RECRUTEUR</span><span class="ob oc-rh">FORMATEUR SAP</span><span class="ob oc-rh">FORMATEUR DIV/SR</span><span class="ob oc-rh">FORMATEUR INC</span><span class="ob oc-rh">FORMATEUR COD3</span><span class="ob oc-rh">FORMATEUR COS</span></div></div><div class="orow"><span class="olab">Commandement</span><div><span class="ob oc-cmd">COS</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Responsable CTA/CODIS</span><span class="ob oc-cod">Opérateur CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">Sami BERTIN</div><div class="ocard-grade">Lieutenant · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>23/05/2025</strong></div><div>📈 Évol. : <strong>18/01/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">RECRUTEUR</span><span class="ob oc-rh">FORMATEUR SAP</span><span class="ob oc-rh">FORMATEUR DIV/SR</span><span class="ob oc-rh">FORMATEUR INC</span></div></div><div class="orow"><span class="olab">Commandement</span><div><span class="ob oc-cmd">COS</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Opérateur CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><h3 class="ogrp-title">🏅 Sous-officiers <span class="ogrp-count">2</span></h3><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Pierre BROUSSARD</div><div class="ocard-grade">Adjudant · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>18/07/2025</strong></div><div>📈 Évol. : <strong>20/12/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">FORMATEUR SSSM</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">SSSM</span><div><span class="ob oc-med">MÉDECIN SP</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Régulateur SAMU</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Mickael DOS SANTOS</div><div class="ocard-grade">Sergent-Chef · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>19/10/2025</strong></div><div>📈 Évol. : <strong>17/01/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">FORMATEUR SAP</span><span class="ob oc-rh">FORMATEUR DIV/SR</span><span class="ob oc-rh">FORMATEUR INC</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">CU DÉMINEUR</span><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Assistant CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span></div></div></div><h3 class="ogrp-title">👨‍🚒 Hommes du rang <span class="ogrp-count">8</span></h3><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Robert NEVILLE</div><div class="ocard-grade">Caporal-Chef · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>15/02/2026</strong></div><div>📈 Évol. : <strong>18/02/2026</strong></div></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">CU SAL / SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Opérateur CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Nicolas BERING</div><div class="ocard-grade">Caporal-Chef · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>22/02/2026</strong></div><div>📈 Évol. : <strong>28/02/2026</strong></div></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">CU DRAGON</span><span class="ob oc-spe">EPIM-F</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Assistant CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Raphael CARPENTIER</div><div class="ocard-grade">Caporal · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>26/12/2025</strong></div><div>📈 Évol. : <strong>18/01/2026</strong></div></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Clément DESAULNIERS</div><div class="ocard-grade">Caporal · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>15/03/2026</strong></div><div>📈 Évol. : <strong>—</strong></div></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Dustin VAKARIAN</div><div class="ocard-grade">Sapeur 1C · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>17/05/2026</strong></div><div>📈 Évol. : <strong>—</strong></div></div></div><div class="orow"><span class="ob oc-form">⏳ EN FORMATION</span></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">Antoni WOJDA</div><div class="ocard-grade">Caporal-Chef · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>27/01/2026</strong></div><div>📈 Évol. : <strong>22/02/2026</strong></div></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAV</span><span class="ob oc-spe">EPIM-F</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Assistant CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">David LOPEZ</div><div class="ocard-grade">Caporal · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>08/01/2026</strong></div><div>📈 Évol. : <strong>15/01/2026</strong></div></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span></div></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">Franck RAMOS</div><div class="ocard-grade">Caporal · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>22/02/2026</strong></div><div>📈 Évol. : <strong>01/03/2026</strong></div></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAL</span><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard ocard-vide" style="border-left:4px solid #ccc;background:#f8f8f8"><div class="ocard-head"><div class="ocard-name" style="color:#aaa">Recrutement à venir</div></div></div><div class="ocard ocard-vide" style="border-left:4px solid #ccc;background:#f8f8f8"><div class="ocard-head"><div class="ocard-name" style="color:#aaa">Recrutement à venir</div></div></div></div>
   <div id="ot-arc"  class="off-tab-content"><div class="table-wrap"><table class="arc-table"><thead><tr><th>Nom</th><th>Statut</th><th>Nature</th><th>Motif</th><th>Sortie</th></tr></thead><tbody><tr class="arc-dem"><td><strong>John STUART</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Pas de motif donné</td><td style="white-space:nowrap">09/01/2026</td></tr><tr class="arc-dem"><td><strong>Jason SMITH</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">Problème garde 09/01/26</td><td style="white-space:nowrap">10/01/2026</td></tr><tr class="arc-dem"><td><strong>Lucas SPECTRE</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème privé / temps / grade 1ère classe</td><td style="white-space:nowrap">24/01/2026</td></tr><tr class="arc-dem"><td><strong>Raby RODRIGUEZ</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème de temps / grade 2ème classe</td><td style="white-space:nowrap">18/01/2026</td></tr><tr class="arc-lic"><td><strong>Léandro DUPONT</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚫 Licenciement pour faute</td><td class="arc-motif">Blâmes / insultes / non-respect du règlement / 1er classe</td><td style="white-space:nowrap">20/01/2026</td></tr><tr class="arc-lic"><td><strong>Mickael KEAL</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité de longue durée / 2ème classe</td><td style="white-space:nowrap">31/01/2026</td></tr><tr class="arc-dem"><td><strong>Vadim KOROV</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">N&#x27;a pas souhaité poursuivre / 1ère classe / engagé 26/01/26</td><td style="white-space:nowrap">15/02/2026</td></tr><tr class="arc-dem"><td><strong>Noah BRESTO</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / manque de temps / caporal / engagé 19/10/25</td><td style="white-space:nowrap">04/03/2026</td></tr><tr class="arc-dem"><td><strong>Lyam BELLAY</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / changement jeu / 1er classe / engagé 12/01/26</td><td style="white-space:nowrap">03/03/2026</td></tr><tr class="arc-lic"><td><strong>Rémi BERGER</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité longue durée / caporal / engagé 24/10/25</td><td style="white-space:nowrap">16/03/2026</td></tr><tr class="arc-lic"><td><strong>Yoan PARKER</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité longue / adjudant / médecin / engagé 25/03/25</td><td style="white-space:nowrap">15/03/2026</td></tr><tr class="arc-dem"><td><strong>Brice COUSIN</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">A souhaité démissionner / sergent / engagé 17/09/25</td><td style="white-space:nowrap">17/03/2026</td></tr><tr class="arc-dem"><td><strong>Robin COUSIN</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème IG / Lieutenant / engagé 28/06/25</td><td style="white-space:nowrap">16/03/2026</td></tr><tr class="arc-dem"><td><strong>Nael BELLERINAUD</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Changement vie pro / caporal / engagé 13/01/26</td><td style="white-space:nowrap">24/03/2026</td></tr><tr class="arc-dem"><td><strong>Dylan WHITER</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Pas de temps / 1ère classe EQ GRES, DÉMINEUR</td><td style="white-space:nowrap">06/04/2026</td></tr><tr class="arc-lic"><td><strong>Pauline DUMONT</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Problème privé/santé / 2nd classe (SAP) / engagé 15/02/26</td><td style="white-space:nowrap">14/04/2026</td></tr><tr class="arc-dem"><td><strong>Tom BANKS</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">Manque de temps / 1er classe / engagé 21/01/26</td><td style="white-space:nowrap">14/04/2026</td></tr><tr class="arc-dem"><td><strong>Jonathan PREVOT</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / médecin chef / commandant / engagé 23/05/25</td><td style="white-space:nowrap">18/04/2026</td></tr><tr class="arc-dem"><td><strong>Marco DOS SANTOS</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / CCH / spec démineur / engagé 26/01/26</td><td style="white-space:nowrap">05/05/2026</td></tr><tr class="arc-dem"><td><strong>Kelly GUZMANN</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / ISP SSSM / Formatrice / EPIM / engagée 23/11/25</td><td style="white-space:nowrap">18/05/2026</td></tr><tr class="arc-dem"><td><strong>Nael BELLERINAUD</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture 2ème contrat 28/03/2026</td><td style="white-space:nowrap">18/05/2026</td></tr><tr class="arc-dem"><td><strong>Thonny ZANOTTI</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / formateur INC / CCH / engagé 20/01/26</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-lic"><td><strong>Hantz WARTHZ</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">CAP SPV / engagé 19/10/2025</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-lic"><td><strong>Raven STORM</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">1C SPV / engagé 25/11/25</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-dem"><td><strong>Axel SLIMANI</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">2C SPV / engagé 10/03/26</td><td style="white-space:nowrap">19/05/2026</td></tr></tbody></table></div>
+<div id="ot-token" class="off-tab-content">
+  <h3 class="ogrp-title">🔑 Token GitHub — Accès partagé</h3>
+  <div style="background:#fff;border:1px solid #E2D9C6;border-radius:12px;padding:16px 18px">
+    <div id="gh-token-status" style="margin-bottom:12px;font-size:.92rem;font-weight:600">🔴 Non configuré</div>
+    <div style="font-size:.82rem;color:#666;margin-bottom:14px;line-height:1.6">
+      Ce token permet de publier les annonces, événements et promotions sur GitHub pour que <strong>tout le monde les voie</strong>.<br><br>
+      <strong>Créer le token :</strong><br>
+      1. Aller sur <a href="https://github.com/settings/tokens?type=beta" target="_blank" style="color:#0A3A66;font-weight:600">github.com/settings/tokens</a><br>
+      2. New fine-grained token → Repository <strong>SDIS972</strong><br>
+      3. Permissions → Contents → <strong>Read and Write</strong><br>
+      4. Copier le token généré ci-dessous
+    </div>
+    <div style="margin-bottom:10px">
+      <label style="font-size:.72rem;font-family:'Oswald',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#777;display:block;margin-bottom:4px">Token (github_pat_...)</label>
+      <input id="gh-token-inp" type="password" placeholder="github_pat_XXXXXXXXXXXX" class="ann-inp">
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button onclick="ghTokenSave()" style="flex:1;padding:11px;background:linear-gradient(100deg,#0A3A66,#072A4C);color:#fff;border:none;border-radius:8px;cursor:pointer;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase">✅ Enregistrer définitivement</button>
+      <button onclick="ghTokenClear()" style="padding:11px 16px;background:#fee2e2;color:#991b1b;border:none;border-radius:8px;cursor:pointer;font-size:.86rem">✕ Effacer</button>
+    </div>
+    <div style="margin-top:12px;padding:10px 14px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;font-size:.78rem;color:#166534">
+      💡 Token stocké en <strong>localStorage</strong> — permanent dans ce navigateur. Pour hardcoder dans le HTML, remplacer <code>GH_TOKEN_HARD=''</code> par votre token.
+    </div>
+  </div>
 </div>
-
 <div id="ot-ann" class="off-tab-content">
   <h3 class="ogrp-title">Nouvelle annonce</h3>
   <div class="ann-form">
@@ -3428,11 +3452,63 @@ function fichesTab(tab,btn){
 </div>
 </div>
 <script>
+/* ══ GitHub API ══ */
+var GH_OWNER='nicolas9696-admin', GH_REPO='SDIS972', GH_BRANCH='main';
+var GH_RAW='https://raw.githubusercontent.com/'+GH_OWNER+'/'+GH_REPO+'/'+GH_BRANCH+'/data/';
+var GH_API='https://api.github.com/repos/'+GH_OWNER+'/'+GH_REPO+'/contents/data/';
+
+/* Token hardcodé (optionnel — remplacer la chaîne vide par votre token) */
+var GH_TOKEN_HARD='';
+function ghToken(){return GH_TOKEN_HARD||localStorage.getItem('sdis_gh_token')||'';}
+
+async function ghRead(file){
+  try{
+    var r=await fetch(GH_RAW+file+'?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok)return [];
+    return await r.json();
+  }catch(e){return [];}
+}
+
+async function ghWrite(file,data){
+  var token=ghToken();
+  if(!token){alert('Token GitHub non configuré.
+Ouvrez l'espace officier → Tableau de bord → 🔑 Token GitHub.');return false;}
+  var apiUrl=GH_API+file;
+  var sha=null;
+  try{
+    var curr=await fetch(apiUrl,{headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}});
+    if(curr.ok){var j=await curr.json();sha=j.sha;}
+  }catch(e){}
+  var content=btoa(unescape(encodeURIComponent(JSON.stringify(data,null,2))));
+  var body={message:'SDIS 972 — '+file,content:content,branch:GH_BRANCH};
+  if(sha)body.sha=sha;
+  try{
+    var resp=await fetch(apiUrl,{method:'PUT',
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},
+      body:JSON.stringify(body)});
+    if(!resp.ok){var err=await resp.json();alert('Erreur GitHub: '+(err.message||resp.status));return false;}
+    return true;
+  }catch(e){alert('Erreur réseau: '+e.message);return false;}
+}
+
+function ghTokenSave(){
+  var v=(document.getElementById('gh-token-inp').value||'').trim();
+  if(!v){alert('Token vide.');return;}
+  localStorage.setItem('sdis_gh_token',v);
+  document.getElementById('gh-token-inp').value='';
+  ghTokenRender();
+  alert('Token enregistré de façon permanente dans ce navigateur.');
+}
+function ghTokenClear(){localStorage.removeItem('sdis_gh_token');ghTokenRender();}
+function ghTokenRender(){
+  var t=ghToken();
+  var s=document.getElementById('gh-token-status');
+  if(s)s.innerHTML=t?'<span style="color:#2E7D46;font-weight:600">🟢 Token actif</span>':'<span style="color:#C8161D;font-weight:600">🔴 Non configuré</span>';
+}
+
 /* ══ Annonces ══ */
 var ANN_ICONS={info:'📋',alerte:'⚠️',urgent:'🔴',nomination:'🎖️'};
 var ANN_COLORS={info:'#0A3A66',alerte:'#EE8B1F',urgent:'#C8161D',nomination:'#2E7D46'};
-function annGet(){try{return JSON.parse(localStorage.getItem('sdis_ann')||'[]');}catch(e){return[];}}
-function annSave(a){try{localStorage.setItem('sdis_ann',JSON.stringify(a));}catch(e){}}
 function annCard(a,del){
   return '<div class="annonce-card '+a.type+'" id="an-'+a.id+'">'
     +'<div class="annonce-ico">'+ANN_ICONS[a.type]+'</div>'
@@ -3442,11 +3518,11 @@ function annCard(a,del){
     +'<div class="annonce-txt">'+a.txt+'</div>'
     +'<div class="annonce-foot">'+a.date+(a.auteur?' &mdash; '+a.auteur:'')+'</div>'
     +'</div>'
-    +(del?'<button class="annonce-del" onclick="annDel('+a.id+')" title="Supprimer">✕</button>':'')
+    +(del?'<button class="annonce-del" onclick="annDel(''+a.id+'')" title="Supprimer">✕</button>':'')
     +'</div>';
 }
-function annRender(){
-  var list=annGet();
+async function annRender(){
+  var list=await ghRead('annonces.json');
   var wrap=document.getElementById('home-annonces-wrap');
   var pub=document.getElementById('home-annonces-list');
   var off=document.getElementById('off-ann-list');
@@ -3456,1815 +3532,133 @@ function annRender(){
   if(off)off.innerHTML=list.length?list.map(function(a){return annCard(a,true);}).join(''):'<div class="agenda-empty">Aucune annonce.</div>';
   if(cnt)cnt.textContent=list.length;
 }
-function annAdd(){
+async function annAdd(){
   var title=(document.getElementById('ann-title').value||'').trim();
   if(!title){alert('Titre obligatoire.');return;}
   var d=document.getElementById('ann-date').value;
   var df=d?new Date(d).toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'}):new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
-  var a={id:Date.now(),type:document.getElementById('ann-type').value,
+  var list=await ghRead('annonces.json');
+  list.unshift({id:Date.now(),type:document.getElementById('ann-type').value,
     title:title,txt:(document.getElementById('ann-txt').value||'').trim(),
-    date:df,auteur:(document.getElementById('ann-auteur').value||'').trim()};
-  var list=annGet();list.unshift(a);annSave(list);
-  document.getElementById('ann-title').value='';
-  document.getElementById('ann-txt').value='';
-  annRender();
+    date:df,auteur:(document.getElementById('ann-auteur').value||'').trim()});
+  if(await ghWrite('annonces.json',list)){
+    document.getElementById('ann-title').value='';
+    document.getElementById('ann-txt').value='';
+    annRender();
+  }
 }
-function annDel(id){
-  if(!confirm('Supprimer cette annonce?'))return;
-  annSave(annGet().filter(function(a){return a.id!==id;}));
-  annRender();
+async function annDel(id){
+  if(!confirm('Supprimer cette annonce ?'))return;
+  var list=await ghRead('annonces.json');
+  list=list.filter(function(a){return String(a.id)!==String(id);});
+  if(await ghWrite('annonces.json',list))annRender();
 }
-annRender();
 
 /* ══ Calendrier ══ */
 var EV_COLORS={formation:'#0A3A66',evaluation:'#C8161D',recrutement:'#2E7D46',sortie:'#EE8B1F',autre:'#555'};
 var EV_ICONS={formation:'📚',evaluation:'📝',recrutement:'👥',sortie:'🏔️',autre:'📌'};
-function evGet(){try{return JSON.parse(localStorage.getItem('sdis_ev')||'[]');}catch(e){return[];}}
-function evSave(a){try{localStorage.setItem('sdis_ev',JSON.stringify(a));}catch(e){}}
 function evCard(e,del){
-  var c=EV_COLORS[e.type]||'#555';
-  var ic=EV_ICONS[e.type]||'📌';
+  var c=EV_COLORS[e.type]||'#555',ic=EV_ICONS[e.type]||'📌';
   var past=new Date(e.date)<new Date()?'ev-past':'';
   var d=new Date(e.date);
-  var day=d.getDate();
   var months=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];
-  var mon=months[d.getMonth()]||'';
   return '<div class="ev-card '+past+'" id="ev-'+e.id+'">'
-    +'<div class="ev-date-col"><div class="ev-day">'+day+'</div><div class="ev-month">'+mon+'</div></div>'
-    +'<div class="ev-body">'
-    +'<div class="ev-top"><span class="ev-badge" style="background:'+c+'">'+ic+' '+e.type+'</span>'
-    +(e.heure?'<span class="ev-time">'+e.heure+'</span>':'')
-    +'</div>'
+    +'<div class="ev-date-col"><div class="ev-day">'+d.getDate()+'</div><div class="ev-month">'+months[d.getMonth()]+'</div></div>'
+    +'<div class="ev-body"><div class="ev-top"><span class="ev-badge" style="background:'+c+'">'+ic+' '+e.type+'</span>'
+    +(e.heure?'<span class="ev-time">'+e.heure+'</span>':'')+'</div>'
     +'<div class="ev-title">'+e.title+'</div>'
     +(e.desc?'<div class="ev-desc">'+e.desc+'</div>':'')
-    +'</div>'
-    +(del?'<button class="ev-del" onclick="evDel('+e.id+')" title="Supprimer">✕</button>':'')
-    +'</div>';
+    +'</div>'+(del?'<button class="ev-del" onclick="evDel(''+e.id+'')" title="Supprimer">✕</button>':'')+'</div>';
 }
-function evRender(){
-  var list=evGet().sort(function(a,b){return a.date<b.date?-1:1;});
+async function evRender(){
+  var list=await ghRead('evenements.json');
+  list.sort(function(a,b){return a.date<b.date?-1:1;});
   var now=new Date();now.setHours(0,0,0,0);
-  var upcoming=list.filter(function(e){return new Date(e.date)>=now;});
+  var up=list.filter(function(e){return new Date(e.date)>=now;});
   var past=list.filter(function(e){return new Date(e.date)<now;}).reverse();
   var upEl=document.getElementById('ev-upcoming-list');
   var pastEl=document.getElementById('ev-past-list');
   var offEl=document.getElementById('off-ev-list');
   var cnt=document.getElementById('ev-count');
-  if(upEl)upEl.innerHTML=upcoming.length?upcoming.map(function(e){return evCard(e,false);}).join(''):'<div class="agenda-empty">Aucun événement à venir.</div>';
+  if(upEl)upEl.innerHTML=up.length?up.map(function(e){return evCard(e,false);}).join(''):'<div class="agenda-empty">Aucun événement à venir.</div>';
   if(pastEl)pastEl.innerHTML=past.length?past.map(function(e){return evCard(e,false);}).join(''):'';
-  if(offEl)offEl.innerHTML=list.length?list.reverse().map(function(e){return evCard(e,true);}).join(''):'<div class="agenda-empty">Aucun événement.</div>';
+  if(offEl)offEl.innerHTML=list.length?list.slice().reverse().map(function(e){return evCard(e,true);}).join(''):'<div class="agenda-empty">Aucun événement.</div>';
   if(cnt)cnt.textContent=list.length;
-  var tPast=document.getElementById('ev-past-title');
-  if(tPast)tPast.style.display=past.length?'flex':'none';
+  var tp=document.getElementById('ev-past-title');
+  if(tp)tp.style.display=past.length?'flex':'none';
 }
-function evAdd(){
+async function evAdd(){
   var title=(document.getElementById('ev-title').value||'').trim();
   var date=document.getElementById('ev-date').value;
   if(!title||!date){alert('Titre et date obligatoires.');return;}
-  var e={id:Date.now(),type:document.getElementById('ev-type').value,
+  var list=await ghRead('evenements.json');
+  list.push({id:Date.now(),type:document.getElementById('ev-type').value,
     date:date,heure:document.getElementById('ev-heure').value||'',
-    title:title,desc:(document.getElementById('ev-desc').value||'').trim()};
-  var list=evGet();list.push(e);evSave(list);
-  document.getElementById('ev-title').value='';
-  document.getElementById('ev-desc').value='';
-  evRender();
+    title:title,desc:(document.getElementById('ev-desc').value||'').trim()});
+  if(await ghWrite('evenements.json',list)){
+    document.getElementById('ev-title').value='';
+    document.getElementById('ev-desc').value='';
+    evRender();
+  }
 }
-function evDel(id){
-  if(!confirm('Supprimer cet événement?'))return;
-  evSave(evGet().filter(function(e){return e.id!==id;}));
-  evRender();
+async function evDel(id){
+  if(!confirm('Supprimer cet événement ?'))return;
+  var list=await ghRead('evenements.json');
+  list=list.filter(function(e){return String(e.id)!==String(id);});
+  if(await ghWrite('evenements.json',list))evRender();
 }
-evRender();
 
 /* ══ Promotions ══ */
-var PROMOS_BASE=[{"nom": "DELAVEGAS Julien", "grade": "Lieutenant", "statut": "SPP", "entree": "07/06/2025", "promo": "02/02/2026", "event": "Nomination Lieutenant"}, {"nom": "BERTIN Sami", "grade": "Lieutenant", "statut": "SPV", "entree": "23/05/2025", "promo": "18/01/2026", "event": "Nomination Lieutenant"}, {"nom": "BROUSSARD Pierre", "grade": "Adjudant", "statut": "SPP", "entree": "18/07/2025", "promo": "20/12/2026", "event": "Nomination Adjudant"}, {"nom": "DOS SANTOS Mickael", "grade": "Sergent-Chef", "statut": "SPP", "entree": "19/10/2025", "promo": "17/01/2026", "event": "Promotion Sergent-Chef"}, {"nom": "NEVILLE Robert", "grade": "Caporal-Chef", "statut": "SPP", "entree": "15/02/2026", "promo": "18/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "BERING Nicolas", "grade": "Caporal-Chef", "statut": "SPP", "entree": "22/02/2026", "promo": "28/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "WOJDA Antoni", "grade": "Caporal-Chef", "statut": "SPV", "entree": "27/01/2026", "promo": "22/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "CARPENTIER Raphael", "grade": "Caporal", "statut": "SPP", "entree": "26/12/2025", "promo": "18/01/2026", "event": "Promotion Caporal"}, {"nom": "RAMOS Franck", "grade": "Caporal", "statut": "SPV", "entree": "22/02/2026", "promo": "01/03/2026", "event": "Promotion Caporal"}, {"nom": "LOPEZ David", "grade": "Caporal", "statut": "SPV", "entree": "08/01/2026", "promo": "15/01/2026", "event": "Promotion Caporal"}];
-function pmGet(){try{return JSON.parse(localStorage.getItem('sdis_pm')||'[]');}catch(e){return[];}}
-function pmSave(a){try{localStorage.setItem('sdis_pm',JSON.stringify(a));}catch(e){}}
-function pmRender(){
-  // Table actif (statique)
+async function pmRender(){
   var tbody=document.getElementById('promos-actif-body');
-  if(tbody){
-    tbody.innerHTML=PROMOS_BASE.sort(function(a,b){
-      var ord={Lieutenant:0,Adjudant:1,'Sergent-Chef':2,Sergent:3,'Caporal-Chef':4,Caporal:5,'Sapeur 1C':6,'Sapeur 2C':7};
-      return (ord[a.grade]||9)-(ord[b.grade]||9);
-    }).map(function(p){
-      var sc=p.statut==='SPP'?'promo-spp':'promo-spv';
-      return '<tr><td><strong>'+p.nom+'</strong></td>'
-        +'<td><span class="promo-badge '+sc+'">'+p.grade+'</span></td>'
-        +'<td><span class="promo-badge '+sc+'">'+p.statut+'</span></td>'
-        +'<td style="font-size:.8rem;color:#888">'+p.entree+'</td>'
-        +'<td style="font-weight:600;color:#072A4C">'+p.promo+'</td>'
-        +'<td style="font-size:.82rem;color:#555">'+p.event+'</td>'
-        +'</tr>';
-    }).join('');
-  }
-  // Extras localStorage
-  var extras=pmGet();
+  if(tbody){tbody.innerHTML=PROMOS_BASE.slice().sort(function(a,b){
+    var ord={Lieutenant:0,Adjudant:1,'Sergent-Chef':2,Sergent:3,'Caporal-Chef':4,Caporal:5,'Sapeur 1C':6,'Sapeur 2C':7};
+    return (ord[a.grade]||9)-(ord[b.grade]||9);
+  }).map(function(p){
+    var sc=p.statut==='SPP'?'promo-spp':'promo-spv';
+    return '<tr><td><strong>'+p.nom+'</strong></td><td><span class="promo-badge '+sc+'">'+p.grade+'</span></td>'
+      +'<td><span class="promo-badge '+sc+'">'+p.statut+'</span></td>'
+      +'<td style="font-size:.8rem;color:#888">'+p.entree+'</td>'
+      +'<td style="font-weight:600;color:#072A4C">'+p.promo+'</td>'
+      +'<td style="font-size:.82rem;color:#555">'+p.event+'</td></tr>';
+  }).join('');}
+  var extras=await ghRead('promotions.json');
   var extEl=document.getElementById('promos-extra-list');
   var offEl=document.getElementById('off-promos-list');
-  var html=extras.length?extras.map(function(p){
+  var toCard=function(p,del){
     return '<div class="annonce-card nomination" style="margin-bottom:8px">'
-      +'<div class="annonce-ico">🏆</div>'
-      +'<div class="annonce-body">'
+      +'<div class="annonce-ico">🏆</div><div class="annonce-body">'
       +'<div class="annonce-type" style="color:#2E7D46">'+p.type.toUpperCase()+'</div>'
       +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
-      +'<div class="annonce-foot">'+p.date+'</div>'
-      +'</div></div>';
-  }).join(''):'<div class="agenda-empty">Aucune.</div>';
-  if(extEl)extEl.innerHTML=html;
-  if(offEl)offEl.innerHTML=extras.length?extras.map(function(p,i){
-    return '<div class="annonce-card nomination" style="margin-bottom:8px">'
-      +'<div class="annonce-ico">🏆</div>'
-      +'<div class="annonce-body">'
-      +'<div class="annonce-type" style="color:#2E7D46">'+p.type+'</div>'
-      +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
-      +'<div class="annonce-foot">'+p.date+'</div>'
-      +'</div>'
-      +'<button class="annonce-del" onclick="pmDel('+i+')" title="Supprimer">✕</button>'
+      +'<div class="annonce-foot">'+p.date+'</div></div>'
+      +(del?'<button class="annonce-del" onclick="pmDel(''+p.id+'')" title="Supprimer">✕</button>':'')
       +'</div>';
-  }).join(''):'<div class="agenda-empty">Aucune promotion ajoutée.</div>';
-}
-function pmAdd(){
-  var nom=(document.getElementById('pm-nom').value||'').trim();
-  var grade=(document.getElementById('pm-grade').value||'').trim();
-  var date=document.getElementById('pm-date').value;
-  if(!nom||!grade){alert('Nom et grade obligatoires.');return;}
-  var df=date?new Date(date).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'}):new Date().toLocaleDateString('fr-FR');
-  var p={nom:nom,grade:grade,type:document.getElementById('pm-type').value,date:df};
-  var list=pmGet();list.unshift(p);pmSave(list);
-  document.getElementById('pm-nom').value='';
-  document.getElementById('pm-grade').value='';
-  pmRender();
-}
-function pmDel(i){
-  if(!confirm('Supprimer?'))return;
-  var list=pmGet();list.splice(i,1);pmSave(list);pmRender();
-}
-pmRender();
-</script>
-</body>
-</html>
-<div id="ot-agenda" class="off-tab-content">
-  <h3 class="ogrp-title">Nouvel &#233;v&#233;nement</h3>
-  <div class="ev-form">
-    <div class="ev-form-grid">
-      <div><label class="ann-lbl">Type</label>
-        <select id="ev-type" class="ann-inp">
-          <option value="formation">📚 Formation</option>
-          <option value="evaluation">📝 &#201;valuation</option>
-          <option value="recrutement">👥 Recrutement</option>
-          <option value="sortie">🏔️ Sortie / exercice</option>
-          <option value="autre">📌 Autre</option>
-        </select></div>
-      <div><label class="ann-lbl">Date</label>
-        <input id="ev-date" type="date" class="ann-inp"></div>
-      <div><label class="ann-lbl">Heure (optionnel)</label>
-        <input id="ev-heure" type="time" class="ann-inp"></div>
-    </div>
-    <div style="margin-bottom:10px"><label class="ann-lbl">Titre de l'&#233;v&#233;nement</label>
-      <input id="ev-title" type="text" placeholder="Formation SAP, &#201;valuation COD2..." class="ann-inp"></div>
-    <div style="margin-bottom:12px"><label class="ann-lbl">Description</label>
-      <textarea id="ev-desc" class="ann-inp" rows="2" style="resize:vertical"></textarea></div>
-    <button class="ann-btn" style="background:linear-gradient(100deg,#0A3A66,#072A4C)" onclick="evAdd()">📅 Ajouter au calendrier</button>
-  </div>
-  <h3 class="ogrp-title" style="margin-top:0">&#201;v&#233;nements <span id="ev-count" class="ogrp-count">0</span></h3>
-  <div id="off-ev-list"><div class="agenda-empty">Aucun &#233;v&#233;nement.</div></div>
-</div>
-<div id="ot-promos" class="off-tab-content">
-  <h3 class="ogrp-title">Ajouter une promotion / nomination</h3>
-  <div class="ann-form">
-    <div class="ann-form-grid">
-      <div><label class="ann-lbl">Nom</label><input id="pm-nom" type="text" placeholder="NOM Pr&#233;nom" class="ann-inp"></div>
-      <div><label class="ann-lbl">Nouveau grade</label><input id="pm-grade" type="text" placeholder="Sergent-Chef" class="ann-inp"></div>
-      <div><label class="ann-lbl">Date</label><input id="pm-date" type="date" class="ann-inp"></div>
-      <div><label class="ann-lbl">Type</label>
-        <select id="pm-type" class="ann-inp">
-          <option>Promotion</option><option>Nomination</option><option>Recrutement</option><option>D&#233;coration</option>
-        </select></div>
-    </div>
-    <button class="promo-add-btn" onclick="pmAdd()">🏆 Ajouter</button>
-  </div>
-  <div id="off-promos-list"><div class="agenda-empty">Promotions/nominations ajout&#233;es ici.</div></div>
-</div></div>
-</div>
-
-</div>
-
-<script>
-
-/* ── Officier ── */
-function showOffOvl(){
-  if(sessionStorage.getItem('off_auth')==='1'){openOff();return;}
-  document.getElementById('off-overlay').classList.add('show');
-  setTimeout(function(){document.getElementById('off-pw-inp').focus();},120);
-}
-function checkPw(){
-  var v=document.getElementById('off-pw-inp').value;
-  if(v==='officier_SDIS_972'){
-    sessionStorage.setItem('off_auth','1');
-    document.getElementById('off-overlay').classList.remove('show');
-    document.getElementById('off-pw-inp').value='';
-    openOff();
-  } else {
-    var i=document.getElementById('off-pw-inp');
-    i.classList.add('err'); setTimeout(function(){i.classList.remove('err');},400);
-    document.getElementById('off-pw-err').style.display='block';
-    i.value=''; i.focus();
-  }
-}
-function openOff(){document.getElementById('off-panel').classList.add('show');document.body.style.overflow='hidden';}
-function closeOff(){document.getElementById('off-panel').classList.remove('show');document.body.style.overflow='';}
-function switchTab(id,btn){
-  document.querySelectorAll('.off-tab-content').forEach(function(x){x.classList.remove('active');});
-  document.querySelectorAll('.off-tab').forEach(function(x){x.classList.remove('active');});
-  document.getElementById('ot-'+id).classList.add('active'); btn.classList.add('active');
-}
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){closeOff();document.getElementById('off-overlay').classList.remove('show');}
-});
-</script>
-<script>
-/* ── Journal — données statiques ── */
-var JOURNAL_DATA = [
-  {id:167,num:"167",type:"SR", date:"11/06/2026",heure:"23:39",lieu:"Nationale 3, Le Robert",desc:"Accident de circulation 2 VL ou plus"},
-  {id:166,num:"166",type:"SAP",date:"11/06/2026",heure:"23:32",lieu:"Fort-de-France \u2014 Entreprise HDM D\u00e9pannage",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:165,num:"165",type:"SAP",date:"11/06/2026",heure:"23:06",lieu:"Fort-de-France \u2014 Port",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:164,num:"164",type:"SAP",date:"11/06/2026",heure:"22:20",lieu:"Nationale 5, Le Marin \u2014 G\u00e9olocalisation",desc:"Intoxication"},
-  {id:163,num:"163",type:"SR", date:"11/06/2026",heure:"22:10",lieu:"D\u00e9partementale 1, Gros-Morne",desc:"Accident de circulation VL seule"},
-  {id:162,num:"162",type:"SR", date:"11/06/2026",heure:"21:36",lieu:"073/125, Tartane",desc:"Accident de circulation VL seule"},
-  {id:161,num:"161",type:"SR", date:"11/06/2026",heure:"20:56",lieu:"Autoroute A1 sens FDF\u2192Trinit\u00e9 \u2014 Rond-point sortie autoroute",desc:"Accident de circulation VL seule"},
-  {id:160,num:"160",type:"SAP",date:"11/06/2026",heure:"20:51",lieu:"Fonds-Saint-Denis \u2014 Centre du village",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:159,num:"159",type:"SR", date:"10/06/2026",heure:"22:29",lieu:"Fort-de-France — Rond-point Nord",desc:"Accident de circulation VL seule"},
-  {id:158,num:"158",type:"SAP",date:"10/06/2026",heure:"22:17",lieu:"Grand\u2019Rivi\u00e8re — Magasin VHC Sport",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:157,num:"157",type:"SR", date:"10/06/2026",heure:"22:11",lieu:"Nationale 3, Le Fran\u00e7ois",desc:"Accident de circulation VL seule"},
-  {id:156,num:"156",type:"SAP",date:"10/06/2026",heure:"22:08",lieu:"Fort-de-France — Centre Hospitalier",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:155,num:"155",type:"SAP",date:"10/06/2026",heure:"22:07",lieu:"La Trinit\u00e9 — Clinique La Trinit\u00e9",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:154,num:"154",type:"SR", date:"10/06/2026",heure:"21:08",lieu:"Autoroute A2 sens Trinit\u00e9\u2192FDF, Gros-Morne",desc:"Accident de circulation VL seule"},
-  {id:153,num:"153",type:"SR", date:"10/06/2026",heure:"21:07",lieu:"La Trinit\u00e9 — CH Peugeot",desc:"Accident de circulation VL seule"},
-  {id:152,num:"152",type:"SAP",date:"09/06/2026",heure:"22:35",lieu:"Le Vauclin — Entreprise Tropic Dedense",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:151,num:"151",type:"SR", date:"09/06/2026",heure:"22:12",lieu:"Autoroute A2 sens Trinit\u00e9\u2192FDF, Gros-Morne — Sortie PMO",desc:"Accident de circulation 2 VL ou plus"},
-  {id:150,num:"150",type:"SR", date:"09/06/2026",heure:"21:46",lieu:"Autoroute A2 sens Trinit\u00e9\u2192FDF, Gros-Morne — Aire de Saint-Alexis",desc:"Accident de circulation VL seule"},
-  {id:149,num:"149",type:"SAP",date:"09/06/2026",heure:"21:28",lieu:"Fort-de-France",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:3,  num:"3",  type:"DIV",date:"09/06/2026",heure:"11:56",lieu:"—",desc:"Man\u0153uvre diverse"},
-  {id:148,num:"148",type:"SAP",date:"08/06/2026",heure:"23:27",lieu:"Fort-de-France — Centre Hospitalier",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:147,num:"147",type:"SAP",date:"08/06/2026",heure:"22:52",lieu:"La Trinit\u00e9",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:146,num:"146",type:"SAP",date:"08/06/2026",heure:"21:57",lieu:"Gros-Morne — CSP Gros-Morne",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:145,num:"145",type:"SR", date:"08/06/2026",heure:"21:46",lieu:"Fort-de-France — Centre Hospitalier",desc:"Accident de circulation VL seule"},
-  {id:144,num:"144",type:"SAP",date:"08/06/2026",heure:"19:23",lieu:"Gros-Morne — CSP Gros-Morne",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:141,num:"141",type:"SR", date:"07/06/2026",heure:"23:11",lieu:"Nationale 5, Fort-de-France",desc:"Accident de circulation VL seule"},
-  {id:140,num:"140",type:"DIV",date:"07/06/2026",heure:"23:00",lieu:"La Trinit\u00e9 — Concess Peugeot",desc:"Menace ou chute d\u2019arbre sur voie publique"},
-];
-</script>
-<script>
-(function(){
-  var M={
-    0:{m:"Bonne garde de weekend !",a:"Bon dimanche en service !",s:"Bonne soirée de garde !",n:"Bonne nuit de garde !"},
-    1:{m:"Bonne semaine à tous !",a:"Bon lundi après-midi !",s:"Bonne prise de service du soir !",n:"Bonne garde de nuit !"},
-    2:{m:"Bon mardi matin !",a:"Bon mardi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
-    3:{m:"Bon mercredi à l'équipe !",a:"Bon mercredi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
-    4:{m:"Bon jeudi matin !",a:"Bon jeudi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
-    5:{m:"Bon vendredi — dernier effort !",a:"Bon vendredi après-midi !",s:"Bon weekend à ceux qui rentrent !",n:"Bonne nuit — bienvenue au weekend !"},
-    6:{m:"Bon samedi en service !",a:"Bon samedi après-midi !",s:"Bonne soirée de garde !",n:"Bonne nuit de garde !"}
   };
-  var days=["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
-  var months=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
-  var G={m:"Bonjour",a:"Bon après-midi",s:"Bonsoir",n:"Bonne nuit"};
-  var now=new Date(), hh=now.getHours();
-  var p=hh>=6&&hh<12?"m":hh>=12&&hh<18?"a":hh>=18&&hh<22?"s":"n";
-  var d=now.getDay();
-  var msg=(M[d]&&M[d][p])||"Bienvenue au SDIS 972 !";
-  var dateStr=days[d]+" "+now.getDate()+" "+months[now.getMonth()]+" "+now.getFullYear();
-  var el=document.getElementById("hmsg");
-  var el2=document.getElementById("hgreeting");
-  if(el)el.textContent=msg;
-  if(el2)el2.textContent=G[p]+" — "+dateStr;
-  if(typeof JOURNAL_DATA!=="undefined"&&JOURNAL_DATA.length){
-    var last=JOURNAL_DATA[0];
-    var jI={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
-    var jL={SAP:"Secours à personne",INC:"Incendie",SR:"Secours routier",DIV:"Divers",NAUT:"Nautique",HELI:"Hélitreuillage"};
-    var li=document.getElementById("hlast");
-    if(li){
-      li.innerHTML='<span class="home-last-ico">'+jI[last.type]+'</span>'
-        +'<div style="min-width:0"><div class="home-last-type">Dernière inter · N°'+last.num+'</div>'
-        +'<div class="home-last-lieu">'+last.lieu+'</div>'
-        +'<div class="home-last-meta">'+last.date+' · '+last.heure+' · '+jL[last.type]+'</div></div>';
-      li.classList.add("show");
-    }
-  }
-})();
-</script>
-<script>
-
-// Fusionner avec les additions localStorage (bilans sauvegardés)
-function jnlGetAdds(){try{return JSON.parse(localStorage.getItem('sdis_jnl_adds')||'[]');}catch(e){return[];}}
-var jColors={SAP:"#C8161D",INC:"#EE8B1F",SR:"#0A3A66",DIV:"#2E7D46",NAUT:"#0e7ac4",HELI:"#6d28d9"};
-var jIcons={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
-var jLabels={SAP:"Secours à personne",INC:"Incendie",SR:"Secours routier",DIV:"Divers",NAUT:"Nautique",HELI:"Hélitreuillage"};
-function jnlGetDel(){try{return JSON.parse(localStorage.getItem('sdis_jnl_del')||'[]');}catch(e){return[];}}
-function jCard(e,del){
-  var c=jColors[e.type]||'#555',ic=jIcons[e.type]||'📍',lb=jLabels[e.type]||e.type;
-  return '<div class="jl-card" id="je-'+e.id+'">'
-    +'<div class="jl-card-left" style="background:'+c+'"></div>'
-    +'<div class="jl-card-body">'
-    +'<div class="jl-card-top">'
-    +'<span class="jl-num">N°'+e.num+'</span>'
-    +'<span class="jl-btype" style="background:'+c+'">'+ic+' '+lb+'</span>'
-    +'<span class="jl-bstatut">✅ Terminé</span>'
-    +(del?'<button class="jl-card-del" onclick="jnlDel('+e.id+')" title="Masquer">✕</button>':'')
-    +'</div>'
-    +'<div class="jl-card-lieu">'+e.lieu+'</div>'
-    +(e.desc?'<div class="jl-card-desc">'+e.desc+'</div>':'')
-    +'<div class="jl-card-foot">'
-    +'<span class="jl-card-meta">📅 '+e.date+'</span>'
-    +'<span class="jl-card-meta">🕐 '+e.heure+'</span>'
-    +'</div></div></div>';
+  if(extEl)extEl.innerHTML=extras.length?extras.map(function(p){return toCard(p,false);}).join(''):'<div class="agenda-empty">Aucune.</div>';
+  if(offEl)offEl.innerHTML=extras.length?extras.map(function(p){return toCard(p,true);}).join(''):'<div class="agenda-empty">Aucune promotion ajoutée.</div>';
 }
-function jStatBar(){
-  var del=jnlGetDel();
-  var adds=jnlGetAdds();
-  var allData=adds.concat(JOURNAL_DATA);
-  var vis=allData.filter(function(e){return del.indexOf(e.id)<0;});
-  var cnt={};vis.forEach(function(e){cnt[e.type]=(cnt[e.type]||0)+1;});
-  var h='<span class="jstat"><span class="jstat-dot" style="background:#072A4C"></span>'
-    +'<span class="jstat-lbl">Total</span><span class="jstat-num">'+vis.length+'</span></span>';
-  ['SAP','SR','INC','DIV','NAUT','HELI'].forEach(function(t){
-    if(cnt[t])h+='<span class="jstat"><span class="jstat-dot" style="background:'+jColors[t]+'"></span>'
-      +'<span class="jstat-lbl">'+t+'</span><span class="jstat-num">'+cnt[t]+'</span></span>';
-  });
-  return h;
-}
-function jnlRenderAll(){
-  var del=jnlGetDel();
-  var vis=JOURNAL_DATA.filter(function(e){return del.indexOf(e.id)<0;});
-  var empty='<div class="journal-empty">Aucune intervention enregistrée.</div>';
-  var sb=document.getElementById('journal-stats');if(sb)sb.innerHTML=jStatBar();
-  var pub=document.getElementById('pub-journal-list');
-  if(pub)pub.innerHTML=vis.length?vis.map(function(e){return jCard(e,false);}).join(''):empty;
-  var off=document.getElementById('off-journal-list');
-  if(off)off.innerHTML=JOURNAL_DATA.map(function(e){
-    var op=del.indexOf(e.id)>=0?' style="opacity:.3;pointer-events:none"':'';
-    return '<div id="jw-'+e.id+'"'+op+'>'+jCard(e,true)+'</div>';
-  }).join('');
-  var cnt=document.getElementById('jnl-count');
-  if(cnt)cnt.textContent=vis.length+' / '+JOURNAL_DATA.length;
-}
-function jnlDel(id){
-  var d=jnlGetDel();if(d.indexOf(id)<0)d.push(id);
-  try{localStorage.setItem('sdis_jnl_del',JSON.stringify(d));}catch(e){}
-  jnlRenderAll();
-}
-function jnlReset(){
-  if(!confirm('Réafficher toutes les entrées masquées ?'))return;
-  try{localStorage.removeItem('sdis_jnl_del');}catch(e){}
-  jnlRenderAll();
-}
-jnlRenderAll();
-</script>
-<script>
-(function(){
-  function showPage(name){
-    document.body.className=document.body.className
-      .replace(/\bshow-\w+/g,'').trim()+' show-'+(name||'home');
-    ['home','docs','journal','fiches','agenda','promos'].forEach(function(p){
-      var b=document.getElementById('tnav-'+p);
-      if(b)b.classList.toggle('active',p===name);
-    });
-    if(name!=='docs'){
-      var sb=document.querySelector('.sidebar');
-      if(sb)sb.classList.remove('open');
-      var bd=document.getElementById('backdrop');
-      if(bd)bd.classList.remove('show');
-    }
-    window.scrollTo({top:0,behavior:'smooth'});
-    try{sessionStorage.setItem('sdis_page',name);}catch(e){}
-  }
-  window.showPage=showPage;
-
-  // Toggle sidebar mobile (docs uniquement)
-  function toggleSidebar(){
-    if(!document.body.classList.contains('show-docs')){
-      showPage('docs');return;
-    }
-    var sb=document.querySelector('.sidebar');
-    if(!sb)return;
-    sb.classList.toggle('open');
-    var bd=document.getElementById('backdrop');
-    if(bd)bd.classList.toggle('show',sb.classList.contains('open'));
-  }
-  window.toggleSidebar=toggleSidebar;
-
-  // Page initiale
-  var saved=null;
-  try{saved=sessionStorage.getItem('sdis_page');}catch(e){}
-  showPage(saved||'home');
-
-  // CTA home → pages
-  document.addEventListener('click',function(e){
-    var el=e.target.closest('.hcta-red');
-    if(el){e.preventDefault();showPage('docs');return;}
-    var el2=e.target.closest('.hcta-ghost');
-    if(el2){e.preventDefault();showPage('journal');}
-  });
-
-  // Liens sidebar docs → rester sur page docs
-  document.querySelectorAll('.nav-link').forEach(function(a){
-    a.addEventListener('click',function(){
-      if(!document.body.classList.contains('show-docs'))showPage('docs');
-    });
-  });
-
-  // Lien journal sidebar
-  var jl=document.querySelector('.nav-jlink');
-  if(jl)jl.addEventListener('click',function(e){
-    if(!document.body.classList.contains('show-journal')){
-      e.preventDefault();showPage('journal');
-    }
-  });
-})();
-</script>
-<div class="fiches-page" id="fiches-page">
-<div class="fiches-head"><h2>Fiches &amp; Codes radio</h2><p>Consultation rapide pendant une intervention</p></div>
-<div class="fiches-tabs">
-  <button class="fiches-tab active" id="ft-fiches"  onclick="fichesTab('fiches',this)">⚡ Fiches rapides</button>
-  <button class="fiches-tab"        id="ft-radio"   onclick="fichesTab('radio',this)">📻 Codes radio</button>
-  <button class="fiches-tab"        id="ft-phraseo" onclick="fichesTab('phraseo',this)">🎙️ Phraséologie</button>
-</div>
-
-<!-- FICHES RAPIDES -->
-<div class="fiches-content" id="fc-fiches">
-<div class="fiches-grid">
-
-<!-- SAP -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#C8161D,#9E1015)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🚑</div>
-    <div><div class="fiche-title">SAP</div><div class="fiche-sub">Secours à personne</div></div>
-  </div>
-  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
-    ⚠️ Gants médicaux AVANT tout contact victime
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Zone sécurisée</div>
-        <div class="fiche-step-detail">Chef d'agrès confirme la sécurité — gants obligatoires</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Bilan PQRST</div>
-        <div class="fiche-step-detail"><em>Chef :</em> Pourquoi / Sévérité / Temps — <em>Équipier :</em> Quoi / Région (examen)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Bilan circulatoire</div>
-        <div class="fiche-step-detail">Tensiomètre (PA) + LifePak (pouls) — plusieurs mesures</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Constantes Guardian</div>
-        <div class="fiche-step-detail"><em>Noter :</em> BPM · mmHg · SpO₂ · RESP — normales : FC 60-100, SpO₂ 94-100%, FR 12-20</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">5</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Traitement blessures</div>
-        <div class="fiche-step-detail">Gauze → coupure/éraflure · CHU → hémorragie · Chito → projectile · BrulStop → brûlure</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">6</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">MHTA (transport)</div>
-        <div class="fiche-step-detail">Maladie · Hospitalisation récente · Traitements · Allergies</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">7</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Conditionnement &amp; transport</div>
-        <div class="fiche-step-detail"><em>MID</em> si traumatisme · <em>Plan dur</em> si suspicion fracture · transfert normal sinon</div>
-      </div>
-    </div>
-  </div>
-  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
-    🚨 Inconscient sans ventilation → RCP 30 compressions + 2 insufflations (22s / 120bpm)
-  </div>
-  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
-    ⚡ Fibrillation → LifePak : 170J → 180J → 190J → 200J
-  </div>
-</div>
-
-<!-- INC -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#EE8B1F,#c97010)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🔥</div>
-    <div><div class="fiche-title">INC</div><div class="fiche-sub">Incendie</div></div>
-  </div>
-  <div class="fiche-alert" style="background:#fff7ed;color:#92400e;border:1px solid #fcd34d">
-    ⚠️ ARI obligatoire dès que vous attaquez les flammes
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Protection individuelle</div>
-        <div class="fiche-step-detail">Tenue INC + ARI (18 min, sortir à <em>25 bar</em>) + BSD activé</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Reconnaissance</div>
-        <div class="fiche-step-detail">Type de feu · propagation · victimes · risques particuliers</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Alimentation en eau</div>
-        <div class="fiche-step-detail"><em>BI rouge</em> = réseau ville · <em>jaune</em> = haute pression · <em>bleue</em> = aspiration<br>FPTSR 3000L (12 min/LDV) · CCF 6000L (24 min/LDV)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Déploiement lances</div>
-        <div class="fiche-step-detail"><em>LDV 500</em> : 250 L/min sur tuyau 45mm · <em>LTD</em> : 150 L/min (dévidoir)<br>Pression pompe : 3 bar (+1 bar/action, max 9 bar)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">5</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Attaque du feu</div>
-        <div class="fiche-step-detail">ARI enclenché · BSD actif · surveiller pression ARI toutes les 5 min</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">6</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Recharge ARI &amp; CR</div>
-        <div class="fiche-step-detail">Recharger ARI sur FPTSR/CCF après inter · CR CODIS : résultat + levée de garde</div>
-      </div>
-    </div>
-  </div>
-  <div class="fiche-alert" style="background:#fff7ed;color:#92400e;border:1px solid #fcd34d">
-    🔴 BSD : alarme si immobile 25s — bouger pour l'arrêter. 3ème alarme = désactiver manuellement
-  </div>
-</div>
-
-<!-- SR -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#0A3A66,#072A4C)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🛣️</div>
-    <div><div class="fiche-title">SR</div><div class="fiche-sub">Secours routier</div></div>
-  </div>
-  <div class="fiche-alert" style="background:#f0f7ff;color:#1e3a5f;border:1px solid #93c5fd">
-    ⚠️ GHV obligatoire avant de quitter le véhicule
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Placement véhicule</div>
-        <div class="fiche-step-detail">FPTSR/VIDP en <em>amont</em> de l'accident (tampon) — VSAV en aval</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Balisage — ACTION PRIORITAIRE</div>
-        <div class="fiche-step-detail">Panneau accident 50-100m en amont · cônes Lübeck de l'amont vers l'aval · aviser DIR si autoroute</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Reconnaissance</div>
-        <div class="fiche-step-detail">Nb véhicules · nb victimes · incarcération · risque incendie</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Protection incendie</div>
-        <div class="fiche-step-detail">Couper contact · batterie · frein à main · extincteur/lance prêt</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">5</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Abordage &amp; désincarcération</div>
-        <div class="fiche-step-detail">Stabiliser le véhicule · Halligan tool pour ouvrir portes · soutien VSAV si présent</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">6</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Conditionnement &amp; départ</div>
-        <div class="fiche-step-detail">Accompagner extraction avec le VSAV · nettoyage chaussée · lever balisage · <em>dernier à partir</em></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DIV -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#2E7D46,#1d5c32)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🔧</div>
-    <div><div class="fiche-title">DIV</div><div class="fiche-sub">Intervention diverse</div></div>
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Reconnaissance</div>
-        <div class="fiche-step-detail">Nature exacte · victimes potentielles · risques liés (gaz, chute, eau…)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Sécurisation zone</div>
-        <div class="fiche-step-detail">Périmètre de sécurité · aviser partenaires (GN, DIR, gaz…)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Action adaptée</div>
-        <div class="fiche-step-detail">
-          <em>Arbre :</em> tronçonneuse + balisage VP<br>
-          <em>Fuite gaz :</em> évacuation + couper arrivée<br>
-          <em>Inondation :</em> pompe + mise en sécurité<br>
-          <em>Noyade :</em> sauvetage nautique si dispo
-        </div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">CR CODIS &amp; fin d'inter</div>
-        <div class="fiche-step-detail">Résultat · partenaires engagés · statut 1 dès retour caserne</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div><!-- /fiches-grid -->
-</div><!-- /fc-fiches -->
-
-<!-- CODES RADIO -->
-<div class="fiches-content" id="fc-radio" style="display:none">
-
-<div class="radio-section">
-  <h3>📶 Statuts véhicule (1 → 7)</h3>
-  <div class="statuts-grid">
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">1</div><div class="statut-info"><div class="statut-name">Parti</div><div class="statut-desc">Engin en route vers l'intervention</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#C8161D">2</div><div class="statut-info"><div class="statut-name">Sur les lieux</div><div class="statut-desc">Arrivé sur intervention</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#EE8B1F">3</div><div class="statut-info"><div class="statut-name">Demande de parole</div><div class="statut-desc">Souhaite parler au CODIS</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#9E1015">4</div><div class="statut-info"><div class="statut-name">Demande urgente</div><div class="statut-desc">Besoin immédiat du CODIS</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#0A3A66">5</div><div class="statut-info"><div class="statut-name">Transport CH</div><div class="statut-desc">En route vers l'hôpital (VSAV)</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#0A3A66">6</div><div class="statut-info"><div class="statut-name">Arrivée CH</div><div class="statut-desc">Au centre hospitalier</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">7</div><div class="statut-info"><div class="statut-name">Retour disponible</div><div class="statut-desc">Retour caserne — disponible</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#555">8</div><div class="statut-info"><div class="statut-name">Retour indisponible</div><div class="statut-desc">Retour caserne — indisponible</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">9</div><div class="statut-info"><div class="statut-name">Disponible au centre</div><div class="statut-desc">En caserne, prêt à partir</div></div></div>
-  </div>
-</div>
-
-<div class="radio-section">
-  <h3>🏥 Abréviations CODIS</h3>
-  <table class="code10-table">
-    <thead><tr><th>Abréviation</th><th>Signification</th></tr></thead>
-    <tbody>
-      <tr><td>VSAV</td><td>Véhicule de Secours et d'Assistance aux Victimes</td></tr>
-      <tr><td>FPTSR</td><td>Fourgon Pompe Tonne Secours Routier</td></tr>
-      <tr><td>VIDP</td><td>Véhicule d'Intervention Diverse Polyvalent</td></tr>
-      <tr><td>CCF</td><td>Camion-Citerne Feux de forêt</td></tr>
-      <tr><td>VLM</td><td>Véhicule Léger Médicalisé (SSSM)</td></tr>
-      <tr><td>AR</td><td>Ambulance de Réanimation</td></tr>
-      <tr><td>CH / CHU</td><td>Centre Hospitalier (Universitaire)</td></tr>
-      <tr><td>UA</td><td>Urgence Absolue — pronostic vital engagé</td></tr>
-      <tr><td>UR</td><td>Urgence Relative — état stable</td></tr>
-      <tr><td>EU</td><td>État d'Urgence — décédé</td></tr>
-      <tr><td>3SM / SSSM</td><td>Service de Santé et de Secours Médical</td></tr>
-      <tr><td>MGO</td><td>Marche Générale des Opérations</td></tr>
-      <tr><td>COS</td><td>Commandant des Opérations de Secours</td></tr>
-      <tr><td>DIR</td><td>Direction Interdépartementale des Routes</td></tr>
-      <tr><td>ARI</td><td>Appareil Respiratoire Isolant</td></tr>
-      <tr><td>BSD</td><td>Détecteur d'immobilisation (Badass Sensor Device)</td></tr>
-      <tr><td>BI</td><td>Bouche / Borne d'Incendie</td></tr>
-      <tr><td>LDV</td><td>Lance Débit Variable (250 L/min)</td></tr>
-      <tr><td>RCP</td><td>Réanimation Cardio-Pulmonaire</td></tr>
-      <tr><td>PA</td><td>Pression Artérielle</td></tr>
-      <tr><td>SpO₂</td><td>Saturation en oxygène (94-100% normal)</td></tr>
-    </tbody>
-  </table>
-</div>
-</div><!-- /fc-radio -->
-
-<!-- PHRASÉOLOGIE -->
-<div class="fiches-content" id="fc-phraseo" style="display:none">
-<div class="radio-section">
-  <h3>🎙️ Messages types CODIS</h3>
-  <div class="phraseo-grid">
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Départ vers intervention</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 3 pour [NATURE] à [LIEU].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Arrivée sur intervention</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 4. [DESCRIPTION RAPIDE].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Demande de renfort</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], 10-16. Demande [MOYEN] pour [NATURE] à [LIEU].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Transport CH (VSAV)</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 5, transport [UA/UR] vers [CH]. Heure de départ : [HH:MM].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Arrivée CH</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 6 au [CH]. Victime prise en charge.</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Fin d'intervention</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], 10-10. [RÉSULTAT]. Retour caserne, statut 1 à [HH:MM].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Urgence absolue</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], 10-99 ! [NATURE]. Besoin immédiat de [MOYEN/SSSM].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Compte-rendu de situation</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], CR de situation : [NATURE], [NB] victime(s) [UA/UR], situation [MAÎTRISÉE/EN COURS].</div>
-    </div>
-
-  </div>
-</div>
-
-<div class="radio-section">
-  <h3>📋 Indicatifs radio SP 972</h3>
-  <table class="code10-table">
-    <thead><tr><th>Indicatif</th><th>Véhicule</th></tr></thead>
-    <tbody>
-      <tr><td>VSAV 01</td><td>VSAV principal CSP Gros-Morne</td></tr>
-      <tr><td>FPTSR 01</td><td>Fourgon Pompe Tonne SR — CSP Gros-Morne</td></tr>
-      <tr><td>VIDP 01</td><td>Véhicule Intervention Diverse Polyvalent</td></tr>
-      <tr><td>CCF 6000</td><td>Camion-Citerne Feux de Forêt</td></tr>
-      <tr><td>VLM</td><td>Véhicule Léger SSSM</td></tr>
-      <tr><td>DRAGON 972</td><td>Hélicoptère EC145 SDIS 972</td></tr>
-    </tbody>
-  </table>
-</div>
-</div><!-- /fc-phraseo -->
-
-</div><!-- /fiches-page -->
-
-<script>
-function fichesTab(tab,btn){
-  ['fiches','radio','phraseo'].forEach(function(t){
-    var b=document.getElementById('ft-'+t);
-    var c=document.getElementById('fc-'+t);
-    if(b)b.classList.toggle('active',t===tab);
-    if(c)c.style.display=(t===tab)?'block':'none';
-  });
-}
-</script>
-<div class="agenda-page" id="agenda-page">
-<div class="agenda-head"><h2>Calendrier des &#233;v&#233;nements</h2><p>Formations &middot; &#233;valuations &middot; recrutements &middot; sorties</p></div>
-<div class="agenda-content" id="agenda-main">
-  <div class="ev-section-title" id="ev-upcoming-title">&#192; venir</div>
-  <div id="ev-upcoming-list"><div class="agenda-empty">Aucun &#233;v&#233;nement planifi&#233;.</div></div>
-  <div class="ev-section-title" id="ev-past-title" style="margin-top:24px">Pass&#233;s</div>
-  <div id="ev-past-list"></div>
-</div>
-</div>
-<div class="promos-page" id="promos-page">
-<div class="promos-head"><h2>Tableau des promotions</h2><p>Avancements et nominations &mdash; CSP Gros-Morne</p></div>
-<div class="promos-content">
-  <div class="promo-section">
-    <div class="promo-section-title">Personnel actif</div>
-    <table class="promo-table" id="promos-actif-table">
-      <thead><tr><th>Nom</th><th>Grade</th><th>Statut</th><th>Entr&#233;e</th><th>Derni&#232;re promotion</th><th>&#201;v&#233;nement</th></tr></thead>
-      <tbody id="promos-actif-body"></tbody>
-    </table>
-  </div>
-  <div class="promo-section" style="margin-top:24px">
-    <div class="promo-section-title">Promotions r&#233;centes (officier)</div>
-    <div id="promos-extra-list"><div class="agenda-empty">Aucune promotion enregistr&#233;e.</div></div>
-  </div>
-</div>
-</div>
-<script>
-/* ══ Annonces ══ */
-var ANN_ICONS={info:'📋',alerte:'⚠️',urgent:'🔴',nomination:'🎖️'};
-var ANN_COLORS={info:'#0A3A66',alerte:'#EE8B1F',urgent:'#C8161D',nomination:'#2E7D46'};
-function annGet(){try{return JSON.parse(localStorage.getItem('sdis_ann')||'[]');}catch(e){return[];}}
-function annSave(a){try{localStorage.setItem('sdis_ann',JSON.stringify(a));}catch(e){}}
-function annCard(a,del){
-  return '<div class="annonce-card '+a.type+'" id="an-'+a.id+'">'
-    +'<div class="annonce-ico">'+ANN_ICONS[a.type]+'</div>'
-    +'<div class="annonce-body">'
-    +'<div class="annonce-type" style="color:'+ANN_COLORS[a.type]+'">'+a.type.toUpperCase()+'</div>'
-    +'<div class="annonce-title">'+a.title+'</div>'
-    +'<div class="annonce-txt">'+a.txt+'</div>'
-    +'<div class="annonce-foot">'+a.date+(a.auteur?' &mdash; '+a.auteur:'')+'</div>'
-    +'</div>'
-    +(del?'<button class="annonce-del" onclick="annDel('+a.id+')" title="Supprimer">✕</button>':'')
-    +'</div>';
-}
-function annRender(){
-  var list=annGet();
-  var wrap=document.getElementById('home-annonces-wrap');
-  var pub=document.getElementById('home-annonces-list');
-  var off=document.getElementById('off-ann-list');
-  var cnt=document.getElementById('ann-count');
-  if(wrap)wrap.style.display=list.length?'block':'none';
-  if(pub)pub.innerHTML=list.length?list.slice(0,5).map(function(a){return annCard(a,false);}).join(''):'';
-  if(off)off.innerHTML=list.length?list.map(function(a){return annCard(a,true);}).join(''):'<div class="agenda-empty">Aucune annonce.</div>';
-  if(cnt)cnt.textContent=list.length;
-}
-function annAdd(){
-  var title=(document.getElementById('ann-title').value||'').trim();
-  if(!title){alert('Titre obligatoire.');return;}
-  var d=document.getElementById('ann-date').value;
-  var df=d?new Date(d).toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'}):new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
-  var a={id:Date.now(),type:document.getElementById('ann-type').value,
-    title:title,txt:(document.getElementById('ann-txt').value||'').trim(),
-    date:df,auteur:(document.getElementById('ann-auteur').value||'').trim()};
-  var list=annGet();list.unshift(a);annSave(list);
-  document.getElementById('ann-title').value='';
-  document.getElementById('ann-txt').value='';
-  annRender();
-}
-function annDel(id){
-  if(!confirm('Supprimer cette annonce?'))return;
-  annSave(annGet().filter(function(a){return a.id!==id;}));
-  annRender();
-}
-annRender();
-
-/* ══ Calendrier ══ */
-var EV_COLORS={formation:'#0A3A66',evaluation:'#C8161D',recrutement:'#2E7D46',sortie:'#EE8B1F',autre:'#555'};
-var EV_ICONS={formation:'📚',evaluation:'📝',recrutement:'👥',sortie:'🏔️',autre:'📌'};
-function evGet(){try{return JSON.parse(localStorage.getItem('sdis_ev')||'[]');}catch(e){return[];}}
-function evSave(a){try{localStorage.setItem('sdis_ev',JSON.stringify(a));}catch(e){}}
-function evCard(e,del){
-  var c=EV_COLORS[e.type]||'#555';
-  var ic=EV_ICONS[e.type]||'📌';
-  var past=new Date(e.date)<new Date()?'ev-past':'';
-  var d=new Date(e.date);
-  var day=d.getDate();
-  var months=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];
-  var mon=months[d.getMonth()]||'';
-  return '<div class="ev-card '+past+'" id="ev-'+e.id+'">'
-    +'<div class="ev-date-col"><div class="ev-day">'+day+'</div><div class="ev-month">'+mon+'</div></div>'
-    +'<div class="ev-body">'
-    +'<div class="ev-top"><span class="ev-badge" style="background:'+c+'">'+ic+' '+e.type+'</span>'
-    +(e.heure?'<span class="ev-time">'+e.heure+'</span>':'')
-    +'</div>'
-    +'<div class="ev-title">'+e.title+'</div>'
-    +(e.desc?'<div class="ev-desc">'+e.desc+'</div>':'')
-    +'</div>'
-    +(del?'<button class="ev-del" onclick="evDel('+e.id+')" title="Supprimer">✕</button>':'')
-    +'</div>';
-}
-function evRender(){
-  var list=evGet().sort(function(a,b){return a.date<b.date?-1:1;});
-  var now=new Date();now.setHours(0,0,0,0);
-  var upcoming=list.filter(function(e){return new Date(e.date)>=now;});
-  var past=list.filter(function(e){return new Date(e.date)<now;}).reverse();
-  var upEl=document.getElementById('ev-upcoming-list');
-  var pastEl=document.getElementById('ev-past-list');
-  var offEl=document.getElementById('off-ev-list');
-  var cnt=document.getElementById('ev-count');
-  if(upEl)upEl.innerHTML=upcoming.length?upcoming.map(function(e){return evCard(e,false);}).join(''):'<div class="agenda-empty">Aucun événement à venir.</div>';
-  if(pastEl)pastEl.innerHTML=past.length?past.map(function(e){return evCard(e,false);}).join(''):'';
-  if(offEl)offEl.innerHTML=list.length?list.reverse().map(function(e){return evCard(e,true);}).join(''):'<div class="agenda-empty">Aucun événement.</div>';
-  if(cnt)cnt.textContent=list.length;
-  var tPast=document.getElementById('ev-past-title');
-  if(tPast)tPast.style.display=past.length?'flex':'none';
-}
-function evAdd(){
-  var title=(document.getElementById('ev-title').value||'').trim();
-  var date=document.getElementById('ev-date').value;
-  if(!title||!date){alert('Titre et date obligatoires.');return;}
-  var e={id:Date.now(),type:document.getElementById('ev-type').value,
-    date:date,heure:document.getElementById('ev-heure').value||'',
-    title:title,desc:(document.getElementById('ev-desc').value||'').trim()};
-  var list=evGet();list.push(e);evSave(list);
-  document.getElementById('ev-title').value='';
-  document.getElementById('ev-desc').value='';
-  evRender();
-}
-function evDel(id){
-  if(!confirm('Supprimer cet événement?'))return;
-  evSave(evGet().filter(function(e){return e.id!==id;}));
-  evRender();
-}
-evRender();
-
-/* ══ Promotions ══ */
-var PROMOS_BASE=[{"nom": "DELAVEGAS Julien", "grade": "Lieutenant", "statut": "SPP", "entree": "07/06/2025", "promo": "02/02/2026", "event": "Nomination Lieutenant"}, {"nom": "BERTIN Sami", "grade": "Lieutenant", "statut": "SPV", "entree": "23/05/2025", "promo": "18/01/2026", "event": "Nomination Lieutenant"}, {"nom": "BROUSSARD Pierre", "grade": "Adjudant", "statut": "SPP", "entree": "18/07/2025", "promo": "20/12/2026", "event": "Nomination Adjudant"}, {"nom": "DOS SANTOS Mickael", "grade": "Sergent-Chef", "statut": "SPP", "entree": "19/10/2025", "promo": "17/01/2026", "event": "Promotion Sergent-Chef"}, {"nom": "NEVILLE Robert", "grade": "Caporal-Chef", "statut": "SPP", "entree": "15/02/2026", "promo": "18/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "BERING Nicolas", "grade": "Caporal-Chef", "statut": "SPP", "entree": "22/02/2026", "promo": "28/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "WOJDA Antoni", "grade": "Caporal-Chef", "statut": "SPV", "entree": "27/01/2026", "promo": "22/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "CARPENTIER Raphael", "grade": "Caporal", "statut": "SPP", "entree": "26/12/2025", "promo": "18/01/2026", "event": "Promotion Caporal"}, {"nom": "RAMOS Franck", "grade": "Caporal", "statut": "SPV", "entree": "22/02/2026", "promo": "01/03/2026", "event": "Promotion Caporal"}, {"nom": "LOPEZ David", "grade": "Caporal", "statut": "SPV", "entree": "08/01/2026", "promo": "15/01/2026", "event": "Promotion Caporal"}];
-function pmGet(){try{return JSON.parse(localStorage.getItem('sdis_pm')||'[]');}catch(e){return[];}}
-function pmSave(a){try{localStorage.setItem('sdis_pm',JSON.stringify(a));}catch(e){}}
-function pmRender(){
-  // Table actif (statique)
-  var tbody=document.getElementById('promos-actif-body');
-  if(tbody){
-    tbody.innerHTML=PROMOS_BASE.sort(function(a,b){
-      var ord={Lieutenant:0,Adjudant:1,'Sergent-Chef':2,Sergent:3,'Caporal-Chef':4,Caporal:5,'Sapeur 1C':6,'Sapeur 2C':7};
-      return (ord[a.grade]||9)-(ord[b.grade]||9);
-    }).map(function(p){
-      var sc=p.statut==='SPP'?'promo-spp':'promo-spv';
-      return '<tr><td><strong>'+p.nom+'</strong></td>'
-        +'<td><span class="promo-badge '+sc+'">'+p.grade+'</span></td>'
-        +'<td><span class="promo-badge '+sc+'">'+p.statut+'</span></td>'
-        +'<td style="font-size:.8rem;color:#888">'+p.entree+'</td>'
-        +'<td style="font-weight:600;color:#072A4C">'+p.promo+'</td>'
-        +'<td style="font-size:.82rem;color:#555">'+p.event+'</td>'
-        +'</tr>';
-    }).join('');
-  }
-  // Extras localStorage
-  var extras=pmGet();
-  var extEl=document.getElementById('promos-extra-list');
-  var offEl=document.getElementById('off-promos-list');
-  var html=extras.length?extras.map(function(p){
-    return '<div class="annonce-card nomination" style="margin-bottom:8px">'
-      +'<div class="annonce-ico">🏆</div>'
-      +'<div class="annonce-body">'
-      +'<div class="annonce-type" style="color:#2E7D46">'+p.type.toUpperCase()+'</div>'
-      +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
-      +'<div class="annonce-foot">'+p.date+'</div>'
-      +'</div></div>';
-  }).join(''):'<div class="agenda-empty">Aucune.</div>';
-  if(extEl)extEl.innerHTML=html;
-  if(offEl)offEl.innerHTML=extras.length?extras.map(function(p,i){
-    return '<div class="annonce-card nomination" style="margin-bottom:8px">'
-      +'<div class="annonce-ico">🏆</div>'
-      +'<div class="annonce-body">'
-      +'<div class="annonce-type" style="color:#2E7D46">'+p.type+'</div>'
-      +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
-      +'<div class="annonce-foot">'+p.date+'</div>'
-      +'</div>'
-      +'<button class="annonce-del" onclick="pmDel('+i+')" title="Supprimer">✕</button>'
-      +'</div>';
-  }).join(''):'<div class="agenda-empty">Aucune promotion ajoutée.</div>';
-}
-function pmAdd(){
+async function pmAdd(){
   var nom=(document.getElementById('pm-nom').value||'').trim();
   var grade=(document.getElementById('pm-grade').value||'').trim();
-  var date=document.getElementById('pm-date').value;
   if(!nom||!grade){alert('Nom et grade obligatoires.');return;}
-  var df=date?new Date(date).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'}):new Date().toLocaleDateString('fr-FR');
-  var p={nom:nom,grade:grade,type:document.getElementById('pm-type').value,date:df};
-  var list=pmGet();list.unshift(p);pmSave(list);
-  document.getElementById('pm-nom').value='';
-  document.getElementById('pm-grade').value='';
-  pmRender();
-}
-function pmDel(i){
-  if(!confirm('Supprimer?'))return;
-  var list=pmGet();list.splice(i,1);pmSave(list);pmRender();
-}
-pmRender();
-</script>
-</body>
-</html>
-<div id="ot-promos" class="off-tab-content">
-  <h3 class="ogrp-title">Ajouter une promotion / nomination</h3>
-  <div class="ann-form">
-    <div class="ann-form-grid">
-      <div><label class="ann-lbl">Nom</label><input id="pm-nom" type="text" placeholder="NOM Pr&#233;nom" class="ann-inp"></div>
-      <div><label class="ann-lbl">Nouveau grade</label><input id="pm-grade" type="text" placeholder="Sergent-Chef" class="ann-inp"></div>
-      <div><label class="ann-lbl">Date</label><input id="pm-date" type="date" class="ann-inp"></div>
-      <div><label class="ann-lbl">Type</label>
-        <select id="pm-type" class="ann-inp">
-          <option>Promotion</option><option>Nomination</option><option>Recrutement</option><option>D&#233;coration</option>
-        </select></div>
-    </div>
-    <button class="promo-add-btn" onclick="pmAdd()">🏆 Ajouter</button>
-  </div>
-  <div id="off-promos-list"><div class="agenda-empty">Promotions/nominations ajout&#233;es ici.</div></div>
-</div></div>
-</div>
-
-</div>
-
-<script>
-
-/* ── Officier ── */
-function showOffOvl(){
-  if(sessionStorage.getItem('off_auth')==='1'){openOff();return;}
-  document.getElementById('off-overlay').classList.add('show');
-  setTimeout(function(){document.getElementById('off-pw-inp').focus();},120);
-}
-function checkPw(){
-  var v=document.getElementById('off-pw-inp').value;
-  if(v==='officier_SDIS_972'){
-    sessionStorage.setItem('off_auth','1');
-    document.getElementById('off-overlay').classList.remove('show');
-    document.getElementById('off-pw-inp').value='';
-    openOff();
-  } else {
-    var i=document.getElementById('off-pw-inp');
-    i.classList.add('err'); setTimeout(function(){i.classList.remove('err');},400);
-    document.getElementById('off-pw-err').style.display='block';
-    i.value=''; i.focus();
-  }
-}
-function openOff(){document.getElementById('off-panel').classList.add('show');document.body.style.overflow='hidden';}
-function closeOff(){document.getElementById('off-panel').classList.remove('show');document.body.style.overflow='';}
-function switchTab(id,btn){
-  document.querySelectorAll('.off-tab-content').forEach(function(x){x.classList.remove('active');});
-  document.querySelectorAll('.off-tab').forEach(function(x){x.classList.remove('active');});
-  document.getElementById('ot-'+id).classList.add('active'); btn.classList.add('active');
-}
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){closeOff();document.getElementById('off-overlay').classList.remove('show');}
-});
-</script>
-<script>
-/* ── Journal — données statiques ── */
-var JOURNAL_DATA = [
-  {id:167,num:"167",type:"SR", date:"11/06/2026",heure:"23:39",lieu:"Nationale 3, Le Robert",desc:"Accident de circulation 2 VL ou plus"},
-  {id:166,num:"166",type:"SAP",date:"11/06/2026",heure:"23:32",lieu:"Fort-de-France \u2014 Entreprise HDM D\u00e9pannage",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:165,num:"165",type:"SAP",date:"11/06/2026",heure:"23:06",lieu:"Fort-de-France \u2014 Port",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:164,num:"164",type:"SAP",date:"11/06/2026",heure:"22:20",lieu:"Nationale 5, Le Marin \u2014 G\u00e9olocalisation",desc:"Intoxication"},
-  {id:163,num:"163",type:"SR", date:"11/06/2026",heure:"22:10",lieu:"D\u00e9partementale 1, Gros-Morne",desc:"Accident de circulation VL seule"},
-  {id:162,num:"162",type:"SR", date:"11/06/2026",heure:"21:36",lieu:"073/125, Tartane",desc:"Accident de circulation VL seule"},
-  {id:161,num:"161",type:"SR", date:"11/06/2026",heure:"20:56",lieu:"Autoroute A1 sens FDF\u2192Trinit\u00e9 \u2014 Rond-point sortie autoroute",desc:"Accident de circulation VL seule"},
-  {id:160,num:"160",type:"SAP",date:"11/06/2026",heure:"20:51",lieu:"Fonds-Saint-Denis \u2014 Centre du village",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:159,num:"159",type:"SR", date:"10/06/2026",heure:"22:29",lieu:"Fort-de-France — Rond-point Nord",desc:"Accident de circulation VL seule"},
-  {id:158,num:"158",type:"SAP",date:"10/06/2026",heure:"22:17",lieu:"Grand\u2019Rivi\u00e8re — Magasin VHC Sport",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:157,num:"157",type:"SR", date:"10/06/2026",heure:"22:11",lieu:"Nationale 3, Le Fran\u00e7ois",desc:"Accident de circulation VL seule"},
-  {id:156,num:"156",type:"SAP",date:"10/06/2026",heure:"22:08",lieu:"Fort-de-France — Centre Hospitalier",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:155,num:"155",type:"SAP",date:"10/06/2026",heure:"22:07",lieu:"La Trinit\u00e9 — Clinique La Trinit\u00e9",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:154,num:"154",type:"SR", date:"10/06/2026",heure:"21:08",lieu:"Autoroute A2 sens Trinit\u00e9\u2192FDF, Gros-Morne",desc:"Accident de circulation VL seule"},
-  {id:153,num:"153",type:"SR", date:"10/06/2026",heure:"21:07",lieu:"La Trinit\u00e9 — CH Peugeot",desc:"Accident de circulation VL seule"},
-  {id:152,num:"152",type:"SAP",date:"09/06/2026",heure:"22:35",lieu:"Le Vauclin — Entreprise Tropic Dedense",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:151,num:"151",type:"SR", date:"09/06/2026",heure:"22:12",lieu:"Autoroute A2 sens Trinit\u00e9\u2192FDF, Gros-Morne — Sortie PMO",desc:"Accident de circulation 2 VL ou plus"},
-  {id:150,num:"150",type:"SR", date:"09/06/2026",heure:"21:46",lieu:"Autoroute A2 sens Trinit\u00e9\u2192FDF, Gros-Morne — Aire de Saint-Alexis",desc:"Accident de circulation VL seule"},
-  {id:149,num:"149",type:"SAP",date:"09/06/2026",heure:"21:28",lieu:"Fort-de-France",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:3,  num:"3",  type:"DIV",date:"09/06/2026",heure:"11:56",lieu:"—",desc:"Man\u0153uvre diverse"},
-  {id:148,num:"148",type:"SAP",date:"08/06/2026",heure:"23:27",lieu:"Fort-de-France — Centre Hospitalier",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:147,num:"147",type:"SAP",date:"08/06/2026",heure:"22:52",lieu:"La Trinit\u00e9",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:146,num:"146",type:"SAP",date:"08/06/2026",heure:"21:57",lieu:"Gros-Morne — CSP Gros-Morne",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:145,num:"145",type:"SR", date:"08/06/2026",heure:"21:46",lieu:"Fort-de-France — Centre Hospitalier",desc:"Accident de circulation VL seule"},
-  {id:144,num:"144",type:"SAP",date:"08/06/2026",heure:"19:23",lieu:"Gros-Morne — CSP Gros-Morne",desc:"Personne bless\u00e9e sur VP ou lieu public"},
-  {id:141,num:"141",type:"SR", date:"07/06/2026",heure:"23:11",lieu:"Nationale 5, Fort-de-France",desc:"Accident de circulation VL seule"},
-  {id:140,num:"140",type:"DIV",date:"07/06/2026",heure:"23:00",lieu:"La Trinit\u00e9 — Concess Peugeot",desc:"Menace ou chute d\u2019arbre sur voie publique"},
-];
-</script>
-<script>
-(function(){
-  var M={
-    0:{m:"Bonne garde de weekend !",a:"Bon dimanche en service !",s:"Bonne soirée de garde !",n:"Bonne nuit de garde !"},
-    1:{m:"Bonne semaine à tous !",a:"Bon lundi après-midi !",s:"Bonne prise de service du soir !",n:"Bonne garde de nuit !"},
-    2:{m:"Bon mardi matin !",a:"Bon mardi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
-    3:{m:"Bon mercredi à l'équipe !",a:"Bon mercredi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
-    4:{m:"Bon jeudi matin !",a:"Bon jeudi après-midi !",s:"Bonne soirée en service !",n:"Bonne garde de nuit !"},
-    5:{m:"Bon vendredi — dernier effort !",a:"Bon vendredi après-midi !",s:"Bon weekend à ceux qui rentrent !",n:"Bonne nuit — bienvenue au weekend !"},
-    6:{m:"Bon samedi en service !",a:"Bon samedi après-midi !",s:"Bonne soirée de garde !",n:"Bonne nuit de garde !"}
-  };
-  var days=["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"];
-  var months=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
-  var G={m:"Bonjour",a:"Bon après-midi",s:"Bonsoir",n:"Bonne nuit"};
-  var now=new Date(), hh=now.getHours();
-  var p=hh>=6&&hh<12?"m":hh>=12&&hh<18?"a":hh>=18&&hh<22?"s":"n";
-  var d=now.getDay();
-  var msg=(M[d]&&M[d][p])||"Bienvenue au SDIS 972 !";
-  var dateStr=days[d]+" "+now.getDate()+" "+months[now.getMonth()]+" "+now.getFullYear();
-  var el=document.getElementById("hmsg");
-  var el2=document.getElementById("hgreeting");
-  if(el)el.textContent=msg;
-  if(el2)el2.textContent=G[p]+" — "+dateStr;
-  if(typeof JOURNAL_DATA!=="undefined"&&JOURNAL_DATA.length){
-    var last=JOURNAL_DATA[0];
-    var jI={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
-    var jL={SAP:"Secours à personne",INC:"Incendie",SR:"Secours routier",DIV:"Divers",NAUT:"Nautique",HELI:"Hélitreuillage"};
-    var li=document.getElementById("hlast");
-    if(li){
-      li.innerHTML='<span class="home-last-ico">'+jI[last.type]+'</span>'
-        +'<div style="min-width:0"><div class="home-last-type">Dernière inter · N°'+last.num+'</div>'
-        +'<div class="home-last-lieu">'+last.lieu+'</div>'
-        +'<div class="home-last-meta">'+last.date+' · '+last.heure+' · '+jL[last.type]+'</div></div>';
-      li.classList.add("show");
-    }
-  }
-})();
-</script>
-<script>
-
-// Fusionner avec les additions localStorage (bilans sauvegardés)
-function jnlGetAdds(){try{return JSON.parse(localStorage.getItem('sdis_jnl_adds')||'[]');}catch(e){return[];}}
-var jColors={SAP:"#C8161D",INC:"#EE8B1F",SR:"#0A3A66",DIV:"#2E7D46",NAUT:"#0e7ac4",HELI:"#6d28d9"};
-var jIcons={SAP:"🚑",INC:"🔥",SR:"🛣️",DIV:"🔧",NAUT:"🌊",HELI:"🚁"};
-var jLabels={SAP:"Secours à personne",INC:"Incendie",SR:"Secours routier",DIV:"Divers",NAUT:"Nautique",HELI:"Hélitreuillage"};
-function jnlGetDel(){try{return JSON.parse(localStorage.getItem('sdis_jnl_del')||'[]');}catch(e){return[];}}
-function jCard(e,del){
-  var c=jColors[e.type]||'#555',ic=jIcons[e.type]||'📍',lb=jLabels[e.type]||e.type;
-  return '<div class="jl-card" id="je-'+e.id+'">'
-    +'<div class="jl-card-left" style="background:'+c+'"></div>'
-    +'<div class="jl-card-body">'
-    +'<div class="jl-card-top">'
-    +'<span class="jl-num">N°'+e.num+'</span>'
-    +'<span class="jl-btype" style="background:'+c+'">'+ic+' '+lb+'</span>'
-    +'<span class="jl-bstatut">✅ Terminé</span>'
-    +(del?'<button class="jl-card-del" onclick="jnlDel('+e.id+')" title="Masquer">✕</button>':'')
-    +'</div>'
-    +'<div class="jl-card-lieu">'+e.lieu+'</div>'
-    +(e.desc?'<div class="jl-card-desc">'+e.desc+'</div>':'')
-    +'<div class="jl-card-foot">'
-    +'<span class="jl-card-meta">📅 '+e.date+'</span>'
-    +'<span class="jl-card-meta">🕐 '+e.heure+'</span>'
-    +'</div></div></div>';
-}
-function jStatBar(){
-  var del=jnlGetDel();
-  var adds=jnlGetAdds();
-  var allData=adds.concat(JOURNAL_DATA);
-  var vis=allData.filter(function(e){return del.indexOf(e.id)<0;});
-  var cnt={};vis.forEach(function(e){cnt[e.type]=(cnt[e.type]||0)+1;});
-  var h='<span class="jstat"><span class="jstat-dot" style="background:#072A4C"></span>'
-    +'<span class="jstat-lbl">Total</span><span class="jstat-num">'+vis.length+'</span></span>';
-  ['SAP','SR','INC','DIV','NAUT','HELI'].forEach(function(t){
-    if(cnt[t])h+='<span class="jstat"><span class="jstat-dot" style="background:'+jColors[t]+'"></span>'
-      +'<span class="jstat-lbl">'+t+'</span><span class="jstat-num">'+cnt[t]+'</span></span>';
-  });
-  return h;
-}
-function jnlRenderAll(){
-  var del=jnlGetDel();
-  var vis=JOURNAL_DATA.filter(function(e){return del.indexOf(e.id)<0;});
-  var empty='<div class="journal-empty">Aucune intervention enregistrée.</div>';
-  var sb=document.getElementById('journal-stats');if(sb)sb.innerHTML=jStatBar();
-  var pub=document.getElementById('pub-journal-list');
-  if(pub)pub.innerHTML=vis.length?vis.map(function(e){return jCard(e,false);}).join(''):empty;
-  var off=document.getElementById('off-journal-list');
-  if(off)off.innerHTML=JOURNAL_DATA.map(function(e){
-    var op=del.indexOf(e.id)>=0?' style="opacity:.3;pointer-events:none"':'';
-    return '<div id="jw-'+e.id+'"'+op+'>'+jCard(e,true)+'</div>';
-  }).join('');
-  var cnt=document.getElementById('jnl-count');
-  if(cnt)cnt.textContent=vis.length+' / '+JOURNAL_DATA.length;
-}
-function jnlDel(id){
-  var d=jnlGetDel();if(d.indexOf(id)<0)d.push(id);
-  try{localStorage.setItem('sdis_jnl_del',JSON.stringify(d));}catch(e){}
-  jnlRenderAll();
-}
-function jnlReset(){
-  if(!confirm('Réafficher toutes les entrées masquées ?'))return;
-  try{localStorage.removeItem('sdis_jnl_del');}catch(e){}
-  jnlRenderAll();
-}
-jnlRenderAll();
-</script>
-<script>
-(function(){
-  function showPage(name){
-    document.body.className=document.body.className
-      .replace(/\bshow-\w+/g,'').trim()+' show-'+(name||'home');
-    ['home','docs','journal','fiches','agenda','promos'].forEach(function(p){
-      var b=document.getElementById('tnav-'+p);
-      if(b)b.classList.toggle('active',p===name);
-    });
-    if(name!=='docs'){
-      var sb=document.querySelector('.sidebar');
-      if(sb)sb.classList.remove('open');
-      var bd=document.getElementById('backdrop');
-      if(bd)bd.classList.remove('show');
-    }
-    window.scrollTo({top:0,behavior:'smooth'});
-    try{sessionStorage.setItem('sdis_page',name);}catch(e){}
-  }
-  window.showPage=showPage;
-
-  // Toggle sidebar mobile (docs uniquement)
-  function toggleSidebar(){
-    if(!document.body.classList.contains('show-docs')){
-      showPage('docs');return;
-    }
-    var sb=document.querySelector('.sidebar');
-    if(!sb)return;
-    sb.classList.toggle('open');
-    var bd=document.getElementById('backdrop');
-    if(bd)bd.classList.toggle('show',sb.classList.contains('open'));
-  }
-  window.toggleSidebar=toggleSidebar;
-
-  // Page initiale
-  var saved=null;
-  try{saved=sessionStorage.getItem('sdis_page');}catch(e){}
-  showPage(saved||'home');
-
-  // CTA home → pages
-  document.addEventListener('click',function(e){
-    var el=e.target.closest('.hcta-red');
-    if(el){e.preventDefault();showPage('docs');return;}
-    var el2=e.target.closest('.hcta-ghost');
-    if(el2){e.preventDefault();showPage('journal');}
-  });
-
-  // Liens sidebar docs → rester sur page docs
-  document.querySelectorAll('.nav-link').forEach(function(a){
-    a.addEventListener('click',function(){
-      if(!document.body.classList.contains('show-docs'))showPage('docs');
-    });
-  });
-
-  // Lien journal sidebar
-  var jl=document.querySelector('.nav-jlink');
-  if(jl)jl.addEventListener('click',function(e){
-    if(!document.body.classList.contains('show-journal')){
-      e.preventDefault();showPage('journal');
-    }
-  });
-})();
-</script>
-<div class="fiches-page" id="fiches-page">
-<div class="fiches-head"><h2>Fiches &amp; Codes radio</h2><p>Consultation rapide pendant une intervention</p></div>
-<div class="fiches-tabs">
-  <button class="fiches-tab active" id="ft-fiches"  onclick="fichesTab('fiches',this)">⚡ Fiches rapides</button>
-  <button class="fiches-tab"        id="ft-radio"   onclick="fichesTab('radio',this)">📻 Codes radio</button>
-  <button class="fiches-tab"        id="ft-phraseo" onclick="fichesTab('phraseo',this)">🎙️ Phraséologie</button>
-</div>
-
-<!-- FICHES RAPIDES -->
-<div class="fiches-content" id="fc-fiches">
-<div class="fiches-grid">
-
-<!-- SAP -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#C8161D,#9E1015)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🚑</div>
-    <div><div class="fiche-title">SAP</div><div class="fiche-sub">Secours à personne</div></div>
-  </div>
-  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
-    ⚠️ Gants médicaux AVANT tout contact victime
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Zone sécurisée</div>
-        <div class="fiche-step-detail">Chef d'agrès confirme la sécurité — gants obligatoires</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Bilan PQRST</div>
-        <div class="fiche-step-detail"><em>Chef :</em> Pourquoi / Sévérité / Temps — <em>Équipier :</em> Quoi / Région (examen)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Bilan circulatoire</div>
-        <div class="fiche-step-detail">Tensiomètre (PA) + LifePak (pouls) — plusieurs mesures</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Constantes Guardian</div>
-        <div class="fiche-step-detail"><em>Noter :</em> BPM · mmHg · SpO₂ · RESP — normales : FC 60-100, SpO₂ 94-100%, FR 12-20</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">5</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Traitement blessures</div>
-        <div class="fiche-step-detail">Gauze → coupure/éraflure · CHU → hémorragie · Chito → projectile · BrulStop → brûlure</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">6</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">MHTA (transport)</div>
-        <div class="fiche-step-detail">Maladie · Hospitalisation récente · Traitements · Allergies</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#C8161D">7</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Conditionnement &amp; transport</div>
-        <div class="fiche-step-detail"><em>MID</em> si traumatisme · <em>Plan dur</em> si suspicion fracture · transfert normal sinon</div>
-      </div>
-    </div>
-  </div>
-  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
-    🚨 Inconscient sans ventilation → RCP 30 compressions + 2 insufflations (22s / 120bpm)
-  </div>
-  <div class="fiche-alert" style="background:#fff0f0;color:#9E1015;border:1px solid #fca5a5">
-    ⚡ Fibrillation → LifePak : 170J → 180J → 190J → 200J
-  </div>
-</div>
-
-<!-- INC -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#EE8B1F,#c97010)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🔥</div>
-    <div><div class="fiche-title">INC</div><div class="fiche-sub">Incendie</div></div>
-  </div>
-  <div class="fiche-alert" style="background:#fff7ed;color:#92400e;border:1px solid #fcd34d">
-    ⚠️ ARI obligatoire dès que vous attaquez les flammes
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Protection individuelle</div>
-        <div class="fiche-step-detail">Tenue INC + ARI (18 min, sortir à <em>25 bar</em>) + BSD activé</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Reconnaissance</div>
-        <div class="fiche-step-detail">Type de feu · propagation · victimes · risques particuliers</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Alimentation en eau</div>
-        <div class="fiche-step-detail"><em>BI rouge</em> = réseau ville · <em>jaune</em> = haute pression · <em>bleue</em> = aspiration<br>FPTSR 3000L (12 min/LDV) · CCF 6000L (24 min/LDV)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Déploiement lances</div>
-        <div class="fiche-step-detail"><em>LDV 500</em> : 250 L/min sur tuyau 45mm · <em>LTD</em> : 150 L/min (dévidoir)<br>Pression pompe : 3 bar (+1 bar/action, max 9 bar)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">5</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Attaque du feu</div>
-        <div class="fiche-step-detail">ARI enclenché · BSD actif · surveiller pression ARI toutes les 5 min</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#EE8B1F">6</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Recharge ARI &amp; CR</div>
-        <div class="fiche-step-detail">Recharger ARI sur FPTSR/CCF après inter · CR CODIS : résultat + levée de garde</div>
-      </div>
-    </div>
-  </div>
-  <div class="fiche-alert" style="background:#fff7ed;color:#92400e;border:1px solid #fcd34d">
-    🔴 BSD : alarme si immobile 25s — bouger pour l'arrêter. 3ème alarme = désactiver manuellement
-  </div>
-</div>
-
-<!-- SR -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#0A3A66,#072A4C)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🛣️</div>
-    <div><div class="fiche-title">SR</div><div class="fiche-sub">Secours routier</div></div>
-  </div>
-  <div class="fiche-alert" style="background:#f0f7ff;color:#1e3a5f;border:1px solid #93c5fd">
-    ⚠️ GHV obligatoire avant de quitter le véhicule
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Placement véhicule</div>
-        <div class="fiche-step-detail">FPTSR/VIDP en <em>amont</em> de l'accident (tampon) — VSAV en aval</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Balisage — ACTION PRIORITAIRE</div>
-        <div class="fiche-step-detail">Panneau accident 50-100m en amont · cônes Lübeck de l'amont vers l'aval · aviser DIR si autoroute</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Reconnaissance</div>
-        <div class="fiche-step-detail">Nb véhicules · nb victimes · incarcération · risque incendie</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Protection incendie</div>
-        <div class="fiche-step-detail">Couper contact · batterie · frein à main · extincteur/lance prêt</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">5</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Abordage &amp; désincarcération</div>
-        <div class="fiche-step-detail">Stabiliser le véhicule · Halligan tool pour ouvrir portes · soutien VSAV si présent</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#0A3A66">6</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Conditionnement &amp; départ</div>
-        <div class="fiche-step-detail">Accompagner extraction avec le VSAV · nettoyage chaussée · lever balisage · <em>dernier à partir</em></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DIV -->
-<div class="fiche-card">
-  <div class="fiche-header" style="background:linear-gradient(135deg,#2E7D46,#1d5c32)">
-    <div class="fiche-ico" style="background:rgba(255,255,255,.15)">🔧</div>
-    <div><div class="fiche-title">DIV</div><div class="fiche-sub">Intervention diverse</div></div>
-  </div>
-  <div class="fiche-body">
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">1</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Reconnaissance</div>
-        <div class="fiche-step-detail">Nature exacte · victimes potentielles · risques liés (gaz, chute, eau…)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">2</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Sécurisation zone</div>
-        <div class="fiche-step-detail">Périmètre de sécurité · aviser partenaires (GN, DIR, gaz…)</div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">3</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">Action adaptée</div>
-        <div class="fiche-step-detail">
-          <em>Arbre :</em> tronçonneuse + balisage VP<br>
-          <em>Fuite gaz :</em> évacuation + couper arrivée<br>
-          <em>Inondation :</em> pompe + mise en sécurité<br>
-          <em>Noyade :</em> sauvetage nautique si dispo
-        </div>
-      </div>
-    </div>
-    <div class="fiche-step">
-      <div class="fiche-num" style="background:#2E7D46">4</div>
-      <div class="fiche-step-txt">
-        <div class="fiche-step-label">CR CODIS &amp; fin d'inter</div>
-        <div class="fiche-step-detail">Résultat · partenaires engagés · statut 1 dès retour caserne</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</div><!-- /fiches-grid -->
-</div><!-- /fc-fiches -->
-
-<!-- CODES RADIO -->
-<div class="fiches-content" id="fc-radio" style="display:none">
-
-<div class="radio-section">
-  <h3>📶 Statuts véhicule (1 → 7)</h3>
-  <div class="statuts-grid">
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">1</div><div class="statut-info"><div class="statut-name">Parti</div><div class="statut-desc">Engin en route vers l'intervention</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#C8161D">2</div><div class="statut-info"><div class="statut-name">Sur les lieux</div><div class="statut-desc">Arrivé sur intervention</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#EE8B1F">3</div><div class="statut-info"><div class="statut-name">Demande de parole</div><div class="statut-desc">Souhaite parler au CODIS</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#9E1015">4</div><div class="statut-info"><div class="statut-name">Demande urgente</div><div class="statut-desc">Besoin immédiat du CODIS</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#0A3A66">5</div><div class="statut-info"><div class="statut-name">Transport CH</div><div class="statut-desc">En route vers l'hôpital (VSAV)</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#0A3A66">6</div><div class="statut-info"><div class="statut-name">Arrivée CH</div><div class="statut-desc">Au centre hospitalier</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">7</div><div class="statut-info"><div class="statut-name">Retour disponible</div><div class="statut-desc">Retour caserne — disponible</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#555">8</div><div class="statut-info"><div class="statut-name">Retour indisponible</div><div class="statut-desc">Retour caserne — indisponible</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">9</div><div class="statut-info"><div class="statut-name">Disponible au centre</div><div class="statut-desc">En caserne, prêt à partir</div></div></div>
-  </div>
-</div>
-
-<div class="radio-section">
-  <h3>🏥 Abréviations CODIS</h3>
-  <table class="code10-table">
-    <thead><tr><th>Abréviation</th><th>Signification</th></tr></thead>
-    <tbody>
-      <tr><td>VSAV</td><td>Véhicule de Secours et d'Assistance aux Victimes</td></tr>
-      <tr><td>FPTSR</td><td>Fourgon Pompe Tonne Secours Routier</td></tr>
-      <tr><td>VIDP</td><td>Véhicule d'Intervention Diverse Polyvalent</td></tr>
-      <tr><td>CCF</td><td>Camion-Citerne Feux de forêt</td></tr>
-      <tr><td>VLM</td><td>Véhicule Léger Médicalisé (SSSM)</td></tr>
-      <tr><td>AR</td><td>Ambulance de Réanimation</td></tr>
-      <tr><td>CH / CHU</td><td>Centre Hospitalier (Universitaire)</td></tr>
-      <tr><td>UA</td><td>Urgence Absolue — pronostic vital engagé</td></tr>
-      <tr><td>UR</td><td>Urgence Relative — état stable</td></tr>
-      <tr><td>EU</td><td>État d'Urgence — décédé</td></tr>
-      <tr><td>3SM / SSSM</td><td>Service de Santé et de Secours Médical</td></tr>
-      <tr><td>MGO</td><td>Marche Générale des Opérations</td></tr>
-      <tr><td>COS</td><td>Commandant des Opérations de Secours</td></tr>
-      <tr><td>DIR</td><td>Direction Interdépartementale des Routes</td></tr>
-      <tr><td>ARI</td><td>Appareil Respiratoire Isolant</td></tr>
-      <tr><td>BSD</td><td>Détecteur d'immobilisation (Badass Sensor Device)</td></tr>
-      <tr><td>BI</td><td>Bouche / Borne d'Incendie</td></tr>
-      <tr><td>LDV</td><td>Lance Débit Variable (250 L/min)</td></tr>
-      <tr><td>RCP</td><td>Réanimation Cardio-Pulmonaire</td></tr>
-      <tr><td>PA</td><td>Pression Artérielle</td></tr>
-      <tr><td>SpO₂</td><td>Saturation en oxygène (94-100% normal)</td></tr>
-    </tbody>
-  </table>
-</div>
-</div><!-- /fc-radio -->
-
-<!-- PHRASÉOLOGIE -->
-<div class="fiches-content" id="fc-phraseo" style="display:none">
-<div class="radio-section">
-  <h3>🎙️ Messages types CODIS</h3>
-  <div class="phraseo-grid">
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Départ vers intervention</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 3 pour [NATURE] à [LIEU].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Arrivée sur intervention</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 4. [DESCRIPTION RAPIDE].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Demande de renfort</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], 10-16. Demande [MOYEN] pour [NATURE] à [LIEU].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Transport CH (VSAV)</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 5, transport [UA/UR] vers [CH]. Heure de départ : [HH:MM].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Arrivée CH</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], statut 6 au [CH]. Victime prise en charge.</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Fin d'intervention</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], 10-10. [RÉSULTAT]. Retour caserne, statut 1 à [HH:MM].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Urgence absolue</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], 10-99 ! [NATURE]. Besoin immédiat de [MOYEN/SSSM].</div>
-    </div>
-
-    <div class="phraseo-card">
-      <div class="phraseo-ctx">Compte-rendu de situation</div>
-      <div class="phraseo-msg">CODIS de [INDICATIF], CR de situation : [NATURE], [NB] victime(s) [UA/UR], situation [MAÎTRISÉE/EN COURS].</div>
-    </div>
-
-  </div>
-</div>
-
-<div class="radio-section">
-  <h3>📋 Indicatifs radio SP 972</h3>
-  <table class="code10-table">
-    <thead><tr><th>Indicatif</th><th>Véhicule</th></tr></thead>
-    <tbody>
-      <tr><td>VSAV 01</td><td>VSAV principal CSP Gros-Morne</td></tr>
-      <tr><td>FPTSR 01</td><td>Fourgon Pompe Tonne SR — CSP Gros-Morne</td></tr>
-      <tr><td>VIDP 01</td><td>Véhicule Intervention Diverse Polyvalent</td></tr>
-      <tr><td>CCF 6000</td><td>Camion-Citerne Feux de Forêt</td></tr>
-      <tr><td>VLM</td><td>Véhicule Léger SSSM</td></tr>
-      <tr><td>DRAGON 972</td><td>Hélicoptère EC145 SDIS 972</td></tr>
-    </tbody>
-  </table>
-</div>
-</div><!-- /fc-phraseo -->
-
-</div><!-- /fiches-page -->
-
-<script>
-function fichesTab(tab,btn){
-  ['fiches','radio','phraseo'].forEach(function(t){
-    var b=document.getElementById('ft-'+t);
-    var c=document.getElementById('fc-'+t);
-    if(b)b.classList.toggle('active',t===tab);
-    if(c)c.style.display=(t===tab)?'block':'none';
-  });
-}
-</script>
-<div class="agenda-page" id="agenda-page">
-<div class="agenda-head"><h2>Calendrier des &#233;v&#233;nements</h2><p>Formations &middot; &#233;valuations &middot; recrutements &middot; sorties</p></div>
-<div class="agenda-content" id="agenda-main">
-  <div class="ev-section-title" id="ev-upcoming-title">&#192; venir</div>
-  <div id="ev-upcoming-list"><div class="agenda-empty">Aucun &#233;v&#233;nement planifi&#233;.</div></div>
-  <div class="ev-section-title" id="ev-past-title" style="margin-top:24px">Pass&#233;s</div>
-  <div id="ev-past-list"></div>
-</div>
-</div>
-<div class="promos-page" id="promos-page">
-<div class="promos-head"><h2>Tableau des promotions</h2><p>Avancements et nominations &mdash; CSP Gros-Morne</p></div>
-<div class="promos-content">
-  <div class="promo-section">
-    <div class="promo-section-title">Personnel actif</div>
-    <table class="promo-table" id="promos-actif-table">
-      <thead><tr><th>Nom</th><th>Grade</th><th>Statut</th><th>Entr&#233;e</th><th>Derni&#232;re promotion</th><th>&#201;v&#233;nement</th></tr></thead>
-      <tbody id="promos-actif-body"></tbody>
-    </table>
-  </div>
-  <div class="promo-section" style="margin-top:24px">
-    <div class="promo-section-title">Promotions r&#233;centes (officier)</div>
-    <div id="promos-extra-list"><div class="agenda-empty">Aucune promotion enregistr&#233;e.</div></div>
-  </div>
-</div>
-</div>
-<script>
-/* ══ Annonces ══ */
-var ANN_ICONS={info:'📋',alerte:'⚠️',urgent:'🔴',nomination:'🎖️'};
-var ANN_COLORS={info:'#0A3A66',alerte:'#EE8B1F',urgent:'#C8161D',nomination:'#2E7D46'};
-function annGet(){try{return JSON.parse(localStorage.getItem('sdis_ann')||'[]');}catch(e){return[];}}
-function annSave(a){try{localStorage.setItem('sdis_ann',JSON.stringify(a));}catch(e){}}
-function annCard(a,del){
-  return '<div class="annonce-card '+a.type+'" id="an-'+a.id+'">'
-    +'<div class="annonce-ico">'+ANN_ICONS[a.type]+'</div>'
-    +'<div class="annonce-body">'
-    +'<div class="annonce-type" style="color:'+ANN_COLORS[a.type]+'">'+a.type.toUpperCase()+'</div>'
-    +'<div class="annonce-title">'+a.title+'</div>'
-    +'<div class="annonce-txt">'+a.txt+'</div>'
-    +'<div class="annonce-foot">'+a.date+(a.auteur?' &mdash; '+a.auteur:'')+'</div>'
-    +'</div>'
-    +(del?'<button class="annonce-del" onclick="annDel('+a.id+')" title="Supprimer">✕</button>':'')
-    +'</div>';
-}
-function annRender(){
-  var list=annGet();
-  var wrap=document.getElementById('home-annonces-wrap');
-  var pub=document.getElementById('home-annonces-list');
-  var off=document.getElementById('off-ann-list');
-  var cnt=document.getElementById('ann-count');
-  if(wrap)wrap.style.display=list.length?'block':'none';
-  if(pub)pub.innerHTML=list.length?list.slice(0,5).map(function(a){return annCard(a,false);}).join(''):'';
-  if(off)off.innerHTML=list.length?list.map(function(a){return annCard(a,true);}).join(''):'<div class="agenda-empty">Aucune annonce.</div>';
-  if(cnt)cnt.textContent=list.length;
-}
-function annAdd(){
-  var title=(document.getElementById('ann-title').value||'').trim();
-  if(!title){alert('Titre obligatoire.');return;}
-  var d=document.getElementById('ann-date').value;
-  var df=d?new Date(d).toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'}):new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
-  var a={id:Date.now(),type:document.getElementById('ann-type').value,
-    title:title,txt:(document.getElementById('ann-txt').value||'').trim(),
-    date:df,auteur:(document.getElementById('ann-auteur').value||'').trim()};
-  var list=annGet();list.unshift(a);annSave(list);
-  document.getElementById('ann-title').value='';
-  document.getElementById('ann-txt').value='';
-  annRender();
-}
-function annDel(id){
-  if(!confirm('Supprimer cette annonce?'))return;
-  annSave(annGet().filter(function(a){return a.id!==id;}));
-  annRender();
-}
-annRender();
-
-/* ══ Calendrier ══ */
-var EV_COLORS={formation:'#0A3A66',evaluation:'#C8161D',recrutement:'#2E7D46',sortie:'#EE8B1F',autre:'#555'};
-var EV_ICONS={formation:'📚',evaluation:'📝',recrutement:'👥',sortie:'🏔️',autre:'📌'};
-function evGet(){try{return JSON.parse(localStorage.getItem('sdis_ev')||'[]');}catch(e){return[];}}
-function evSave(a){try{localStorage.setItem('sdis_ev',JSON.stringify(a));}catch(e){}}
-function evCard(e,del){
-  var c=EV_COLORS[e.type]||'#555';
-  var ic=EV_ICONS[e.type]||'📌';
-  var past=new Date(e.date)<new Date()?'ev-past':'';
-  var d=new Date(e.date);
-  var day=d.getDate();
-  var months=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];
-  var mon=months[d.getMonth()]||'';
-  return '<div class="ev-card '+past+'" id="ev-'+e.id+'">'
-    +'<div class="ev-date-col"><div class="ev-day">'+day+'</div><div class="ev-month">'+mon+'</div></div>'
-    +'<div class="ev-body">'
-    +'<div class="ev-top"><span class="ev-badge" style="background:'+c+'">'+ic+' '+e.type+'</span>'
-    +(e.heure?'<span class="ev-time">'+e.heure+'</span>':'')
-    +'</div>'
-    +'<div class="ev-title">'+e.title+'</div>'
-    +(e.desc?'<div class="ev-desc">'+e.desc+'</div>':'')
-    +'</div>'
-    +(del?'<button class="ev-del" onclick="evDel('+e.id+')" title="Supprimer">✕</button>':'')
-    +'</div>';
-}
-function evRender(){
-  var list=evGet().sort(function(a,b){return a.date<b.date?-1:1;});
-  var now=new Date();now.setHours(0,0,0,0);
-  var upcoming=list.filter(function(e){return new Date(e.date)>=now;});
-  var past=list.filter(function(e){return new Date(e.date)<now;}).reverse();
-  var upEl=document.getElementById('ev-upcoming-list');
-  var pastEl=document.getElementById('ev-past-list');
-  var offEl=document.getElementById('off-ev-list');
-  var cnt=document.getElementById('ev-count');
-  if(upEl)upEl.innerHTML=upcoming.length?upcoming.map(function(e){return evCard(e,false);}).join(''):'<div class="agenda-empty">Aucun événement à venir.</div>';
-  if(pastEl)pastEl.innerHTML=past.length?past.map(function(e){return evCard(e,false);}).join(''):'';
-  if(offEl)offEl.innerHTML=list.length?list.reverse().map(function(e){return evCard(e,true);}).join(''):'<div class="agenda-empty">Aucun événement.</div>';
-  if(cnt)cnt.textContent=list.length;
-  var tPast=document.getElementById('ev-past-title');
-  if(tPast)tPast.style.display=past.length?'flex':'none';
-}
-function evAdd(){
-  var title=(document.getElementById('ev-title').value||'').trim();
-  var date=document.getElementById('ev-date').value;
-  if(!title||!date){alert('Titre et date obligatoires.');return;}
-  var e={id:Date.now(),type:document.getElementById('ev-type').value,
-    date:date,heure:document.getElementById('ev-heure').value||'',
-    title:title,desc:(document.getElementById('ev-desc').value||'').trim()};
-  var list=evGet();list.push(e);evSave(list);
-  document.getElementById('ev-title').value='';
-  document.getElementById('ev-desc').value='';
-  evRender();
-}
-function evDel(id){
-  if(!confirm('Supprimer cet événement?'))return;
-  evSave(evGet().filter(function(e){return e.id!==id;}));
-  evRender();
-}
-evRender();
-
-/* ══ Promotions ══ */
-var PROMOS_BASE=[{"nom": "DELAVEGAS Julien", "grade": "Lieutenant", "statut": "SPP", "entree": "07/06/2025", "promo": "02/02/2026", "event": "Nomination Lieutenant"}, {"nom": "BERTIN Sami", "grade": "Lieutenant", "statut": "SPV", "entree": "23/05/2025", "promo": "18/01/2026", "event": "Nomination Lieutenant"}, {"nom": "BROUSSARD Pierre", "grade": "Adjudant", "statut": "SPP", "entree": "18/07/2025", "promo": "20/12/2026", "event": "Nomination Adjudant"}, {"nom": "DOS SANTOS Mickael", "grade": "Sergent-Chef", "statut": "SPP", "entree": "19/10/2025", "promo": "17/01/2026", "event": "Promotion Sergent-Chef"}, {"nom": "NEVILLE Robert", "grade": "Caporal-Chef", "statut": "SPP", "entree": "15/02/2026", "promo": "18/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "BERING Nicolas", "grade": "Caporal-Chef", "statut": "SPP", "entree": "22/02/2026", "promo": "28/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "WOJDA Antoni", "grade": "Caporal-Chef", "statut": "SPV", "entree": "27/01/2026", "promo": "22/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "CARPENTIER Raphael", "grade": "Caporal", "statut": "SPP", "entree": "26/12/2025", "promo": "18/01/2026", "event": "Promotion Caporal"}, {"nom": "RAMOS Franck", "grade": "Caporal", "statut": "SPV", "entree": "22/02/2026", "promo": "01/03/2026", "event": "Promotion Caporal"}, {"nom": "LOPEZ David", "grade": "Caporal", "statut": "SPV", "entree": "08/01/2026", "promo": "15/01/2026", "event": "Promotion Caporal"}];
-function pmGet(){try{return JSON.parse(localStorage.getItem('sdis_pm')||'[]');}catch(e){return[];}}
-function pmSave(a){try{localStorage.setItem('sdis_pm',JSON.stringify(a));}catch(e){}}
-function pmRender(){
-  // Table actif (statique)
-  var tbody=document.getElementById('promos-actif-body');
-  if(tbody){
-    tbody.innerHTML=PROMOS_BASE.sort(function(a,b){
-      var ord={Lieutenant:0,Adjudant:1,'Sergent-Chef':2,Sergent:3,'Caporal-Chef':4,Caporal:5,'Sapeur 1C':6,'Sapeur 2C':7};
-      return (ord[a.grade]||9)-(ord[b.grade]||9);
-    }).map(function(p){
-      var sc=p.statut==='SPP'?'promo-spp':'promo-spv';
-      return '<tr><td><strong>'+p.nom+'</strong></td>'
-        +'<td><span class="promo-badge '+sc+'">'+p.grade+'</span></td>'
-        +'<td><span class="promo-badge '+sc+'">'+p.statut+'</span></td>'
-        +'<td style="font-size:.8rem;color:#888">'+p.entree+'</td>'
-        +'<td style="font-weight:600;color:#072A4C">'+p.promo+'</td>'
-        +'<td style="font-size:.82rem;color:#555">'+p.event+'</td>'
-        +'</tr>';
-    }).join('');
-  }
-  // Extras localStorage
-  var extras=pmGet();
-  var extEl=document.getElementById('promos-extra-list');
-  var offEl=document.getElementById('off-promos-list');
-  var html=extras.length?extras.map(function(p){
-    return '<div class="annonce-card nomination" style="margin-bottom:8px">'
-      +'<div class="annonce-ico">🏆</div>'
-      +'<div class="annonce-body">'
-      +'<div class="annonce-type" style="color:#2E7D46">'+p.type.toUpperCase()+'</div>'
-      +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
-      +'<div class="annonce-foot">'+p.date+'</div>'
-      +'</div></div>';
-  }).join(''):'<div class="agenda-empty">Aucune.</div>';
-  if(extEl)extEl.innerHTML=html;
-  if(offEl)offEl.innerHTML=extras.length?extras.map(function(p,i){
-    return '<div class="annonce-card nomination" style="margin-bottom:8px">'
-      +'<div class="annonce-ico">🏆</div>'
-      +'<div class="annonce-body">'
-      +'<div class="annonce-type" style="color:#2E7D46">'+p.type+'</div>'
-      +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
-      +'<div class="annonce-foot">'+p.date+'</div>'
-      +'</div>'
-      +'<button class="annonce-del" onclick="pmDel('+i+')" title="Supprimer">✕</button>'
-      +'</div>';
-  }).join(''):'<div class="agenda-empty">Aucune promotion ajoutée.</div>';
-}
-function pmAdd(){
-  var nom=(document.getElementById('pm-nom').value||'').trim();
-  var grade=(document.getElementById('pm-grade').value||'').trim();
   var date=document.getElementById('pm-date').value;
-  if(!nom||!grade){alert('Nom et grade obligatoires.');return;}
   var df=date?new Date(date).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'}):new Date().toLocaleDateString('fr-FR');
-  var p={nom:nom,grade:grade,type:document.getElementById('pm-type').value,date:df};
-  var list=pmGet();list.unshift(p);pmSave(list);
-  document.getElementById('pm-nom').value='';
-  document.getElementById('pm-grade').value='';
-  pmRender();
+  var list=await ghRead('promotions.json');
+  list.unshift({id:Date.now(),nom:nom,grade:grade,type:document.getElementById('pm-type').value,date:df});
+  if(await ghWrite('promotions.json',list)){
+    document.getElementById('pm-nom').value='';
+    document.getElementById('pm-grade').value='';
+    pmRender();
+  }
 }
-function pmDel(i){
-  if(!confirm('Supprimer?'))return;
-  var list=pmGet();list.splice(i,1);pmSave(list);pmRender();
+async function pmDel(id){
+  if(!confirm('Supprimer ?'))return;
+  var list=await ghRead('promotions.json');
+  list=list.filter(function(p){return String(p.id)!==String(id);});
+  if(await ghWrite('promotions.json',list))pmRender();
 }
-pmRender();
+
+ghTokenRender();annRender();evRender();pmRender();
 </script>
 </body>
 </html>
