@@ -731,6 +731,84 @@ body.show-fiches .fiches-page{display:block}
 .phraseo-msg{font-family:'Courier New',monospace;font-size:.82rem;background:#F6F1E7;border-radius:6px;padding:8px 10px;line-height:1.5;color:#1B1B1B}
 @media(max-width:640px){.fiches-grid{grid-template-columns:1fr}.fiches-content{padding:16px 5% 50px}.fiches-tabs{top:52px}.phraseo-grid{grid-template-columns:1fr}.statuts-grid{grid-template-columns:1fr 1fr}}
 
+
+/* ══ Annonces ══ */
+.annonces-wrap{padding:0 7% 0;margin-top:20px;max-width:1100px}
+.annonce-card{display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid #E2D9C6;border-radius:12px;padding:14px 18px;margin-bottom:10px;animation:pgIn .25s ease}
+.annonce-card.urgent{border-left:5px solid #C8161D;background:#fff8f8}
+.annonce-card.alerte{border-left:5px solid #EE8B1F;background:#fffaf5}
+.annonce-card.info{border-left:5px solid #0A3A66;background:#f8fbff}
+.annonce-card.nomination{border-left:5px solid #2E7D46;background:#f6fff9}
+.annonce-ico{font-size:1.5rem;flex:0 0 auto;margin-top:2px}
+.annonce-body{flex:1;min-width:0}
+.annonce-type{font-family:'Oswald',sans-serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.annonce-title{font-weight:700;color:#072A4C;font-size:.98rem;margin-bottom:4px}
+.annonce-txt{font-size:.84rem;color:#444;line-height:1.5}
+.annonce-foot{font-size:.72rem;color:#aaa;margin-top:6px}
+.annonce-del{background:none;border:none;cursor:pointer;color:#ddd;padding:2px 6px;border-radius:4px;font-size:.82rem;transition:.15s}
+.annonce-del:hover{color:#C8161D;background:#fff0f0}
+.ann-empty{text-align:center;padding:20px;color:#aaa;font-style:italic;font-size:.86rem}
+/* Officier annonces form */
+.ann-form{background:#fff;border:1px solid #E2D9C6;border-radius:12px;padding:18px;margin-bottom:20px}
+.ann-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.ann-inp{width:100%;padding:9px 12px;border:1px solid #E2D9C6;border-radius:8px;font-family:'Mulish',sans-serif;font-size:.88rem;box-sizing:border-box;outline:none}
+.ann-inp:focus{border-color:#0A3A66}
+.ann-lbl{font-size:.72rem;font-family:'Oswald',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#777;margin-bottom:3px;display:block}
+.ann-btn{width:100%;padding:11px;border:none;border-radius:8px;background:linear-gradient(100deg,#C8161D,#9E1015);color:#fff;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;margin-top:4px}
+/* ══ Calendrier ══ */
+body.show-agenda .agenda-page{display:block}
+.agenda-page{display:none;margin-top:58px;background:#F6F1E7;min-height:calc(100vh - 58px);animation:pgIn .28s ease}
+.agenda-head{background:linear-gradient(135deg,#072A4C,#0A3A66);padding:22px 7% 18px;border-bottom:3px solid #C8161D}
+.agenda-head h2{font-family:'Oswald',sans-serif;font-size:1.3rem;color:#fff;margin:0 0 3px;letter-spacing:.05em;text-transform:uppercase}
+.agenda-head p{font-size:.82rem;color:rgba(255,255,255,.5);margin:0}
+.agenda-content{padding:24px 7% 60px;max-width:1000px}
+.agenda-empty{text-align:center;padding:40px;color:#aaa;font-style:italic;background:#fff;border:1px solid #E2D9C6;border-radius:12px}
+.ev-card{display:flex;gap:0;background:#fff;border:1px solid #E2D9C6;border-radius:12px;margin-bottom:10px;overflow:hidden;transition:.15s}
+.ev-card:hover{box-shadow:0 4px 14px rgba(7,42,76,.1)}
+.ev-date-col{flex:0 0 72px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 8px;border-right:1px solid #E2D9C6}
+.ev-day{font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:700;color:#072A4C;line-height:1}
+.ev-month{font-family:'Oswald',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#888}
+.ev-body{padding:13px 16px;flex:1;min-width:0}
+.ev-top{display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap}
+.ev-badge{font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 10px;border-radius:20px;color:#fff;white-space:nowrap}
+.ev-time{font-size:.76rem;color:#888;margin-left:auto}
+.ev-title{font-weight:700;color:#072A4C;font-size:.95rem;margin-bottom:3px}
+.ev-desc{font-size:.82rem;color:#555;line-height:1.45}
+.ev-del{background:none;border:none;cursor:pointer;color:#ddd;padding:2px 6px;border-radius:4px;font-size:.82rem;transition:.15s;align-self:flex-start;margin-top:12px;margin-right:10px}
+.ev-del:hover{color:#C8161D;background:#fff0f0}
+.ev-past{opacity:.5}
+.ev-section-title{font-family:'Oswald',sans-serif;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:#888;margin:18px 0 8px;display:flex;align-items:center;gap:10px}
+.ev-section-title::after{content:"";flex:1;height:1px;background:#E2D9C6}
+/* Officier agenda form */
+.ev-form{background:#fff;border:1px solid #E2D9C6;border-radius:12px;padding:18px;margin-bottom:20px}
+.ev-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+/* ══ Tableau des promotions ══ */
+body.show-promos .promos-page{display:block}
+.promos-page{display:none;margin-top:58px;background:#F6F1E7;min-height:calc(100vh - 58px);animation:pgIn .28s ease}
+.promos-head{background:linear-gradient(135deg,#072A4C,#0A3A66);padding:22px 7% 18px;border-bottom:3px solid #C8161D}
+.promos-head h2{font-family:'Oswald',sans-serif;font-size:1.3rem;color:#fff;margin:0 0 3px;letter-spacing:.05em;text-transform:uppercase}
+.promos-head p{font-size:.82rem;color:rgba(255,255,255,.5);margin:0}
+.promos-content{padding:24px 7% 60px;max-width:1000px}
+.promo-section{margin-bottom:28px}
+.promo-section-title{font-family:'Oswald',sans-serif;font-size:.86rem;letter-spacing:.08em;text-transform:uppercase;color:#072A4C;margin:0 0 10px;display:flex;align-items:center;gap:10px}
+.promo-section-title::after{content:"";flex:1;height:2px;background:#E2D9C6}
+.promo-table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;border:1px solid #E2D9C6}
+.promo-table th{background:#072A4C;color:#fff;padding:9px 14px;font-family:'Oswald',sans-serif;font-size:.78rem;letter-spacing:.06em;text-align:left}
+.promo-table td{padding:8px 14px;border-top:1px solid #E2D9C6;font-size:.85rem}
+.promo-table tr:hover td{background:#fafaf8}
+.promo-badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.72rem;font-weight:600}
+.promo-spp{background:rgba(10,58,102,.1);color:#072A4C}
+.promo-spv{background:rgba(185,113,26,.1);color:#b9711a}
+.promo-new{background:#dcfce7;color:#166534;padding:2px 8px;border-radius:5px;font-size:.7rem;font-weight:600;margin-left:6px}
+.promo-add-btn{width:100%;padding:11px;border:none;border-radius:8px;background:linear-gradient(100deg,#2E7D46,#1d5c32);color:#fff;font-family:'Oswald',sans-serif;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;margin-top:4px}
+@media(max-width:640px){
+  .annonces-wrap{padding:0 5% 0}
+  .ann-form-grid,.ev-form-grid{grid-template-columns:1fr}
+  .agenda-content,.promos-content{padding:16px 5% 50px}
+  .ev-date-col{flex:0 0 58px}
+  .ev-day{font-size:1.5rem}
+}
+
 </style></head><body class="show-home">
 <nav id="topnav">
   <button id="tnav-logo" onclick="showPage('home')">
@@ -741,6 +819,8 @@ body.show-fiches .fiches-page{display:block}
   <button class="tnav-btn"        id="tnav-docs"    onclick="showPage('docs')">📚<span class="tnav-label"> Docs</span></button>
   <button class="tnav-btn"        id="tnav-journal" onclick="showPage('journal')">📋<span class="tnav-label"> Journal</span></button>
   <button class="tnav-btn" id="tnav-fiches" onclick="showPage('fiches')">⚡<span class="tnav-label"> Fiches</span></button>
+  <button class="tnav-btn" id="tnav-agenda"  onclick="showPage('agenda')" >📅<span class="tnav-label"> Agenda</span></button>
+  <button class="tnav-btn" id="tnav-promos"  onclick="showPage('promos')" >🏆<span class="tnav-label"> Promos</span></button>
   <button id="tnav-off" onclick="showOffOvl()">🔐<span class="tnav-off-text"> Officier</span></button>
   <button id="tnav-ham" onclick="toggleSidebar()" aria-label="Menu">☰</button>
 </nav>
@@ -749,6 +829,8 @@ body.show-fiches .fiches-page{display:block}
   <button class="tnav-menu-btn"        id="tmenu-docs"    onclick="showPage('docs');closeMenu()">📚 Documentation</button>
   <button class="tnav-menu-btn"        id="tmenu-journal" onclick="showPage('journal');closeMenu()">📋 Journal d'activité</button>
   <button class="tnav-menu-btn" id="tmenu-fiches" onclick="showPage('fiches');closeMenu()">⚡ Fiches rapides &amp; Codes radio</button>
+  <button class="tnav-menu-btn" id="tmenu-agenda"  onclick="showPage('agenda');closeMenu()">📅 Calendrier</button>
+  <button class="tnav-menu-btn" id="tmenu-promos"  onclick="showPage('promos');closeMenu()">🏆 Promotions</button>
   <div class="tnav-menu-divider"></div>
   <button class="tnav-menu-btn"        onclick="showOffOvl();closeMenu()">🔐 Espace Officier</button>
 </div>
@@ -773,7 +855,10 @@ body.show-fiches .fiches-page{display:block}
     <div class="home-stat"><strong>30</strong><span>Documents</span></div>
     <div class="home-stat"><strong>3</strong><span>Domaines</span></div>
     <div class="home-stat"><strong>CSP</strong><span>Gros-Morne</span></div>
-  </div>
+  <div class="annonces-wrap" id="home-annonces-wrap" style="display:none">
+  <div id="home-annonces-list"></div>
+</div>
+</div>
 </div>
 <section class="journal-section" id="journal-activite">
   <div class="journal-head">
@@ -2629,7 +2714,6 @@ search&&search.addEventListener('input',function(){
     <button class="off-tab active" onclick="switchTab('db',this)">🏠 Tableau de bord</button>
     <button class="off-tab" onclick="switchTab('pers',this)">👥 Personnel</button>
     <button class="off-tab" onclick="switchTab('arc',this)">📁 Archives</button>
-    <button class="off-tab" onclick="switchTab('jnl',this)">📋 Journal</button>
   </div>
   <div id="ot-db"   class="off-tab-content active"><div class="db-stats">
   <div class="db-card" style="border-top:4px solid #0A3A66"><div class="db-num">12</div><div class="db-lbl">Effectif total actif</div></div>
@@ -2644,15 +2728,76 @@ search&&search.addEventListener('input',function(){
 <h3 class="ogrp-title" style="margin-top:24px">📋 Personnel actif</h3>
 <div class="table-wrap"><table class="arc-table"><thead><tr><th>Nom</th><th>Grade</th><th>Statut</th><th>Entrée</th><th>Rôle CTA/CODIS</th></tr></thead><tbody><tr><td><strong style="color:#0A3A66">Julien DELAVEGAS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Lieutenant</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">07/06/2025</td><td style="font-size:.78rem">Responsable CTA/CODIS</td></tr><tr><td><strong style="color:#b9711a">Sami BERTIN</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Lieutenant</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">23/05/2025</td><td style="font-size:.78rem">Opérateur CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Pierre BROUSSARD</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Adjudant</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">18/07/2025</td><td style="font-size:.78rem">Régulateur SAMU</td></tr><tr><td><strong style="color:#0A3A66">Mickael DOS SANTOS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Sergent-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">19/10/2025</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Robert NEVILLE</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">15/02/2026</td><td style="font-size:.78rem">Opérateur CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Nicolas BERING</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">22/02/2026</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#0A3A66">Raphael CARPENTIER</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">26/12/2025</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#0A3A66">Clément DESAULNIERS</strong></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">15/03/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#0A3A66">Dustin VAKARIAN</strong><span class="ob oc-form" style="font-size:.7rem;margin-left:6px">⏳ Formation</span></td><td><span class="ob" style="background:#0A3A66;color:#fff;font-size:.74rem">Sapeur 1C</span></td><td style="font-size:.78rem">SPP</td><td style="font-size:.78rem">17/05/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#b9711a">Antoni WOJDA</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal-Chef</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">27/01/2026</td><td style="font-size:.78rem">Assistant CTA/CODIS</td></tr><tr><td><strong style="color:#b9711a">David LOPEZ</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">08/01/2026</td><td style="font-size:.78rem">—</td></tr><tr><td><strong style="color:#b9711a">Franck RAMOS</strong></td><td><span class="ob" style="background:#b9711a;color:#fff;font-size:.74rem">Caporal</span></td><td style="font-size:.78rem">SPV</td><td style="font-size:.78rem">22/02/2026</td><td style="font-size:.78rem">—</td></tr></tbody></table></div></div>
   <div id="ot-pers" class="off-tab-content"><h3 class="ogrp-title">🎖️ Commandement <span class="ogrp-count">2</span></h3><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Julien DELAVEGAS</div><div class="ocard-grade">Lieutenant · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>07/06/2025</strong></div><div>📈 Évol. : <strong>02/02/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">RECRUTEUR</span><span class="ob oc-rh">FORMATEUR SAP</span><span class="ob oc-rh">FORMATEUR DIV/SR</span><span class="ob oc-rh">FORMATEUR INC</span><span class="ob oc-rh">FORMATEUR COD3</span><span class="ob oc-rh">FORMATEUR COS</span></div></div><div class="orow"><span class="olab">Commandement</span><div><span class="ob oc-cmd">COS</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Responsable CTA/CODIS</span><span class="ob oc-cod">Opérateur CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">Sami BERTIN</div><div class="ocard-grade">Lieutenant · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>23/05/2025</strong></div><div>📈 Évol. : <strong>18/01/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">RECRUTEUR</span><span class="ob oc-rh">FORMATEUR SAP</span><span class="ob oc-rh">FORMATEUR DIV/SR</span><span class="ob oc-rh">FORMATEUR INC</span></div></div><div class="orow"><span class="olab">Commandement</span><div><span class="ob oc-cmd">COS</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Opérateur CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><h3 class="ogrp-title">🏅 Sous-officiers <span class="ogrp-count">2</span></h3><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Pierre BROUSSARD</div><div class="ocard-grade">Adjudant · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>18/07/2025</strong></div><div>📈 Évol. : <strong>20/12/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">FORMATEUR SSSM</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">SSSM</span><div><span class="ob oc-med">MÉDECIN SP</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Régulateur SAMU</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Mickael DOS SANTOS</div><div class="ocard-grade">Sergent-Chef · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>19/10/2025</strong></div><div>📈 Évol. : <strong>17/01/2026</strong></div></div></div><div class="orow"><span class="olab">RH</span><div><span class="ob oc-rh">FORMATEUR SAP</span><span class="ob oc-rh">FORMATEUR DIV/SR</span><span class="ob oc-rh">FORMATEUR INC</span></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA INC/FDF</span><span class="ob oc-ca">CA EPA</span><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">CU DÉMINEUR</span><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Assistant CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span></div></div></div><h3 class="ogrp-title">👨‍🚒 Hommes du rang <span class="ogrp-count">8</span></h3><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Robert NEVILLE</div><div class="ocard-grade">Caporal-Chef · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>15/02/2026</strong></div><div>📈 Évol. : <strong>18/02/2026</strong></div></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">CU SAL / SAV</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Opérateur CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Nicolas BERING</div><div class="ocard-grade">Caporal-Chef · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>22/02/2026</strong></div><div>📈 Évol. : <strong>28/02/2026</strong></div></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">CU DRAGON</span><span class="ob oc-spe">EPIM-F</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Assistant CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Raphael CARPENTIER</div><div class="ocard-grade">Caporal · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>26/12/2025</strong></div><div>📈 Évol. : <strong>18/01/2026</strong></div></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Clément DESAULNIERS</div><div class="ocard-grade">Caporal · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>15/03/2026</strong></div><div>📈 Évol. : <strong>—</strong></div></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #0A3A66;background:rgba(10,58,102,.07)"><div class="ocard-head"><div><div class="ocard-name">Dustin VAKARIAN</div><div class="ocard-grade">Sapeur 1C · <span style="background:#0A3A66;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPP</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>17/05/2026</strong></div><div>📈 Évol. : <strong>—</strong></div></div></div><div class="orow"><span class="ob oc-form">⏳ EN FORMATION</span></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">Antoni WOJDA</div><div class="ocard-grade">Caporal-Chef · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>27/01/2026</strong></div><div>📈 Évol. : <strong>22/02/2026</strong></div></div></div><div class="orow"><span class="olab">Chef d'agrès</span><div><span class="ob oc-ca">CA DIV/SIR</span><span class="ob oc-ca">CA SAP</span></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAV</span><span class="ob oc-spe">EPIM-F</span></div></div><div class="orow"><span class="olab">CTA/CODIS</span><div><span class="ob oc-cod">Assistant CTA/CODIS</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC, CE INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">David LOPEZ</div><div class="ocard-grade">Caporal · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>08/01/2026</strong></div><div>📈 Évol. : <strong>15/01/2026</strong></div></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span></div></div></div><div class="ocard" style="border-left:4px solid #b9711a;background:rgba(185,113,26,.07)"><div class="ocard-head"><div><div class="ocard-name">Franck RAMOS</div><div class="ocard-grade">Caporal · <span style="background:#b9711a;color:#fff;padding:1px 8px;border-radius:20px;font-size:.7rem">SPV</span></div></div><div class="ocard-dates"><div>📅 Entrée : <strong>22/02/2026</strong></div><div>📈 Évol. : <strong>01/03/2026</strong></div></div></div><div class="orow"><span class="olab">Spécialité</span><div><span class="ob oc-spe">SAL</span><span class="ob oc-spe">SAV</span></div></div><div class="orow"><span class="olab">Opérationnel</span><div><span class="ob oc-ops">EQ SAP · EQ DIV/SR · EQ INC</span></div></div><div class="orow"><span class="olab">Conduite</span><div><span class="ob oc-cond">VL</span><span class="ob oc-cond">PL</span><span class="ob oc-cond">COD 1 [EP]</span><span class="ob oc-cond">COD 2 [FDF]</span><span class="ob oc-cond">COD 6 [EPA]</span></div></div></div><div class="ocard ocard-vide" style="border-left:4px solid #ccc;background:#f8f8f8"><div class="ocard-head"><div class="ocard-name" style="color:#aaa">Recrutement à venir</div></div></div><div class="ocard ocard-vide" style="border-left:4px solid #ccc;background:#f8f8f8"><div class="ocard-head"><div class="ocard-name" style="color:#aaa">Recrutement à venir</div></div></div></div>
-  <div id="ot-arc"  class="off-tab-content"><div class="table-wrap"><table class="arc-table"><thead><tr><th>Nom</th><th>Statut</th><th>Nature</th><th>Motif</th><th>Sortie</th></tr></thead><tbody><tr class="arc-dem"><td><strong>John STUART</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Pas de motif donné</td><td style="white-space:nowrap">09/01/2026</td></tr><tr class="arc-dem"><td><strong>Jason SMITH</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">Problème garde 09/01/26</td><td style="white-space:nowrap">10/01/2026</td></tr><tr class="arc-dem"><td><strong>Lucas SPECTRE</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème privé / temps / grade 1ère classe</td><td style="white-space:nowrap">24/01/2026</td></tr><tr class="arc-dem"><td><strong>Raby RODRIGUEZ</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème de temps / grade 2ème classe</td><td style="white-space:nowrap">18/01/2026</td></tr><tr class="arc-lic"><td><strong>Léandro DUPONT</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚫 Licenciement pour faute</td><td class="arc-motif">Blâmes / insultes / non-respect du règlement / 1er classe</td><td style="white-space:nowrap">20/01/2026</td></tr><tr class="arc-lic"><td><strong>Mickael KEAL</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité de longue durée / 2ème classe</td><td style="white-space:nowrap">31/01/2026</td></tr><tr class="arc-dem"><td><strong>Vadim KOROV</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">N&#x27;a pas souhaité poursuivre / 1ère classe / engagé 26/01/26</td><td style="white-space:nowrap">15/02/2026</td></tr><tr class="arc-dem"><td><strong>Noah BRESTO</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / manque de temps / caporal / engagé 19/10/25</td><td style="white-space:nowrap">04/03/2026</td></tr><tr class="arc-dem"><td><strong>Lyam BELLAY</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / changement jeu / 1er classe / engagé 12/01/26</td><td style="white-space:nowrap">03/03/2026</td></tr><tr class="arc-lic"><td><strong>Rémi BERGER</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité longue durée / caporal / engagé 24/10/25</td><td style="white-space:nowrap">16/03/2026</td></tr><tr class="arc-lic"><td><strong>Yoan PARKER</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité longue / adjudant / médecin / engagé 25/03/25</td><td style="white-space:nowrap">15/03/2026</td></tr><tr class="arc-dem"><td><strong>Brice COUSIN</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">A souhaité démissionner / sergent / engagé 17/09/25</td><td style="white-space:nowrap">17/03/2026</td></tr><tr class="arc-dem"><td><strong>Robin COUSIN</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème IG / Lieutenant / engagé 28/06/25</td><td style="white-space:nowrap">16/03/2026</td></tr><tr class="arc-dem"><td><strong>Nael BELLERINAUD</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Changement vie pro / caporal / engagé 13/01/26</td><td style="white-space:nowrap">24/03/2026</td></tr><tr class="arc-dem"><td><strong>Dylan WHITER</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Pas de temps / 1ère classe EQ GRES, DÉMINEUR</td><td style="white-space:nowrap">06/04/2026</td></tr><tr class="arc-lic"><td><strong>Pauline DUMONT</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Problème privé/santé / 2nd classe (SAP) / engagé 15/02/26</td><td style="white-space:nowrap">14/04/2026</td></tr><tr class="arc-dem"><td><strong>Tom BANKS</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">Manque de temps / 1er classe / engagé 21/01/26</td><td style="white-space:nowrap">14/04/2026</td></tr><tr class="arc-dem"><td><strong>Jonathan PREVOT</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / médecin chef / commandant / engagé 23/05/25</td><td style="white-space:nowrap">18/04/2026</td></tr><tr class="arc-dem"><td><strong>Marco DOS SANTOS</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / CCH / spec démineur / engagé 26/01/26</td><td style="white-space:nowrap">05/05/2026</td></tr><tr class="arc-dem"><td><strong>Kelly GUZMANN</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / ISP SSSM / Formatrice / EPIM / engagée 23/11/25</td><td style="white-space:nowrap">18/05/2026</td></tr><tr class="arc-dem"><td><strong>Nael BELLERINAUD</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture 2ème contrat 28/03/2026</td><td style="white-space:nowrap">18/05/2026</td></tr><tr class="arc-dem"><td><strong>Thonny ZANOTTI</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / formateur INC / CCH / engagé 20/01/26</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-lic"><td><strong>Hantz WARTHZ</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">CAP SPV / engagé 19/10/2025</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-lic"><td><strong>Raven STORM</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">1C SPV / engagé 25/11/25</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-dem"><td><strong>Axel SLIMANI</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">2C SPV / engagé 10/03/26</td><td style="white-space:nowrap">19/05/2026</td></tr></tbody></table></div></div>
-</div>
-<div id="ot-jnl" class="off-tab-content">
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px">
-    <h3 class="ogrp-title" style="margin:0;flex:1">Interventions <span id="jnl-count" class="ogrp-count">0</span></h3>
-    <button onclick="jnlReset()" style="background:none;border:1px solid #E2D9C6;border-radius:7px;padding:6px 14px;font-size:.78rem;color:#888;cursor:pointer">↺ Réafficher masquées</button>
+  <div id="ot-arc"  class="off-tab-content"><div class="table-wrap"><table class="arc-table"><thead><tr><th>Nom</th><th>Statut</th><th>Nature</th><th>Motif</th><th>Sortie</th></tr></thead><tbody><tr class="arc-dem"><td><strong>John STUART</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Pas de motif donné</td><td style="white-space:nowrap">09/01/2026</td></tr><tr class="arc-dem"><td><strong>Jason SMITH</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">Problème garde 09/01/26</td><td style="white-space:nowrap">10/01/2026</td></tr><tr class="arc-dem"><td><strong>Lucas SPECTRE</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème privé / temps / grade 1ère classe</td><td style="white-space:nowrap">24/01/2026</td></tr><tr class="arc-dem"><td><strong>Raby RODRIGUEZ</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème de temps / grade 2ème classe</td><td style="white-space:nowrap">18/01/2026</td></tr><tr class="arc-lic"><td><strong>Léandro DUPONT</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚫 Licenciement pour faute</td><td class="arc-motif">Blâmes / insultes / non-respect du règlement / 1er classe</td><td style="white-space:nowrap">20/01/2026</td></tr><tr class="arc-lic"><td><strong>Mickael KEAL</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité de longue durée / 2ème classe</td><td style="white-space:nowrap">31/01/2026</td></tr><tr class="arc-dem"><td><strong>Vadim KOROV</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">N&#x27;a pas souhaité poursuivre / 1ère classe / engagé 26/01/26</td><td style="white-space:nowrap">15/02/2026</td></tr><tr class="arc-dem"><td><strong>Noah BRESTO</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / manque de temps / caporal / engagé 19/10/25</td><td style="white-space:nowrap">04/03/2026</td></tr><tr class="arc-dem"><td><strong>Lyam BELLAY</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / changement jeu / 1er classe / engagé 12/01/26</td><td style="white-space:nowrap">03/03/2026</td></tr><tr class="arc-lic"><td><strong>Rémi BERGER</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité longue durée / caporal / engagé 24/10/25</td><td style="white-space:nowrap">16/03/2026</td></tr><tr class="arc-lic"><td><strong>Yoan PARKER</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Inactivité longue / adjudant / médecin / engagé 25/03/25</td><td style="white-space:nowrap">15/03/2026</td></tr><tr class="arc-dem"><td><strong>Brice COUSIN</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">A souhaité démissionner / sergent / engagé 17/09/25</td><td style="white-space:nowrap">17/03/2026</td></tr><tr class="arc-dem"><td><strong>Robin COUSIN</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Problème IG / Lieutenant / engagé 28/06/25</td><td style="white-space:nowrap">16/03/2026</td></tr><tr class="arc-dem"><td><strong>Nael BELLERINAUD</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Changement vie pro / caporal / engagé 13/01/26</td><td style="white-space:nowrap">24/03/2026</td></tr><tr class="arc-dem"><td><strong>Dylan WHITER</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Pas de temps / 1ère classe EQ GRES, DÉMINEUR</td><td style="white-space:nowrap">06/04/2026</td></tr><tr class="arc-lic"><td><strong>Pauline DUMONT</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">Problème privé/santé / 2nd classe (SAP) / engagé 15/02/26</td><td style="white-space:nowrap">14/04/2026</td></tr><tr class="arc-dem"><td><strong>Tom BANKS</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">Manque de temps / 1er classe / engagé 21/01/26</td><td style="white-space:nowrap">14/04/2026</td></tr><tr class="arc-dem"><td><strong>Jonathan PREVOT</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / médecin chef / commandant / engagé 23/05/25</td><td style="white-space:nowrap">18/04/2026</td></tr><tr class="arc-dem"><td><strong>Marco DOS SANTOS</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / CCH / spec démineur / engagé 26/01/26</td><td style="white-space:nowrap">05/05/2026</td></tr><tr class="arc-dem"><td><strong>Kelly GUZMANN</strong></td><td><span class="ob oc-ops">SPP 3SM</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / ISP SSSM / Formatrice / EPIM / engagée 23/11/25</td><td style="white-space:nowrap">18/05/2026</td></tr><tr class="arc-dem"><td><strong>Nael BELLERINAUD</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture 2ème contrat 28/03/2026</td><td style="white-space:nowrap">18/05/2026</td></tr><tr class="arc-dem"><td><strong>Thonny ZANOTTI</strong></td><td><span class="ob oc-ops">SPP</span></td><td>🚪 Démission</td><td class="arc-motif">Rupture contrat / formateur INC / CCH / engagé 20/01/26</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-lic"><td><strong>Hantz WARTHZ</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">CAP SPV / engagé 19/10/2025</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-lic"><td><strong>Raven STORM</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚫 Licenciement inactivité</td><td class="arc-motif">1C SPV / engagé 25/11/25</td><td style="white-space:nowrap">19/05/2026</td></tr><tr class="arc-dem"><td><strong>Axel SLIMANI</strong></td><td><span class="ob oc-ops">SPV</span></td><td>🚪 Démission</td><td class="arc-motif">2C SPV / engagé 10/03/26</td><td style="white-space:nowrap">19/05/2026</td></tr></tbody></table></div>
+<div id="ot-ann" class="off-tab-content">
+  <h3 class="ogrp-title">Nouvelle annonce</h3>
+  <div class="ann-form">
+    <div class="ann-form-grid">
+      <div><label class="ann-lbl">Type</label>
+        <select id="ann-type" class="ann-inp">
+          <option value="info">📋 Information</option>
+          <option value="alerte">⚠️ Alerte</option>
+          <option value="urgent">🔴 Urgent</option>
+          <option value="nomination">🎖️ Nomination</option>
+        </select></div>
+      <div><label class="ann-lbl">Date (affich&#233;e)</label>
+        <input id="ann-date" type="date" class="ann-inp"></div>
+    </div>
+    <div style="margin-bottom:10px"><label class="ann-lbl">Titre</label>
+      <input id="ann-title" type="text" placeholder="Convocation, changement de r&#232;gle..." class="ann-inp"></div>
+    <div style="margin-bottom:12px"><label class="ann-lbl">Message</label>
+      <textarea id="ann-txt" class="ann-inp" rows="3" style="resize:vertical"></textarea></div>
+    <div style="margin-bottom:12px"><label class="ann-lbl">Sign&#233; par</label>
+      <input id="ann-auteur" type="text" placeholder="Lieutenant DELAVEGAS" class="ann-inp"></div>
+    <button class="ann-btn" onclick="annAdd()">📢 Publier l'annonce</button>
   </div>
-  <p style="font-size:.82rem;color:#888;margin:0 0 14px;font-style:italic">Pour ajouter de nouvelles interventions, envoyez une capture à Claude dans le chat.</p>
-  <div id="off-journal-list"></div>
+  <h3 class="ogrp-title" style="margin-top:0">Annonces actives <span id="ann-count" class="ogrp-count">0</span></h3>
+  <div id="off-ann-list"><div class="agenda-empty">Aucune annonce.</div></div>
+</div>
+<div id="ot-agenda" class="off-tab-content">
+  <h3 class="ogrp-title">Nouvel &#233;v&#233;nement</h3>
+  <div class="ev-form">
+    <div class="ev-form-grid">
+      <div><label class="ann-lbl">Type</label>
+        <select id="ev-type" class="ann-inp">
+          <option value="formation">📚 Formation</option>
+          <option value="evaluation">📝 &#201;valuation</option>
+          <option value="recrutement">👥 Recrutement</option>
+          <option value="sortie">🏔️ Sortie / exercice</option>
+          <option value="autre">📌 Autre</option>
+        </select></div>
+      <div><label class="ann-lbl">Date</label>
+        <input id="ev-date" type="date" class="ann-inp"></div>
+      <div><label class="ann-lbl">Heure (optionnel)</label>
+        <input id="ev-heure" type="time" class="ann-inp"></div>
+    </div>
+    <div style="margin-bottom:10px"><label class="ann-lbl">Titre de l'&#233;v&#233;nement</label>
+      <input id="ev-title" type="text" placeholder="Formation SAP, &#201;valuation COD2..." class="ann-inp"></div>
+    <div style="margin-bottom:12px"><label class="ann-lbl">Description</label>
+      <textarea id="ev-desc" class="ann-inp" rows="2" style="resize:vertical"></textarea></div>
+    <button class="ann-btn" style="background:linear-gradient(100deg,#0A3A66,#072A4C)" onclick="evAdd()">📅 Ajouter au calendrier</button>
+  </div>
+  <h3 class="ogrp-title" style="margin-top:0">&#201;v&#233;nements <span id="ev-count" class="ogrp-count">0</span></h3>
+  <div id="off-ev-list"><div class="agenda-empty">Aucun &#233;v&#233;nement.</div></div>
+</div>
+<div id="ot-promos" class="off-tab-content">
+  <h3 class="ogrp-title">Ajouter une promotion / nomination</h3>
+  <div class="ann-form">
+    <div class="ann-form-grid">
+      <div><label class="ann-lbl">Nom</label><input id="pm-nom" type="text" placeholder="NOM Pr&#233;nom" class="ann-inp"></div>
+      <div><label class="ann-lbl">Nouveau grade</label><input id="pm-grade" type="text" placeholder="Sergent-Chef" class="ann-inp"></div>
+      <div><label class="ann-lbl">Date</label><input id="pm-date" type="date" class="ann-inp"></div>
+      <div><label class="ann-lbl">Type</label>
+        <select id="pm-type" class="ann-inp">
+          <option>Promotion</option><option>Nomination</option><option>Recrutement</option><option>D&#233;coration</option>
+        </select></div>
+    </div>
+    <button class="promo-add-btn" onclick="pmAdd()">🏆 Ajouter</button>
+  </div>
+  <div id="off-promos-list"><div class="agenda-empty">Promotions/nominations ajout&#233;es ici.</div></div>
+</div></div>
+</div>
+
 </div>
 
 <script>
@@ -2830,7 +2975,7 @@ jnlRenderAll();
   function showPage(name){
     document.body.className=document.body.className
       .replace(/\bshow-\w+/g,'').trim()+' show-'+(name||'home');
-    ['home','docs','journal','fiches'].forEach(function(p){
+    ['home','docs','journal','fiches','agenda','promos'].forEach(function(p){
       var b=document.getElementById('tnav-'+p);
       if(b)b.classList.toggle('active',p===name);
     });
@@ -3132,35 +3277,16 @@ jnlRenderAll();
 <div class="radio-section">
   <h3>📶 Statuts véhicule (1 → 7)</h3>
   <div class="statuts-grid">
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">1</div><div class="statut-info"><div class="statut-name">Disponible en caserne</div><div class="statut-desc">Engin prêt à partir</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">2</div><div class="statut-info"><div class="statut-name">Disponible hors caserne</div><div class="statut-desc">Sur le terrain, sans mission</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#EE8B1F">3</div><div class="statut-info"><div class="statut-name">En route</div><div class="statut-desc">En déplacement vers l'inter</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#C8161D">4</div><div class="statut-info"><div class="statut-name">Sur les lieux</div><div class="statut-desc">Arrivé sur intervention</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">1</div><div class="statut-info"><div class="statut-name">Parti</div><div class="statut-desc">Engin en route vers l'intervention</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#C8161D">2</div><div class="statut-info"><div class="statut-name">Sur les lieux</div><div class="statut-desc">Arrivé sur intervention</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#EE8B1F">3</div><div class="statut-info"><div class="statut-name">Demande de parole</div><div class="statut-desc">Souhaite parler au CODIS</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#9E1015">4</div><div class="statut-info"><div class="statut-name">Demande urgente</div><div class="statut-desc">Besoin immédiat du CODIS</div></div></div>
     <div class="statut-card"><div class="statut-num" style="background:#0A3A66">5</div><div class="statut-info"><div class="statut-name">Transport CH</div><div class="statut-desc">En route vers l'hôpital (VSAV)</div></div></div>
     <div class="statut-card"><div class="statut-num" style="background:#0A3A66">6</div><div class="statut-info"><div class="statut-name">Arrivée CH</div><div class="statut-desc">Au centre hospitalier</div></div></div>
-    <div class="statut-card"><div class="statut-num" style="background:#555">7</div><div class="statut-info"><div class="statut-name">Indisponible</div><div class="statut-desc">En panne / hors service</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">7</div><div class="statut-info"><div class="statut-name">Retour disponible</div><div class="statut-desc">Retour caserne — disponible</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#555">8</div><div class="statut-info"><div class="statut-name">Retour indisponible</div><div class="statut-desc">Retour caserne — indisponible</div></div></div>
+    <div class="statut-card"><div class="statut-num" style="background:#2E7D46">9</div><div class="statut-info"><div class="statut-name">Disponible au centre</div><div class="statut-desc">En caserne, prêt à partir</div></div></div>
   </div>
-</div>
-
-<div class="radio-section">
-  <h3>📡 Codes 10</h3>
-  <table class="code10-table">
-    <thead><tr><th>Code</th><th>Signification</th><th>Usage</th></tr></thead>
-    <tbody>
-      <tr><td>10-1</td><td>Réception mauvaise</td><td>Signal radio faible</td></tr>
-      <tr><td>10-2</td><td>Réception bonne</td><td>Confirmation signal OK</td></tr>
-      <tr><td>10-3</td><td>Arrêt de transmission</td><td>Fin de communication</td></tr>
-      <tr><td>10-4</td><td>Message bien reçu</td><td>Accusé de réception standard</td></tr>
-      <tr><td>10-7</td><td>Accident de personne</td><td>SAP en cours</td></tr>
-      <tr><td>10-9</td><td>Accident de circulation</td><td>Intervention SR</td></tr>
-      <tr><td>10-10</td><td>Mission terminée</td><td>Fin d'intervention</td></tr>
-      <tr><td>10-12</td><td>Visiteur / observateur</td><td>Présence d'un supérieur</td></tr>
-      <tr><td>10-16</td><td>Demande de renfort</td><td>Ressources insuffisantes</td></tr>
-      <tr><td>10-22</td><td>Danger / urgence</td><td>Situation critique</td></tr>
-      <tr><td>10-26</td><td>Détenu / suspect</td><td>Info GN / Police</td></tr>
-      <tr><td>10-99</td><td>Urgence absolue</td><td>Vie en danger immédiat</td></tr>
-    </tbody>
-  </table>
 </div>
 
 <div class="radio-section">
@@ -3270,6 +3396,206 @@ function fichesTab(tab,btn){
     if(c)c.style.display=(t===tab)?'block':'none';
   });
 }
+</script>
+<div class="agenda-page" id="agenda-page">
+<div class="agenda-head"><h2>Calendrier des &#233;v&#233;nements</h2><p>Formations &middot; &#233;valuations &middot; recrutements &middot; sorties</p></div>
+<div class="agenda-content" id="agenda-main">
+  <div class="ev-section-title" id="ev-upcoming-title">&#192; venir</div>
+  <div id="ev-upcoming-list"><div class="agenda-empty">Aucun &#233;v&#233;nement planifi&#233;.</div></div>
+  <div class="ev-section-title" id="ev-past-title" style="margin-top:24px">Pass&#233;s</div>
+  <div id="ev-past-list"></div>
+</div>
+</div>
+<div class="promos-page" id="promos-page">
+<div class="promos-head"><h2>Tableau des promotions</h2><p>Avancements et nominations &mdash; CSP Gros-Morne</p></div>
+<div class="promos-content">
+  <div class="promo-section">
+    <div class="promo-section-title">Personnel actif</div>
+    <table class="promo-table" id="promos-actif-table">
+      <thead><tr><th>Nom</th><th>Grade</th><th>Statut</th><th>Entr&#233;e</th><th>Derni&#232;re promotion</th><th>&#201;v&#233;nement</th></tr></thead>
+      <tbody id="promos-actif-body"></tbody>
+    </table>
+  </div>
+  <div class="promo-section" style="margin-top:24px">
+    <div class="promo-section-title">Promotions r&#233;centes (officier)</div>
+    <div id="promos-extra-list"><div class="agenda-empty">Aucune promotion enregistr&#233;e.</div></div>
+  </div>
+</div>
+</div>
+<script>
+/* ══ Annonces ══ */
+var ANN_ICONS={info:'📋',alerte:'⚠️',urgent:'🔴',nomination:'🎖️'};
+var ANN_COLORS={info:'#0A3A66',alerte:'#EE8B1F',urgent:'#C8161D',nomination:'#2E7D46'};
+function annGet(){try{return JSON.parse(localStorage.getItem('sdis_ann')||'[]');}catch(e){return[];}}
+function annSave(a){try{localStorage.setItem('sdis_ann',JSON.stringify(a));}catch(e){}}
+function annCard(a,del){
+  return '<div class="annonce-card '+a.type+'" id="an-'+a.id+'">'
+    +'<div class="annonce-ico">'+ANN_ICONS[a.type]+'</div>'
+    +'<div class="annonce-body">'
+    +'<div class="annonce-type" style="color:'+ANN_COLORS[a.type]+'">'+a.type.toUpperCase()+'</div>'
+    +'<div class="annonce-title">'+a.title+'</div>'
+    +'<div class="annonce-txt">'+a.txt+'</div>'
+    +'<div class="annonce-foot">'+a.date+(a.auteur?' &mdash; '+a.auteur:'')+'</div>'
+    +'</div>'
+    +(del?'<button class="annonce-del" onclick="annDel('+a.id+')" title="Supprimer">✕</button>':'')
+    +'</div>';
+}
+function annRender(){
+  var list=annGet();
+  var wrap=document.getElementById('home-annonces-wrap');
+  var pub=document.getElementById('home-annonces-list');
+  var off=document.getElementById('off-ann-list');
+  var cnt=document.getElementById('ann-count');
+  if(wrap)wrap.style.display=list.length?'block':'none';
+  if(pub)pub.innerHTML=list.length?list.slice(0,5).map(function(a){return annCard(a,false);}).join(''):'';
+  if(off)off.innerHTML=list.length?list.map(function(a){return annCard(a,true);}).join(''):'<div class="agenda-empty">Aucune annonce.</div>';
+  if(cnt)cnt.textContent=list.length;
+}
+function annAdd(){
+  var title=(document.getElementById('ann-title').value||'').trim();
+  if(!title){alert('Titre obligatoire.');return;}
+  var d=document.getElementById('ann-date').value;
+  var df=d?new Date(d).toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'}):new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'long',year:'numeric'});
+  var a={id:Date.now(),type:document.getElementById('ann-type').value,
+    title:title,txt:(document.getElementById('ann-txt').value||'').trim(),
+    date:df,auteur:(document.getElementById('ann-auteur').value||'').trim()};
+  var list=annGet();list.unshift(a);annSave(list);
+  document.getElementById('ann-title').value='';
+  document.getElementById('ann-txt').value='';
+  annRender();
+}
+function annDel(id){
+  if(!confirm('Supprimer cette annonce?'))return;
+  annSave(annGet().filter(function(a){return a.id!==id;}));
+  annRender();
+}
+annRender();
+
+/* ══ Calendrier ══ */
+var EV_COLORS={formation:'#0A3A66',evaluation:'#C8161D',recrutement:'#2E7D46',sortie:'#EE8B1F',autre:'#555'};
+var EV_ICONS={formation:'📚',evaluation:'📝',recrutement:'👥',sortie:'🏔️',autre:'📌'};
+function evGet(){try{return JSON.parse(localStorage.getItem('sdis_ev')||'[]');}catch(e){return[];}}
+function evSave(a){try{localStorage.setItem('sdis_ev',JSON.stringify(a));}catch(e){}}
+function evCard(e,del){
+  var c=EV_COLORS[e.type]||'#555';
+  var ic=EV_ICONS[e.type]||'📌';
+  var past=new Date(e.date)<new Date()?'ev-past':'';
+  var d=new Date(e.date);
+  var day=d.getDate();
+  var months=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];
+  var mon=months[d.getMonth()]||'';
+  return '<div class="ev-card '+past+'" id="ev-'+e.id+'">'
+    +'<div class="ev-date-col"><div class="ev-day">'+day+'</div><div class="ev-month">'+mon+'</div></div>'
+    +'<div class="ev-body">'
+    +'<div class="ev-top"><span class="ev-badge" style="background:'+c+'">'+ic+' '+e.type+'</span>'
+    +(e.heure?'<span class="ev-time">'+e.heure+'</span>':'')
+    +'</div>'
+    +'<div class="ev-title">'+e.title+'</div>'
+    +(e.desc?'<div class="ev-desc">'+e.desc+'</div>':'')
+    +'</div>'
+    +(del?'<button class="ev-del" onclick="evDel('+e.id+')" title="Supprimer">✕</button>':'')
+    +'</div>';
+}
+function evRender(){
+  var list=evGet().sort(function(a,b){return a.date<b.date?-1:1;});
+  var now=new Date();now.setHours(0,0,0,0);
+  var upcoming=list.filter(function(e){return new Date(e.date)>=now;});
+  var past=list.filter(function(e){return new Date(e.date)<now;}).reverse();
+  var upEl=document.getElementById('ev-upcoming-list');
+  var pastEl=document.getElementById('ev-past-list');
+  var offEl=document.getElementById('off-ev-list');
+  var cnt=document.getElementById('ev-count');
+  if(upEl)upEl.innerHTML=upcoming.length?upcoming.map(function(e){return evCard(e,false);}).join(''):'<div class="agenda-empty">Aucun événement à venir.</div>';
+  if(pastEl)pastEl.innerHTML=past.length?past.map(function(e){return evCard(e,false);}).join(''):'';
+  if(offEl)offEl.innerHTML=list.length?list.reverse().map(function(e){return evCard(e,true);}).join(''):'<div class="agenda-empty">Aucun événement.</div>';
+  if(cnt)cnt.textContent=list.length;
+  var tPast=document.getElementById('ev-past-title');
+  if(tPast)tPast.style.display=past.length?'flex':'none';
+}
+function evAdd(){
+  var title=(document.getElementById('ev-title').value||'').trim();
+  var date=document.getElementById('ev-date').value;
+  if(!title||!date){alert('Titre et date obligatoires.');return;}
+  var e={id:Date.now(),type:document.getElementById('ev-type').value,
+    date:date,heure:document.getElementById('ev-heure').value||'',
+    title:title,desc:(document.getElementById('ev-desc').value||'').trim()};
+  var list=evGet();list.push(e);evSave(list);
+  document.getElementById('ev-title').value='';
+  document.getElementById('ev-desc').value='';
+  evRender();
+}
+function evDel(id){
+  if(!confirm('Supprimer cet événement?'))return;
+  evSave(evGet().filter(function(e){return e.id!==id;}));
+  evRender();
+}
+evRender();
+
+/* ══ Promotions ══ */
+var PROMOS_BASE=[{"nom": "DELAVEGAS Julien", "grade": "Lieutenant", "statut": "SPP", "entree": "07/06/2025", "promo": "02/02/2026", "event": "Nomination Lieutenant"}, {"nom": "BERTIN Sami", "grade": "Lieutenant", "statut": "SPV", "entree": "23/05/2025", "promo": "18/01/2026", "event": "Nomination Lieutenant"}, {"nom": "BROUSSARD Pierre", "grade": "Adjudant", "statut": "SPP", "entree": "18/07/2025", "promo": "20/12/2026", "event": "Nomination Adjudant"}, {"nom": "DOS SANTOS Mickael", "grade": "Sergent-Chef", "statut": "SPP", "entree": "19/10/2025", "promo": "17/01/2026", "event": "Promotion Sergent-Chef"}, {"nom": "NEVILLE Robert", "grade": "Caporal-Chef", "statut": "SPP", "entree": "15/02/2026", "promo": "18/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "BERING Nicolas", "grade": "Caporal-Chef", "statut": "SPP", "entree": "22/02/2026", "promo": "28/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "WOJDA Antoni", "grade": "Caporal-Chef", "statut": "SPV", "entree": "27/01/2026", "promo": "22/02/2026", "event": "Promotion Caporal-Chef"}, {"nom": "CARPENTIER Raphael", "grade": "Caporal", "statut": "SPP", "entree": "26/12/2025", "promo": "18/01/2026", "event": "Promotion Caporal"}, {"nom": "RAMOS Franck", "grade": "Caporal", "statut": "SPV", "entree": "22/02/2026", "promo": "01/03/2026", "event": "Promotion Caporal"}, {"nom": "LOPEZ David", "grade": "Caporal", "statut": "SPV", "entree": "08/01/2026", "promo": "15/01/2026", "event": "Promotion Caporal"}];
+function pmGet(){try{return JSON.parse(localStorage.getItem('sdis_pm')||'[]');}catch(e){return[];}}
+function pmSave(a){try{localStorage.setItem('sdis_pm',JSON.stringify(a));}catch(e){}}
+function pmRender(){
+  // Table actif (statique)
+  var tbody=document.getElementById('promos-actif-body');
+  if(tbody){
+    tbody.innerHTML=PROMOS_BASE.sort(function(a,b){
+      var ord={Lieutenant:0,Adjudant:1,'Sergent-Chef':2,Sergent:3,'Caporal-Chef':4,Caporal:5,'Sapeur 1C':6,'Sapeur 2C':7};
+      return (ord[a.grade]||9)-(ord[b.grade]||9);
+    }).map(function(p){
+      var sc=p.statut==='SPP'?'promo-spp':'promo-spv';
+      return '<tr><td><strong>'+p.nom+'</strong></td>'
+        +'<td><span class="promo-badge '+sc+'">'+p.grade+'</span></td>'
+        +'<td><span class="promo-badge '+sc+'">'+p.statut+'</span></td>'
+        +'<td style="font-size:.8rem;color:#888">'+p.entree+'</td>'
+        +'<td style="font-weight:600;color:#072A4C">'+p.promo+'</td>'
+        +'<td style="font-size:.82rem;color:#555">'+p.event+'</td>'
+        +'</tr>';
+    }).join('');
+  }
+  // Extras localStorage
+  var extras=pmGet();
+  var extEl=document.getElementById('promos-extra-list');
+  var offEl=document.getElementById('off-promos-list');
+  var html=extras.length?extras.map(function(p){
+    return '<div class="annonce-card nomination" style="margin-bottom:8px">'
+      +'<div class="annonce-ico">🏆</div>'
+      +'<div class="annonce-body">'
+      +'<div class="annonce-type" style="color:#2E7D46">'+p.type.toUpperCase()+'</div>'
+      +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
+      +'<div class="annonce-foot">'+p.date+'</div>'
+      +'</div></div>';
+  }).join(''):'<div class="agenda-empty">Aucune.</div>';
+  if(extEl)extEl.innerHTML=html;
+  if(offEl)offEl.innerHTML=extras.length?extras.map(function(p,i){
+    return '<div class="annonce-card nomination" style="margin-bottom:8px">'
+      +'<div class="annonce-ico">🏆</div>'
+      +'<div class="annonce-body">'
+      +'<div class="annonce-type" style="color:#2E7D46">'+p.type+'</div>'
+      +'<div class="annonce-title">'+p.nom+' — '+p.grade+'</div>'
+      +'<div class="annonce-foot">'+p.date+'</div>'
+      +'</div>'
+      +'<button class="annonce-del" onclick="pmDel('+i+')" title="Supprimer">✕</button>'
+      +'</div>';
+  }).join(''):'<div class="agenda-empty">Aucune promotion ajoutée.</div>';
+}
+function pmAdd(){
+  var nom=(document.getElementById('pm-nom').value||'').trim();
+  var grade=(document.getElementById('pm-grade').value||'').trim();
+  var date=document.getElementById('pm-date').value;
+  if(!nom||!grade){alert('Nom et grade obligatoires.');return;}
+  var df=date?new Date(date).toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'}):new Date().toLocaleDateString('fr-FR');
+  var p={nom:nom,grade:grade,type:document.getElementById('pm-type').value,date:df};
+  var list=pmGet();list.unshift(p);pmSave(list);
+  document.getElementById('pm-nom').value='';
+  document.getElementById('pm-grade').value='';
+  pmRender();
+}
+function pmDel(i){
+  if(!confirm('Supprimer?'))return;
+  var list=pmGet();list.splice(i,1);pmSave(list);pmRender();
+}
+pmRender();
 </script>
 </body>
 </html>
