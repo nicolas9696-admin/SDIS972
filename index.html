@@ -3472,7 +3472,7 @@ async function ghRead(file){
 async function ghWrite(file,data){
   var token=ghToken();
   if(!token){alert('Token GitHub non configuré.
-Ouvrez l'espace officier → Tableau de bord → 🔑 Token GitHub.');return false;}
+Ouvrez l\u0027espace officier → Tableau de bord → 🔑 Token GitHub.');return false;}
   var apiUrl=GH_API+file;
   var sha=null;
   try{
